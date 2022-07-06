@@ -8,11 +8,15 @@ Time spent: **X** hours spent in total
 
 The following **required** functionality is completed:
 
-- [ ] User can sign up to create a new account using Parse authentication
+- [X] User can sign up to create a new account using Parse authentication
 - [ ] User can log in and log out of his or her account
 - [ ] The current signed in user is persisted across app restarts
 - [ ] User can pull to refresh the posts submitted to "HangOUT"
 - [ ] User can tap a post to view post details, including timestamp and caption
+- [ ] User can message other users on the messanger page
+- [ ] User can view the list of outings within a certain range
+- [ ] User can fill a survey in the app
+- [ ] Users cxan see the distance of others through the map
 
 
 The following **additional** features are implemented:

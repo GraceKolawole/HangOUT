@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3340C9EB5B81CACFD02BD2FB /* libPods-HangOutUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDC14E044A4D7CAA1170057 /* libPods-HangOutUITests.a */; };
+		953F07032874ABD6009BD594 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07022874ABD6009BD594 /* AppDelegate.m */; };
+		953F07062874ABD6009BD594 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07052874ABD6009BD594 /* SceneDelegate.m */; };
+		953F07092874ABD6009BD594 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07082874ABD6009BD594 /* ViewController.m */; };
+		953F070C2874ABD6009BD594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953F070A2874ABD6009BD594 /* Main.storyboard */; };
+		953F070F2874ABD6009BD594 /* HangOut.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 953F070D2874ABD6009BD594 /* HangOut.xcdatamodeld */; };
+		953F07112874ABD7009BD594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953F07102874ABD7009BD594 /* Assets.xcassets */; };
+		953F07142874ABD7009BD594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953F07122874ABD7009BD594 /* LaunchScreen.storyboard */; };
+		953F07172874ABD7009BD594 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07162874ABD7009BD594 /* main.m */; };
+		953F07212874ABD7009BD594 /* HangOutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07202874ABD7009BD594 /* HangOutTests.m */; };
+		953F072B2874ABD7009BD594 /* HangOutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F072A2874ABD7009BD594 /* HangOutUITests.m */; };
+		953F072D2874ABD7009BD594 /* HangOutUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F072C2874ABD7009BD594 /* HangOutUITestsLaunchTests.m */; };
+		953F073B2874D229009BD594 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F073A2874D229009BD594 /* LoginViewController.m */; };
+		954873212874F368002CD6BC /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954873202874F368002CD6BC /* Keys.plist */; };
+		95487324287501DF002CD6BC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95487323287501DF002CD6BC /* HomeViewController.m */; };
+		9548732D28750592002CD6BC /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548732C28750592002CD6BC /* Post.m */; };
+		9548733328752786002CD6BC /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548733228752786002CD6BC /* SearchViewController.m */; };
+		9548733628752A08002CD6BC /* HangOUTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548733528752A08002CD6BC /* HangOUTCell.m */; };
+		966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06785D0378A68E04F16E844B /* libPods-HangOut.a */; };
+		96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		953F071D2874ABD7009BD594 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 953F06F62874ABD6009BD594 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 953F06FD2874ABD6009BD594;
+			remoteInfo = HangOut;
+		};
+		953F07272874ABD7009BD594 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 953F06F62874ABD6009BD594 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 953F06FD2874ABD6009BD594;
+			remoteInfo = HangOut;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06785D0378A68E04F16E844B /* libPods-HangOut.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HangOut.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06EBD73240E7D8649A6C235D /* Pods-HangOut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.debug.xcconfig"; sourceTree = "<group>"; };
+		11CF374C68A29C6CCB8464E9 /* Pods-HangOutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3BDC14E044A4D7CAA1170057 /* libPods-HangOutUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HangOutUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC8769BAB806F79FED45840 /* Pods-HangOutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutTests/Pods-HangOutTests.release.xcconfig"; sourceTree = "<group>"; };
+		91ABB8770DDA35F4E3C7BDC7 /* Pods-HangOutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutTests/Pods-HangOutTests.debug.xcconfig"; sourceTree = "<group>"; };
+		953F06FE2874ABD6009BD594 /* HangOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HangOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		953F07012874ABD6009BD594 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		953F07022874ABD6009BD594 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		953F07042874ABD6009BD594 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		953F07052874ABD6009BD594 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		953F07072874ABD6009BD594 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		953F07082874ABD6009BD594 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		953F070B2874ABD6009BD594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		953F070E2874ABD6009BD594 /* HangOut.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HangOut.xcdatamodel; sourceTree = "<group>"; };
+		953F07102874ABD7009BD594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		953F07132874ABD7009BD594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		953F07152874ABD7009BD594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953F07162874ABD7009BD594 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		953F071C2874ABD7009BD594 /* HangOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		953F07202874ABD7009BD594 /* HangOutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangOutTests.m; sourceTree = "<group>"; };
+		953F07262874ABD7009BD594 /* HangOutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangOutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		953F072A2874ABD7009BD594 /* HangOutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangOutUITests.m; sourceTree = "<group>"; };
+		953F072C2874ABD7009BD594 /* HangOutUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangOutUITestsLaunchTests.m; sourceTree = "<group>"; };
+		953F07392874D229009BD594 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		953F073A2874D229009BD594 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		954873202874F368002CD6BC /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		95487322287501DF002CD6BC /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		95487323287501DF002CD6BC /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		9548732B28750592002CD6BC /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		9548732C28750592002CD6BC /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		9548733128752786002CD6BC /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		9548733228752786002CD6BC /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		9548733428752A08002CD6BC /* HangOUTCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HangOUTCell.h; sourceTree = "<group>"; };
+		9548733528752A08002CD6BC /* HangOUTCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangOUTCell.m; sourceTree = "<group>"; };
+		9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HangOutTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		953F06FB2874ABD6009BD594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953F07192874ABD7009BD594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953F07232874ABD7009BD594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3340C9EB5B81CACFD02BD2FB /* libPods-HangOutUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		036277543675DF735CCF5581 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06EBD73240E7D8649A6C235D /* Pods-HangOut.debug.xcconfig */,
+				FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */,
+				91ABB8770DDA35F4E3C7BDC7 /* Pods-HangOutTests.debug.xcconfig */,
+				7BC8769BAB806F79FED45840 /* Pods-HangOutTests.release.xcconfig */,
+				F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */,
+				11CF374C68A29C6CCB8464E9 /* Pods-HangOutUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		676698D3AF294F26F002A8CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06785D0378A68E04F16E844B /* libPods-HangOut.a */,
+				9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */,
+				3BDC14E044A4D7CAA1170057 /* libPods-HangOutUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		953F06F52874ABD6009BD594 = {
+			isa = PBXGroup;
+			children = (
+				953F07002874ABD6009BD594 /* HangOut */,
+				953F071F2874ABD7009BD594 /* HangOutTests */,
+				953F07292874ABD7009BD594 /* HangOutUITests */,
+				953F06FF2874ABD6009BD594 /* Products */,
+				036277543675DF735CCF5581 /* Pods */,
+				676698D3AF294F26F002A8CC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		953F06FF2874ABD6009BD594 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				953F06FE2874ABD6009BD594 /* HangOut.app */,
+				953F071C2874ABD7009BD594 /* HangOutTests.xctest */,
+				953F07262874ABD7009BD594 /* HangOutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		953F07002874ABD6009BD594 /* HangOut */ = {
+			isa = PBXGroup;
+			children = (
+				953F07012874ABD6009BD594 /* AppDelegate.h */,
+				953F07022874ABD6009BD594 /* AppDelegate.m */,
+				953F07042874ABD6009BD594 /* SceneDelegate.h */,
+				953F07052874ABD6009BD594 /* SceneDelegate.m */,
+				953F07072874ABD6009BD594 /* ViewController.h */,
+				953F07082874ABD6009BD594 /* ViewController.m */,
+				953F070A2874ABD6009BD594 /* Main.storyboard */,
+				9548733128752786002CD6BC /* SearchViewController.h */,
+				9548733228752786002CD6BC /* SearchViewController.m */,
+				95487322287501DF002CD6BC /* HomeViewController.h */,
+				95487323287501DF002CD6BC /* HomeViewController.m */,
+				953F07102874ABD7009BD594 /* Assets.xcassets */,
+				953F07122874ABD7009BD594 /* LaunchScreen.storyboard */,
+				953F07152874ABD7009BD594 /* Info.plist */,
+				954873202874F368002CD6BC /* Keys.plist */,
+				953F07162874ABD7009BD594 /* main.m */,
+				953F07392874D229009BD594 /* LoginViewController.h */,
+				953F073A2874D229009BD594 /* LoginViewController.m */,
+				953F070D2874ABD6009BD594 /* HangOut.xcdatamodeld */,
+				9548732B28750592002CD6BC /* Post.h */,
+				9548732C28750592002CD6BC /* Post.m */,
+				9548733428752A08002CD6BC /* HangOUTCell.h */,
+				9548733528752A08002CD6BC /* HangOUTCell.m */,
+			);
+			path = HangOut;
+			sourceTree = "<group>";
+		};
+		953F071F2874ABD7009BD594 /* HangOutTests */ = {
+			isa = PBXGroup;
+			children = (
+				953F07202874ABD7009BD594 /* HangOutTests.m */,
+			);
+			path = HangOutTests;
+			sourceTree = "<group>";
+		};
+		953F07292874ABD7009BD594 /* HangOutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				953F072A2874ABD7009BD594 /* HangOutUITests.m */,
+				953F072C2874ABD7009BD594 /* HangOutUITestsLaunchTests.m */,
+			);
+			path = HangOutUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		953F06FD2874ABD6009BD594 /* HangOut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953F07302874ABD7009BD594 /* Build configuration list for PBXNativeTarget "HangOut" */;
+			buildPhases = (
+				8DC3C2A83A4F30F75E3DF3D2 /* [CP] Check Pods Manifest.lock */,
+				953F06FA2874ABD6009BD594 /* Sources */,
+				953F06FB2874ABD6009BD594 /* Frameworks */,
+				953F06FC2874ABD6009BD594 /* Resources */,
+				AD1B4A32B91E9F4203715AA1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HangOut;
+			productName = HangOut;
+			productReference = 953F06FE2874ABD6009BD594 /* HangOut.app */;
+			productType = "com.apple.product-type.application";
+		};
+		953F071B2874ABD7009BD594 /* HangOutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953F07332874ABD7009BD594 /* Build configuration list for PBXNativeTarget "HangOutTests" */;
+			buildPhases = (
+				7DEE491249E6B114B91CE5E7 /* [CP] Check Pods Manifest.lock */,
+				953F07182874ABD7009BD594 /* Sources */,
+				953F07192874ABD7009BD594 /* Frameworks */,
+				953F071A2874ABD7009BD594 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953F071E2874ABD7009BD594 /* PBXTargetDependency */,
+			);
+			name = HangOutTests;
+			productName = HangOutTests;
+			productReference = 953F071C2874ABD7009BD594 /* HangOutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		953F07252874ABD7009BD594 /* HangOutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953F07362874ABD7009BD594 /* Build configuration list for PBXNativeTarget "HangOutUITests" */;
+			buildPhases = (
+				2E8336834A01E9946D9AE7B0 /* [CP] Check Pods Manifest.lock */,
+				953F07222874ABD7009BD594 /* Sources */,
+				953F07232874ABD7009BD594 /* Frameworks */,
+				953F07242874ABD7009BD594 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953F07282874ABD7009BD594 /* PBXTargetDependency */,
+			);
+			name = HangOutUITests;
+			productName = HangOutUITests;
+			productReference = 953F07262874ABD7009BD594 /* HangOutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		953F06F62874ABD6009BD594 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					953F06FD2874ABD6009BD594 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					953F071B2874ABD7009BD594 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 953F06FD2874ABD6009BD594;
+					};
+					953F07252874ABD7009BD594 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 953F06FD2874ABD6009BD594;
+					};
+				};
+			};
+			buildConfigurationList = 953F06F92874ABD6009BD594 /* Build configuration list for PBXProject "HangOut" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 953F06F52874ABD6009BD594;
+			productRefGroup = 953F06FF2874ABD6009BD594 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				953F06FD2874ABD6009BD594 /* HangOut */,
+				953F071B2874ABD7009BD594 /* HangOutTests */,
+				953F07252874ABD7009BD594 /* HangOutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		953F06FC2874ABD6009BD594 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954873212874F368002CD6BC /* Keys.plist in Resources */,
+				953F07142874ABD7009BD594 /* LaunchScreen.storyboard in Resources */,
+				953F07112874ABD7009BD594 /* Assets.xcassets in Resources */,
+				953F070C2874ABD6009BD594 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953F071A2874ABD7009BD594 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953F07242874ABD7009BD594 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E8336834A01E9946D9AE7B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HangOutUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DEE491249E6B114B91CE5E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HangOutTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DC3C2A83A4F30F75E3DF3D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HangOut-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD1B4A32B91E9F4203715AA1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HangOut/Pods-HangOut-resources.sh",
+				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/ParseUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ParseUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HangOut/Pods-HangOut-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		953F06FA2874ABD6009BD594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953F07172874ABD7009BD594 /* main.m in Sources */,
+				953F07092874ABD6009BD594 /* ViewController.m in Sources */,
+				953F073B2874D229009BD594 /* LoginViewController.m in Sources */,
+				953F07032874ABD6009BD594 /* AppDelegate.m in Sources */,
+				9548733328752786002CD6BC /* SearchViewController.m in Sources */,
+				953F070F2874ABD6009BD594 /* HangOut.xcdatamodeld in Sources */,
+				9548733628752A08002CD6BC /* HangOUTCell.m in Sources */,
+				95487324287501DF002CD6BC /* HomeViewController.m in Sources */,
+				953F07062874ABD6009BD594 /* SceneDelegate.m in Sources */,
+				9548732D28750592002CD6BC /* Post.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953F07182874ABD7009BD594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953F07212874ABD7009BD594 /* HangOutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953F07222874ABD7009BD594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953F072B2874ABD7009BD594 /* HangOutUITests.m in Sources */,
+				953F072D2874ABD7009BD594 /* HangOutUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		953F071E2874ABD7009BD594 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 953F06FD2874ABD6009BD594 /* HangOut */;
+			targetProxy = 953F071D2874ABD7009BD594 /* PBXContainerItemProxy */;
+		};
+		953F07282874ABD7009BD594 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 953F06FD2874ABD6009BD594 /* HangOut */;
+			targetProxy = 953F07272874ABD7009BD594 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		953F070A2874ABD6009BD594 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				953F070B2874ABD6009BD594 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		953F07122874ABD7009BD594 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				953F07132874ABD7009BD594 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		953F072E2874ABD7009BD594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		953F072F2874ABD7009BD594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		953F07312874ABD7009BD594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06EBD73240E7D8649A6C235D /* Pods-HangOut.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HangOut/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tippy.HangOut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		953F07322874ABD7009BD594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HangOut/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tippy.HangOut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		953F07342874ABD7009BD594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91ABB8770DDA35F4E3C7BDC7 /* Pods-HangOutTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tippy.HangOutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HangOut.app/HangOut";
+			};
+			name = Debug;
+		};
+		953F07352874ABD7009BD594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BC8769BAB806F79FED45840 /* Pods-HangOutTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tippy.HangOutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HangOut.app/HangOut";
+			};
+			name = Release;
+		};
+		953F07372874ABD7009BD594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tippy.HangOutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HangOut;
+			};
+			name = Debug;
+		};
+		953F07382874ABD7009BD594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11CF374C68A29C6CCB8464E9 /* Pods-HangOutUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tippy.HangOutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HangOut;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		953F06F92874ABD6009BD594 /* Build configuration list for PBXProject "HangOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953F072E2874ABD7009BD594 /* Debug */,
+				953F072F2874ABD7009BD594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		953F07302874ABD7009BD594 /* Build configuration list for PBXNativeTarget "HangOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953F07312874ABD7009BD594 /* Debug */,
+				953F07322874ABD7009BD594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		953F07332874ABD7009BD594 /* Build configuration list for PBXNativeTarget "HangOutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953F07342874ABD7009BD594 /* Debug */,
+				953F07352874ABD7009BD594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		953F07362874ABD7009BD594 /* Build configuration list for PBXNativeTarget "HangOutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953F07372874ABD7009BD594 /* Debug */,
+				953F07382874ABD7009BD594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		953F070D2874ABD6009BD594 /* HangOut.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				953F070E2874ABD6009BD594 /* HangOut.xcdatamodel */,
+			);
+			currentVersion = 953F070E2874ABD6009BD594 /* HangOut.xcdatamodel */;
+			path = HangOut.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 953F06F62874ABD6009BD594 /* Project object */;
+}

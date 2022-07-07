@@ -9,6 +9,7 @@
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
 #import "SignupViewController.h"
+#import "HomeViewController.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextFeild;

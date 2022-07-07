@@ -14,10 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *postID;
 @property (nonatomic, strong) NSString *userID;
-@property (nonatomic, strong) PFUser *author;
+@property (nonatomic, strong) PFFileObject *image;
+
 
 @property (nonatomic, strong) NSNumber *likeCount;
-@property (nonatomic, strong) PFFileObject *image;
+@property (nonatomic, strong) PFUser *author;
 @property (nonatomic, strong) NSNumber *commentCount;
 @property (nonatomic, strong) NSString *caption;
 @property (nonatomic, strong) NSDate *createdAt;

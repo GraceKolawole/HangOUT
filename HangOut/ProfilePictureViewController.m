@@ -1,32 +1,33 @@
 //
-//  PostViewController.m
+//  ProfilePictureViewController.m
 //  HangOut
 //
-//  Created by Oluwanifemi Kolawole on 7/6/22.
+//  Created by Oluwanifemi Kolawole on 7/7/22.
 //
 
+#import "ProfilePictureViewController.h"
 #import "PostViewController.h"
 #import "HomeViewController.h"
 #import "Post.h"
+#import "ProfilePic.h"
 #import "SceneDelegate.h"
 #import "LoginViewController.h"
 
-@interface PostViewController ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ProfilePictureViewController ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *profilePictureImageView;
 
-@property (strong, nonatomic) UIImage *postImage;
-@property (weak, nonatomic) IBOutlet UIImageView *postPictureImageView;
-@property (weak, nonatomic) IBOutlet UITextField *captionTextFeild;
+@property (nonatomic, strong) NSMutableArray *postsArray;
 
 @end
 
-@implementation PostViewController
+@implementation ProfilePictureViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
-- (IBAction)tabGesture:(UITapGestureRecognizer *)sender {
-    NSLog(@"PostViewController");
+- (IBAction)tapGesture:(UITapGestureRecognizer *)sender {
+    NSLog(@"ProfilePictureViewController");
     
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
@@ -39,7 +40,6 @@
     
     [self presentViewController:imagePickerVC animated:YES completion:nil];
 }
-
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     return [[UITableViewCell alloc] init];
@@ -57,7 +57,7 @@
 
     // Do something with the images (based on your use case)
     UIImage *resizedImage = [self resizeImage:originalImage withSize:CGSizeMake(200, 200)];
-    self.postPictureImageView.image = resizedImage;
+    self.profilePictureImageView.image = resizedImage;
     
     //self.pictureImageView.image = resizedImage;
     // Dismiss UIImagePickerController to go back to your original view controller
@@ -76,8 +76,20 @@
     
     return newImage;
 }
-- (IBAction)didTapPost:(id)sender {
-    [Post postUserImage:self.postPictureImageView.image withCaption:self.captionTextFeild.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+- (IBAction)didTapBack:(id)sender {
+    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    HomeViewController *homeViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    
+    sceneDelegate.window.rootViewController = homeViewController;
+    
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        // PFUser.current() will now be nil
+    }];
+}
+- (IBAction)didTapChange:(id)sender {
+    [ProfilePic profilepicUserImage:self.profilePictureImageView.image withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
             if(error != nil){
                 NSLog(@"User share failed: %@", error.localizedDescription);
                
@@ -86,9 +98,6 @@
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
     }];
-}
-- (IBAction)didTapBack:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 /*

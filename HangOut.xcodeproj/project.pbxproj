@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3340C9EB5B81CACFD02BD2FB /* libPods-HangOutUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDC14E044A4D7CAA1170057 /* libPods-HangOutUITests.a */; };
+		953B4B9E287796FE0090186A /* ProfilePic.m in Sources */ = {isa = PBXBuildFile; fileRef = 953B4B9D287796FE0090186A /* ProfilePic.m */; };
 		953F07032874ABD6009BD594 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07022874ABD6009BD594 /* AppDelegate.m */; };
 		953F07062874ABD6009BD594 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07052874ABD6009BD594 /* SceneDelegate.m */; };
 		953F07092874ABD6009BD594 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07082874ABD6009BD594 /* ViewController.m */; };
@@ -27,6 +28,7 @@
 		9548733628752A08002CD6BC /* HangOUTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548733528752A08002CD6BC /* HangOUTCell.m */; };
 		9553A4B528764319005C988B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553A4B428764319005C988B /* SignupViewController.m */; };
 		9553A4B8287655AD005C988B /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553A4B7287655AD005C988B /* PostViewController.m */; };
+		9553A4BD28777E9C005C988B /* ProfilePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */; };
 		966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06785D0378A68E04F16E844B /* libPods-HangOut.a */; };
 		96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,8 @@
 		3BDC14E044A4D7CAA1170057 /* libPods-HangOutUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HangOutUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC8769BAB806F79FED45840 /* Pods-HangOutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutTests/Pods-HangOutTests.release.xcconfig"; sourceTree = "<group>"; };
 		91ABB8770DDA35F4E3C7BDC7 /* Pods-HangOutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutTests/Pods-HangOutTests.debug.xcconfig"; sourceTree = "<group>"; };
+		953B4B9C287796FE0090186A /* ProfilePic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfilePic.h; sourceTree = "<group>"; };
+		953B4B9D287796FE0090186A /* ProfilePic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfilePic.m; sourceTree = "<group>"; };
 		953F06FE2874ABD6009BD594 /* HangOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HangOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		953F07012874ABD6009BD594 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		953F07022874ABD6009BD594 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		9553A4B428764319005C988B /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		9553A4B6287655AD005C988B /* PostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
 		9553A4B7287655AD005C988B /* PostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
+		9553A4BB28777E9C005C988B /* ProfilePictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfilePictureViewController.h; sourceTree = "<group>"; };
+		9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfilePictureViewController.m; sourceTree = "<group>"; };
 		9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HangOutTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,8 +200,12 @@
 				953F070D2874ABD6009BD594 /* HangOut.xcdatamodeld */,
 				9548732B28750592002CD6BC /* Post.h */,
 				9548732C28750592002CD6BC /* Post.m */,
+				953B4B9C287796FE0090186A /* ProfilePic.h */,
+				953B4B9D287796FE0090186A /* ProfilePic.m */,
 				9548733428752A08002CD6BC /* HangOUTCell.h */,
 				9548733528752A08002CD6BC /* HangOUTCell.m */,
+				9553A4BB28777E9C005C988B /* ProfilePictureViewController.h */,
+				9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */,
 			);
 			path = HangOut;
 			sourceTree = "<group>";
@@ -430,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953B4B9E287796FE0090186A /* ProfilePic.m in Sources */,
 				953F07172874ABD7009BD594 /* main.m in Sources */,
 				953F07092874ABD6009BD594 /* ViewController.m in Sources */,
 				953F073B2874D229009BD594 /* LoginViewController.m in Sources */,
@@ -442,6 +453,7 @@
 				95487324287501DF002CD6BC /* HomeViewController.m in Sources */,
 				953F07062874ABD6009BD594 /* SceneDelegate.m in Sources */,
 				9548732D28750592002CD6BC /* Post.m in Sources */,
+				9553A4BD28777E9C005C988B /* ProfilePictureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

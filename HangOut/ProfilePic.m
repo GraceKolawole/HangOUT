@@ -10,6 +10,7 @@
 
 @implementation ProfilePic
 
+@dynamic author;
 @dynamic image;
 
 + (nonnull NSString *)parseClassName {
@@ -17,6 +18,7 @@
 }
 + (void) profilepicUserImage: ( UIImage * _Nullable )image withCompletion: (PFBooleanResultBlock  _Nullable)completion {
     ProfilePic *newPic = [ProfilePic new];
+    newPic.author = [PFUser currentUser];
     newPic.image = [self getPFFileFromImage:image];
     [newPic saveInBackgroundWithBlock: completion];
 }

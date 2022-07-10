@@ -10,6 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol ProfilePictureViewControllerDelegate <NSObject>
+
+//-(void)addProfilePic:(ProfilePictureViewController *)controller
+
+@end
+
 @interface ProfilePictureViewController : UIViewController
 
 @end

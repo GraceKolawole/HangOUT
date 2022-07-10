@@ -9,6 +9,7 @@
 #import "PFImageView.h"
 #import "Parse/Parse.h"
 #import "Post.h"
+#import "ProfilePic.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HangOUTCell : UITableViewCell
@@ -21,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) Post *post;
+@property (strong, nonatomic) ProfilePic *pic;
+@property (weak, nonatomic) IBOutlet UIButton *detaliButton;
 
 @end
 

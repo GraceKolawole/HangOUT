@@ -7,7 +7,7 @@
 
 #import "ProfilePictureViewController.h"
 #import "PostViewController.h"
-#import "HomeViewController.h"
+#import "ProfileViewContoller.h"
 #import "Post.h"
 #import "ProfilePic.h"
 #import "SceneDelegate.h"
@@ -15,6 +15,7 @@
 
 @interface ProfilePictureViewController ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *profilePictureImageView;
+@property (weak, nonatomic) IBOutlet UIButton *albumButton;
 
 @property (nonatomic, strong) NSMutableArray *postsArray;
 
@@ -26,17 +27,14 @@
     [super viewDidLoad];
 
 }
-- (IBAction)tapGesture:(UITapGestureRecognizer *)sender {
-    NSLog(@"ProfilePictureViewController");
-    
+
+//    NSLog(@"ProfilePictureViewController");
+- (IBAction)tappedAlbum:(id)sender {
+
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
-
-    // The Xcode simulator does not support taking pictures, so let's first check that the camera is indeed supported on the device before trying to present it.
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
-    }
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:imagePickerVC animated:YES completion:nil];
 }
@@ -54,10 +52,12 @@
     // Get the image captured by the UIImagePickerController
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
-
+    
     // Do something with the images (based on your use case)
     UIImage *resizedImage = [self resizeImage:originalImage withSize:CGSizeMake(200, 200)];
     self.profilePictureImageView.image = resizedImage;
+    
+    [ProfilePic profilepicUserImage:resizedImage withCompletion:^(BOOL succeeded, NSError * _Nullable error) {}];
     
     //self.pictureImageView.image = resizedImage;
     // Dismiss UIImagePickerController to go back to your original view controller
@@ -76,31 +76,22 @@
     
     return newImage;
 }
-- (IBAction)didTapBack:(id)sender {
-    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
 
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    HomeViewController *homeViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-    
-    sceneDelegate.window.rootViewController = homeViewController;
-    
-    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        // PFUser.current() will now be nil
-    }];
-}
 - (IBAction)didTapChange:(id)sender {
     [ProfilePic profilepicUserImage:self.profilePictureImageView.image withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
-            if(error != nil){
-                NSLog(@"User share failed: %@", error.localizedDescription);
-               
-            } else {
-                NSLog(@"User successfully shared post");
-                [self dismissViewControllerAnimated:YES completion:nil];
-            }
-    }];
+        if(error != nil){
+            NSLog(@"User share failed: %@", error.localizedDescription);
+           
+        } else {
+            
+//            [self dismissViewControllerAnimated:YES completion:nil];
+            UINavigationController *navigationController = self.navigationController;
+            [navigationController popViewControllerAnimated:YES];
+            NSLog(@"User successfully changed profile picture");
+        }
+}];
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -108,6 +99,5 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

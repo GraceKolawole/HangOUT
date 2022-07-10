@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ProfilePic : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) PFFileObject *image;
+@property (nonatomic, strong) PFUser *author;
 
 
 + (void) profilepicUserImage: ( UIImage * _Nullable )image withCompletion: (PFBooleanResultBlock  _Nullable)completion;

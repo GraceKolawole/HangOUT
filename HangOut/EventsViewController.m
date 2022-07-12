@@ -9,6 +9,7 @@
 #import "EventCell.h"
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
+#import "PFImageView.h"
 
 
 //
@@ -79,15 +80,33 @@
     NSArray *performers = event[@"performers"];
     NSString *performerName = performers[0][@"name"];
     cell.titleLabel.text = performerName;
+    
+    NSString *baseURLString = @"https://seatgeek.com/images";
+    NSString *posterURLString = performers[0][@"image"];
+    NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
+    
+    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+    cell.posterView.image = nil;
+    [cell.posterView setImageWithURL:posterURL];
+    
+//    NSURL *linkURL  = performers[0][@"url"];
+//    NSURL *myURL = performers[0][[NSURL alloc]initWithString:@"https://seatgeek.com/performers/tickets"];
+//    cell.linkLabel.text = myURL;
+//    NSString *  = performers[0][@"url"];
+//    NSData *myData = [[NSData alloc]initWithContentsOfURL:myURL];
+//    id myJSON = [NSJSONSerialization JSONObjectWithData:myData options:NSJSONReadingMutableContainers error:nil];
+//    NSArray *jsonArray = (NSArray *)myJSON;
+//    for (id element in jsonArray) {
+//        NSLog(@"Element: %@", [element description]);
 
     cell.addressLabel.text = venue[@"address"];
     cell.cityLabel.text = venue[@"city"];
     cell.eventType.text = event[@"type"];
     cell.locationLabel.text = venue[@"display_location"];
-    
     cell.dateTimeLabel.text = event[@"datetime_utc"];
     
-//    /NSString *baseURLString = @"https://seatgeek.com/images";
+    
+//    /
 //
 ////    NSString *baseURLString = @"https://seatgeek.com/images";
 //    NSString *imageURLString = event[@"image"];
@@ -95,7 +114,7 @@
 ///Users/gracekolawole/Desktop/See/HangOUT/HangOut.xcworkspace
 //    NSURL *imageURL = [NSURL URLWithString:fullimageURLString];
 //    cell.posterView.image = nil;
-//    NSData *imageData = UIImagePNGRepresentation(image);
+//
 //    PFFileObject *imageFile = [PFFileObject fileObjectWithName:@"image.jpg" data:imageData];
 //
 //    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
@@ -117,4 +136,5 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-@end
+    @end
+

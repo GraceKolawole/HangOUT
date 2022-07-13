@@ -37,7 +37,50 @@
         
     }];
 }
+
+- (void)signUpUser {
+
+    PFUser *newUser = [PFUser user];
+    
+    newUser.username = self.groupNameTFd.text;
+    newUser.password = self.groupPassTFd.text;
+    
+    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
+        if (error != nil) {
+            NSLog(@"Error: %@", error.localizedDescription);
+            // Todo - segue
+        } else {
+            NSLog(@"User registered successfully");
+            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
+  
+        }
+    }];
+}
+
 - (IBAction)signUp:(id)sender {
+    if([self.groupNameTFd.text isEqual:@""] || [self.groupPassTFd.text isEqual:@""] ){
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Title"
+                                                                               message:@"Message"
+                                                                        preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                        style:UIAlertActionStyleCancel
+                                                      handler:^(UIAlertAction * _Nonnull action) {
+                                                         
+                                                      }];
+    [alert addAction:cancelAction];
+
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                     }];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:^{
+    }];
+    
+    }
+    else{
+        [self signUpUser];
+    }
 }
 
 - (IBAction)login:(id)sender {

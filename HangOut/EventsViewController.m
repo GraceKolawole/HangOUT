@@ -9,7 +9,6 @@
 #import "EventCell.h"
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
-#import "PFImageView.h"
 
 
 //
@@ -87,7 +86,8 @@
     
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     cell.posterView.image = nil;
-    [cell.posterView setImageWithURL:posterURL];
+//    [posterURL saveInBackground];
+//    [cell.posterView setImageWithURL:posterURL];
     
 //    NSURL *linkURL  = performers[0][@"url"];
 //    NSURL *myURL = performers[0][[NSURL alloc]initWithString:@"https://seatgeek.com/performers/tickets"];

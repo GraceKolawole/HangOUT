@@ -1,17 +1,17 @@
 //
-//  GroupPassViewController.m
+//  IntrovertPassViewController.m
 //  HangOut
 //
-//  Created by Oluwanifemi Kolawole on 7/11/22.
+//  Created by Oluwanifemi Kolawole on 7/12/22.
 //
 
-#import "GroupPassViewController.h"
+#import "IntrovertPassViewController.h"
 
-@interface GroupPassViewController ()
+@interface IntrovertPassViewController ()
 
 @end
 
-@implementation GroupPassViewController
+@implementation IntrovertPassViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

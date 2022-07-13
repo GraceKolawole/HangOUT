@@ -252,21 +252,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Extroverted"/>
-                                <connections>
-                                    <action selector="extrovertedLogin:" destination="qx8-BI-giE" eventType="touchUpInside" id="Z2z-CQ-goB"/>
-                                    <segue destination="qB7-BD-WH1" kind="show" id="r3V-LK-50N"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8C-pJ-Hyw">
                                 <rect key="frame" x="160" y="318" width="95" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Introverted"/>
-                                <connections>
-                                    <action selector="introveredLogin:" destination="p7b-9v-4IB" eventType="touchUpInside" id="lAR-TS-cAv"/>
-                                    <action selector="introveredLogin:" destination="qx8-BI-giE" eventType="touchUpInside" id="zhs-fC-Oxm"/>
-                                    <segue destination="qB7-BD-WH1" kind="show" id="0Sj-Am-qNe"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Preference" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjq-JX-5v1">
                                 <rect key="frame" x="140" y="204" width="135" height="21"/>
@@ -280,10 +271,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ambiverted"/>
-                                <connections>
-                                    <action selector="ambivertedLogin:" destination="qx8-BI-giE" eventType="touchUpInside" id="wbq-yx-DyX"/>
-                                    <segue destination="qB7-BD-WH1" kind="show" id="VOM-u6-Jf1"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dgo-o2-wid"/>
@@ -293,14 +280,13 @@
                     <navigationItem key="navigationItem" title="Group" id="gNr-qW-LTN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2k-Dt-JNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="p7b-9v-4IB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6042.0289855072469" y="16.741071428571427"/>
         </scene>
-        <!--Group Pass View Controller-->
+        <!--Introvert Pass View Controller-->
         <scene sceneID="hWZ-TT-EQR">
             <objects>
-                <viewController id="qB7-BD-WH1" customClass="GroupPassViewController" sceneMemberID="viewController">
+                <viewController id="qB7-BD-WH1" customClass="IntrovertPassViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zR6-V7-vgu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuy-Md-bfq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6880" y="35"/>
+            <point key="canvasLocation" x="6780" y="745"/>
         </scene>
         <!--Outings-->
         <scene sceneID="Ydk-VJ-3mT">
@@ -760,10 +746,41 @@
             </objects>
             <point key="canvasLocation" x="2265" y="1649"/>
         </scene>
+        <!--Introvert Pass View Controller-->
+        <scene sceneID="8Tf-HF-876">
+            <objects>
+                <viewController id="SgE-62-r92" customClass="IntrovertPassViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sla-9e-oE3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zd2-Ah-pvf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="D1m-tS-HX6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZZ-ci-zO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6042" y="745"/>
+        </scene>
+        <!--Introvert Pass View Controller-->
+        <scene sceneID="dDO-TM-CRe">
+            <objects>
+                <viewController id="MsZ-oY-Q1i" customClass="IntrovertPassViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8O-mA-mfa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nr2-ug-vJ2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j51-CJ-FgP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F8G-xT-hdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5294" y="745"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jCR-Io-Gl7"/>
-        <segue reference="r3V-LK-50N"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.circle" catalog="system" width="128" height="121"/>

@@ -33,7 +33,6 @@
 		9553A4BD28777E9C005C988B /* ProfilePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */; };
 		9566B983287908CD0005D40A /* ProfileViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566B982287908CD0005D40A /* ProfileViewContoller.m */; };
 		9566B986287C8B830005D40A /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566B985287C8B830005D40A /* GroupViewController.m */; };
-		9566B989287C8DE70005D40A /* GroupPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566B988287C8DE70005D40A /* GroupPassViewController.m */; };
 		966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06785D0378A68E04F16E844B /* libPods-HangOut.a */; };
 		96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */; };
 /* End PBXBuildFile section */
@@ -107,8 +106,6 @@
 		9566B982287908CD0005D40A /* ProfileViewContoller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewContoller.m; sourceTree = "<group>"; };
 		9566B984287C8B830005D40A /* GroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
 		9566B985287C8B830005D40A /* GroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
-		9566B987287C8DE70005D40A /* GroupPassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupPassViewController.h; sourceTree = "<group>"; };
-		9566B988287C8DE70005D40A /* GroupPassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupPassViewController.m; sourceTree = "<group>"; };
 		9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HangOutTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,8 +194,6 @@
 				953F07072874ABD6009BD594 /* ViewController.h */,
 				953F07082874ABD6009BD594 /* ViewController.m */,
 				953F070A2874ABD6009BD594 /* Main.storyboard */,
-				9566B987287C8DE70005D40A /* GroupPassViewController.h */,
-				9566B988287C8DE70005D40A /* GroupPassViewController.m */,
 				9566B981287908CD0005D40A /* ProfileViewContoller.h */,
 				9566B982287908CD0005D40A /* ProfileViewContoller.m */,
 				9553A4B6287655AD005C988B /* PostViewController.h */,
@@ -483,7 +478,6 @@
 				9566B983287908CD0005D40A /* ProfileViewContoller.m in Sources */,
 				9548732D28750592002CD6BC /* Post.m in Sources */,
 				9553A4BD28777E9C005C988B /* ProfilePictureViewController.m in Sources */,
-				9566B989287C8DE70005D40A /* GroupPassViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

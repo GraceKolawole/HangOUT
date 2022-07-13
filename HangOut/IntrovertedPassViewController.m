@@ -11,6 +11,8 @@
 @interface IntrovertedPassViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *groupNameTFd;
 @property (weak, nonatomic) IBOutlet UITextField *groupPassTFd;
+@property (nullable, nonatomic, strong) NSString *ingroupname;
+@property (nullable, nonatomic, strong) NSString *ingrouppass;
 
 - (IBAction)login:(id)sender;
 - (IBAction)signUp:(id)sender;
@@ -23,10 +25,10 @@
     // Do any additional setup after loading the view.
 }
 - (void)loginUser{
-    NSString *username = self.groupNameTFd.text;
-    NSString *password = self.groupPassTFd.text;
+    NSString *ingroupname = self.groupNameTFd.text;
+    NSString *ingrouppass = self.groupPassTFd.text;
     
-    [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
+    [PFUser logInWithUsernameInBackground:ingroupname password:ingrouppass block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
             NSLog(@"User log in failed: %@", error.localizedDescription);
            
@@ -42,8 +44,8 @@
 
     PFUser *newUser = [PFUser user];
     
-    newUser.username = self.groupNameTFd.text;
-    newUser.password = self.groupPassTFd.text;
+    newUser.ingroupname = self.groupNameTFd.text;
+    newUser.ingrouppass = self.groupPassTFd.text;
     
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
@@ -51,7 +53,7 @@
             // Todo - segue
         } else {
             NSLog(@"User registered successfully");
-            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
+            [self performSegueWithIdentifier:@"ThirdSegue" sender:nil];
   
         }
     }];

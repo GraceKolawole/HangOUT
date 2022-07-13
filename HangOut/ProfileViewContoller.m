@@ -92,22 +92,13 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
 
-    // Get the image captured by the UIImagePickerController
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
-//    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
-    
-    // Do something with the images (based on your use case)
+
     UIImage *resizedImage = [self resizeImage:originalImage withSize:CGSizeMake(200, 200)];
     self.profilePictureImageView.image = resizedImage;
-    
-//    id profilePicObject = resizedImage;
-//    [NSNotificationCenter.defaultCenter postNotificationName:@"handleProfilePicChange" object:profilePicObject];
-    
+
     [ProfilePic profilepicUserImage:resizedImage withCompletion:^(BOOL succeeded, NSError * _Nullable error) {}];
     
-    
-    //self.pictureImageView.image = resizedImage;
-    // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
@@ -123,9 +114,5 @@
     
     return newImage;
 }
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return [self.picArray count];
-//}
-
 
 @end

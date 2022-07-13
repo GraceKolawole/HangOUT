@@ -32,7 +32,7 @@
            
         } else {
             NSLog(@"User logged in successfully");
-            [self performSegueWithIdentifier:@"fourthSegue" sender:nil];
+            [self performSegueWithIdentifier:@"FourthSegue" sender:nil];
         }
         
     }];
@@ -50,7 +50,7 @@
            // Todo - segue
        } else {
            NSLog(@"User registered successfully");
-           [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
+           [self performSegueWithIdentifier:@"fourthSegue" sender:nil];
  
        }
    }];

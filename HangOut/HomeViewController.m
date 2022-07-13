@@ -69,9 +69,6 @@
     [postQuery includeKey:@"author"];
     postQuery.limit = 35;
     
-//    PFQuery *picQuery = [ProfilePic query];
-//    [picQuery orderByDescending:@"updateAt"];
-//    picQuery.limit = 1;
 
     [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
         if (posts) {
@@ -83,17 +80,6 @@
         }
     }];
     
-    
-//    [picQuery findObjectsInBackgroundWithBlock:^(NSArray<ProfilePic *> * _Nullable pic, NSError * _Nullable error) {
-//        if (pic) {
-//            self.picArray = (NSMutableArray *)pic;
-//
-//            [self.tableView reloadData];
-//        }
-//        else {
-//            NSLog(@"%@", error.localizedDescription);
-//        }
-//    }];
     [self.refreshControl endRefreshing];
     
 }

@@ -75,36 +75,35 @@
     EventCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell"];
     NSDictionary *event = self.events[indexPath.row];
     NSDictionary *venue = event[@"venue"];
-//    NSDictionary *performers = event[@"performers"];
     NSArray *performers = event[@"performers"];
     NSString *performerName = performers[0][@"name"];
     cell.titleLabel.text = performerName;
     
-    NSString *baseURLString = @"https://seatgeek.com/images";
-    NSString *posterURLString = performers[0][@"image"];
-    NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
     
-    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
-    cell.posterView.image = nil;
-//    [posterURL saveInBackground];
-//    [cell.posterView setImageWithURL:posterURL];
-    
-//    NSURL *linkURL  = performers[0][@"url"];
-//    NSURL *myURL = performers[0][[NSURL alloc]initWithString:@"https://seatgeek.com/performers/tickets"];
-//    cell.linkLabel.text = myURL;
-//    NSString *  = performers[0][@"url"];
-//    NSData *myData = [[NSData alloc]initWithContentsOfURL:myURL];
-//    id myJSON = [NSJSONSerialization JSONObjectWithData:myData options:NSJSONReadingMutableContainers error:nil];
-//    NSArray *jsonArray = (NSArray *)myJSON;
-//    for (id element in jsonArray) {
-//        NSLog(@"Element: %@", [element description]);
-
     cell.addressLabel.text = venue[@"address"];
     cell.cityLabel.text = venue[@"city"];
     cell.eventType.text = event[@"type"];
     cell.locationLabel.text = venue[@"display_location"];
     cell.dateTimeLabel.text = event[@"datetime_utc"];
-    
+    //
+    //    NSString *baseURLString = @"https://seatgeek.com/images";
+    //    NSString *posterURLString = performers[0][@"image"];
+    //    NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
+        
+    //    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+    //    cell.posterView.image = nil;
+    //    [posterURL saveInBackground];
+    //    [cell.posterView setImageWithURL:posterURL];
+        
+    //    NSURL *linkURL  = performers[0][@"url"];
+    //    NSURL *myURL = performers[0][[NSURL alloc]initWithString:@"https://seatgeek.com/performers/tickets"];
+    //    cell.linkLabel.text = myURL;
+    //    NSString *  = performers[0][@"url"];
+    //    NSData *myData = [[NSData alloc]initWithContentsOfURL:myURL];
+    //    id myJSON = [NSJSONSerialization JSONObjectWithData:myData options:NSJSONReadingMutableContainers error:nil];
+    //    NSArray *jsonArray = (NSArray *)myJSON;
+    //    for (id element in jsonArray) {
+    //        NSLog(@"Element: %@", [element description]);
     
 //    /
 //

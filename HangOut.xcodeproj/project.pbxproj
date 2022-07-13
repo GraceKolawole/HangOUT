@@ -37,6 +37,8 @@
 		95DE87F5287E857300015C15 /* IntrovertedPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE87F4287E857300015C15 /* IntrovertedPassViewController.m */; };
 		95DE87F8287E858800015C15 /* ExtrovertedPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE87F7287E858800015C15 /* ExtrovertedPassViewController.m */; };
 		95DE87FB287E859700015C15 /* AmbivertedPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE87FA287E859700015C15 /* AmbivertedPassViewController.m */; };
+		95DE87FE287E8AF300015C15 /* IntrovertedMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE87FD287E8AF300015C15 /* IntrovertedMsgViewController.m */; };
+		95DE8804287E8BB700015C15 /* IntrovertedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE8803287E8BB700015C15 /* IntrovertedCell.m */; };
 		966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06785D0378A68E04F16E844B /* libPods-HangOut.a */; };
 		96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */; };
 /* End PBXBuildFile section */
@@ -119,6 +121,10 @@
 		95DE87F7287E858800015C15 /* ExtrovertedPassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtrovertedPassViewController.m; sourceTree = "<group>"; };
 		95DE87F9287E859700015C15 /* AmbivertedPassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmbivertedPassViewController.h; sourceTree = "<group>"; };
 		95DE87FA287E859700015C15 /* AmbivertedPassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmbivertedPassViewController.m; sourceTree = "<group>"; };
+		95DE87FC287E8AF300015C15 /* IntrovertedMsgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntrovertedMsgViewController.h; sourceTree = "<group>"; };
+		95DE87FD287E8AF300015C15 /* IntrovertedMsgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntrovertedMsgViewController.m; sourceTree = "<group>"; };
+		95DE8802287E8BB700015C15 /* IntrovertedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntrovertedCell.h; sourceTree = "<group>"; };
+		95DE8803287E8BB700015C15 /* IntrovertedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntrovertedCell.m; sourceTree = "<group>"; };
 		F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +252,10 @@
 				95DE87F7287E858800015C15 /* ExtrovertedPassViewController.m */,
 				95DE87F9287E859700015C15 /* AmbivertedPassViewController.h */,
 				95DE87FA287E859700015C15 /* AmbivertedPassViewController.m */,
+				95DE87FC287E8AF300015C15 /* IntrovertedMsgViewController.h */,
+				95DE87FD287E8AF300015C15 /* IntrovertedMsgViewController.m */,
+				95DE8802287E8BB700015C15 /* IntrovertedCell.h */,
+				95DE8803287E8BB700015C15 /* IntrovertedCell.m */,
 			);
 			path = HangOut;
 			sourceTree = "<group>";
@@ -482,6 +492,7 @@
 			files = (
 				953B4B9E287796FE0090186A /* ProfilePic.m in Sources */,
 				950B82832878B07A00C8DC57 /* EventsViewController.m in Sources */,
+				95DE87FE287E8AF300015C15 /* IntrovertedMsgViewController.m in Sources */,
 				953F07172874ABD7009BD594 /* main.m in Sources */,
 				953F07092874ABD6009BD594 /* ViewController.m in Sources */,
 				953F073B2874D229009BD594 /* LoginViewController.m in Sources */,
@@ -489,6 +500,7 @@
 				95DE87F5287E857300015C15 /* IntrovertedPassViewController.m in Sources */,
 				9553A4B528764319005C988B /* SignupViewController.m in Sources */,
 				9548733328752786002CD6BC /* SearchViewController.m in Sources */,
+				95DE8804287E8BB700015C15 /* IntrovertedCell.m in Sources */,
 				95DE87F8287E858800015C15 /* ExtrovertedPassViewController.m in Sources */,
 				95DE87FB287E859700015C15 /* AmbivertedPassViewController.m in Sources */,
 				950B82862878B35300C8DC57 /* EventCell.m in Sources */,

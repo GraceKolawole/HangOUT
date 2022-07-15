@@ -44,7 +44,7 @@
            
         } else {
             NSLog(@"User logged in successfully");
-            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
+            [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
         }
         
     }];

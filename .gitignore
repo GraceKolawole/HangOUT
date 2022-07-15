@@ -4,4 +4,4 @@
 .DS_Store
 
 # Exclude user specific files
-xcuserdata/*
+xcuserdata/

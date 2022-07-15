@@ -12,6 +12,13 @@
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
 #import "PFImageView.h"
+#import "SignupViewController.h"
+#import "LoginViewController.h"
+#import "EventCell.h"
+#import "HangOUTCell.h"
+#import "HomeViewController.h"
+#import "Post.h"
+
 //UITableViewDataSource, UITableViewDelegate,
 @interface ProfileViewContoller () < UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -21,6 +28,7 @@
 @property (nonatomic, strong) NSMutableArray *picArray;
 @property (strong, nonatomic) ProfilePic *pic;
 @property (weak, nonatomic) PFImageView *profilePictureImageView;
+@property (nonatomic, strong) NSMutableArray<Post *> *postsArray;
 
 @end
 
@@ -29,16 +37,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
     self.refreshControl = [[UIRefreshControl alloc] init];
 
-//    self.tableView.dataSource = self;
-//    self.tableView.delegate = self;
+    self.userLabel.text = self.post.author.username;
+    self.usernameLabel.text = self.post.author.username;
+    self.emailLabel.text = self.post.email;
+
 
     [self.refreshControl addTarget:self action: @selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
-//    [self.tableView insertSubview:self.refreshControl atIndex:0];
 
-    // Server fetch
     PFQuery *picQuery = [ProfilePic query];
     [picQuery includeKey:@"author"];
     [picQuery whereKey:@"author" equalTo:[PFUser currentUser]];
@@ -50,19 +57,16 @@
                   self.profilePictureImageView.file = [p objectForKey:@"image"];
                   [self.profilePictureImageView loadInBackground];
               }
-              
+
           }
           else {
               NSLog(@"%@", error.localizedDescription);
           }
           }];
+
 }
      - (void)beginRefresh: (UIRefreshControl *)UIRefreshControl {
-         
-         // get the current user
-         // set the user image
-         // set the property
-         
+
          PFQuery *picQuery = [ProfilePic query];
          [picQuery orderByDescending:@"updateAt"];
          picQuery.limit = 1;
@@ -80,12 +84,12 @@
 }
 
 - (IBAction)tappedAlbum:(id)sender {
-    
+
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
     imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
+
     [self presentViewController:imagePickerVC animated:YES completion:nil];
 }
 
@@ -98,20 +102,20 @@
     self.profilePictureImageView.image = resizedImage;
 
     [ProfilePic profilepicUserImage:resizedImage withCompletion:^(BOOL succeeded, NSError * _Nullable error) {}];
-    
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
     UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-    
+
     resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
     resizeImageView.image = image;
-    
+
     UIGraphicsBeginImageContext(size);
     [resizeImageView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
+
     return newImage;
 }
 

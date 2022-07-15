@@ -26,11 +26,11 @@
 
 - (void)signupUser {
     PFUser *newUser = [PFUser user];
-    
+
     newUser.username = self.usernameTextFeild.text;
     newUser.password = self.passwordTextFeild.text;
     newUser.email = self.emailTextFeild.text;
-    //newUser.address = self.addressTextFeild.text;
+
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
@@ -38,10 +38,10 @@
         } else {
             NSLog(@"User registered successfully");
             [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
-  
+
         }
     }];
-    
+
 }/*
 #pragma mark - Navigation
 
@@ -60,7 +60,7 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
                                                         style:UIAlertActionStyleCancel
                                                       handler:^(UIAlertAction * _Nonnull action) {
-                                                         
+
                                                       }];
     [alert addAction:cancelAction];
 
@@ -71,7 +71,7 @@
     [alert addAction:okAction];
     [self presentViewController:alert animated:YES completion:^{
     }];
-    
+
     }
     else{
         [self signupUser];

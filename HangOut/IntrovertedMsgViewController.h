@@ -1,5 +1,5 @@
 //
-//  GroupPassViewController.h
+//  IntrovertedMsgViewController.h
 //  HangOut
 //
 //  Created by Oluwanifemi Kolawole on 7/12/22.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GroupPassViewController : UIViewController
+@interface IntrovertedMsgViewController : UIViewController
 
 @end
 

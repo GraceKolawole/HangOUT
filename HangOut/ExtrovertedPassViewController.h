@@ -1,5 +1,5 @@
 //
-//  GroupPassViewController.h
+//  ExtrovertedPassViewController.h
 //  HangOut
 //
 //  Created by Oluwanifemi Kolawole on 7/12/22.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GroupPassViewController : UIViewController
+@interface ExtrovertedPassViewController : UIViewController
 
 @end
 

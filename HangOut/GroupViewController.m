@@ -6,7 +6,7 @@
 //
 
 #import "GroupViewController.h"
-#import "GroupPassViewController.h"
+//#import "GroupPassViewController.h"
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
 
@@ -34,18 +34,18 @@
 }
 */
 
-- (IBAction)ambivertedLogin:(id)sender {
-    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
-
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    GroupPassViewController *GroupPassViewController = [storyboard instantiateViewControllerWithIdentifier:@"GroupPassViewController"];
-
-    sceneDelegate.window.rootViewController = GroupPassViewController;
-
-    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        // PFUser.current() will
-    }];
-}
+//- (IBAction)ambivertedLogin:(id)sender {
+//    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+//
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//     *GroupPassViewController = [storyboard instantiateViewControllerWithIdentifier:@"GroupPassViewController"];
+//
+//    sceneDelegate.window.rootViewController = GroupPassViewController;
+//
+//    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+//        // PFUser.current() will
+//    }];
+//}
 
 - (IBAction)extrovertedLogin:(id)sender {
 }

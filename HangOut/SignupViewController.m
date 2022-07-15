@@ -26,11 +26,11 @@
 
 - (void)signupUser {
     PFUser *newUser = [PFUser user];
-    
+
     newUser.username = self.usernameTextFeild.text;
     newUser.password = self.passwordTextFeild.text;
     newUser.email = self.emailTextFeild.text;
-    newUser.password = self.addressTextFeild.text;
+
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
@@ -38,10 +38,10 @@
         } else {
             NSLog(@"User registered successfully");
             [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
-  
+
         }
     }];
-    
+
 }/*
 #pragma mark - Navigation
 
@@ -53,14 +53,14 @@
 */
 
 - (IBAction)signupUser:(id)sender {
-    if([self.usernameTextFeild.text isEqual:@""] || [self.passwordTextFeild.text isEqual:@""] || [self.emailTextFeild.text isEqual:@""] || [self.addressTextFeild.text isEqual:@""]){
+    if([self.usernameTextFeild.text isEqual:@""] || [self.passwordTextFeild.text isEqual:@""] || [self.emailTextFeild.text isEqual:@""]){
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Title"
                                                                                message:@"Message"
                                                                         preferredStyle:(UIAlertControllerStyleAlert)];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
                                                         style:UIAlertActionStyleCancel
                                                       handler:^(UIAlertAction * _Nonnull action) {
-                                                         
+
                                                       }];
     [alert addAction:cancelAction];
 
@@ -71,7 +71,7 @@
     [alert addAction:okAction];
     [self presentViewController:alert animated:YES completion:^{
     }];
-    
+
     }
     else{
         [self signupUser];

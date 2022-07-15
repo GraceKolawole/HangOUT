@@ -32,9 +32,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
         self.refreshControl = [[UIRefreshControl alloc] init];
-    
+
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
 
@@ -56,11 +56,11 @@
                 NSLog(@"%@", error.localizedDescription);
             }
         }];
-    
+
 }
 
 - (void)beginRefresh: (UIRefreshControl *)UIRefreshControl {
-    
+
     // get the current user
     // set the user image
     // set the property
@@ -79,14 +79,13 @@
             NSLog(@"%@", error.localizedDescription);
         }
     }];
-
     [self.refreshControl endRefreshing];
-    
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HangOUTCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HangOUTCell"];
-    
+
     Post *post = self.postsArray[indexPath.row];
 
     if(post.image == nil){
@@ -97,31 +96,31 @@
         cell.postPictureImageView.file = post[@"image"];
         [cell.postPictureImageView loadInBackground];
     }
-    
+
     cell.captionLabel.text = post.caption;
     cell.userLabel.text = post.author.username;
     cell.usernameLabel.text =  post.author.username;
     cell.dateLabel.text = [post.createdAt shortTimeAgoSinceNow];
-    
+
     PFQuery *picQuery = [ProfilePic query];
     [picQuery includeKey:@"author"];
     [picQuery whereKey:@"author" equalTo:post.author];
-    
+
     [picQuery findObjectsInBackgroundWithBlock:^(NSArray<ProfilePic *> * _Nullable pic, NSError * _Nullable error) {
           if (pic) {
               for(ProfilePic *p in pic){
                   cell.profilePictureImageView.file = [p objectForKey:@"image"];
                   [cell.profilePictureImageView loadInBackground];
               }
-              
+
           }
           else {
               NSLog(@"%@", error.localizedDescription);
           }
           }];
-    
+
     return cell;
-    
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -132,18 +131,18 @@
 
 - (IBAction)didTapLogout:(id)sender {
    // [self dismissViewControllerAnimated:true completion:nil];
-    
+
     SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
 
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    
+
     sceneDelegate.window.rootViewController = loginViewController;
-    
+
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
         // PFUser.current() will now be nil
     }];
-    
+
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -181,4 +180,3 @@
 
 
 @end
-                                                                                              

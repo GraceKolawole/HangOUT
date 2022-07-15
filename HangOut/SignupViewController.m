@@ -29,8 +29,8 @@
     
     newUser.username = self.usernameTextFeild.text;
     newUser.password = self.passwordTextFeild.text;
-    newUser.password = self.emailTextFeild.text;
-    newUser.password = self.addressTextFeild.text;
+    newUser.email = self.emailTextFeild.text;
+    //newUser.address = self.addressTextFeild.text;
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
@@ -53,7 +53,7 @@
 */
 
 - (IBAction)signupUser:(id)sender {
-    if([self.usernameTextFeild.text isEqual:@""] || [self.passwordTextFeild.text isEqual:@""] || [self.emailTextFeild.text isEqual:@""] || [self.addressTextFeild.text isEqual:@""]){
+    if([self.usernameTextFeild.text isEqual:@""] || [self.passwordTextFeild.text isEqual:@""] || [self.emailTextFeild.text isEqual:@""]){
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Title"
                                                                                message:@"Message"
                                                                         preferredStyle:(UIAlertControllerStyleAlert)];

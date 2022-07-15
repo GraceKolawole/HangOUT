@@ -6,6 +6,7 @@
 //
 
 #import "Post.h"
+#import "Parse/Parse.h"
 
 @implementation Post
 
@@ -22,11 +23,12 @@
 }
 
 + (void) postUserImage: ( UIImage * _Nullable )image withCaption: ( NSString * _Nullable )caption withCompletion: (PFBooleanResultBlock  _Nullable)completion {
-    
     Post *newPost = [Post new];
-    newPost.image = [self getPFFileFromImage:image];
+    newPost.postID = @"PostID";
+    newPost.userID = @"userID";
     newPost.author = [PFUser currentUser];
     newPost.caption = caption;
+    newPost.image = [self getPFFileFromImage:image];
     newPost.likeCount = @(0);
     newPost.commentCount = @(0);
     
@@ -48,6 +50,15 @@
         return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
     
 }
+    
 
+//[post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//    if (succeeded) {
+//        // The object has been saved.
+//    }
+//    else {
+//        NSLog(@"%@", error.localizedDescription);
+//    }
+//}];
 
 @end

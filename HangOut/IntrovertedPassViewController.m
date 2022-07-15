@@ -44,8 +44,8 @@
 
     PFUser *newUser = [PFUser user];
     
-    newUser.ingroupname = self.groupNameTFd.text;
-    newUser.ingrouppass = self.groupPassTFd.text;
+//    newUser.ingroupname = self.groupNameTFd.text;
+//    newUser.ingrouppass = self.groupPassTFd.text;
     
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {

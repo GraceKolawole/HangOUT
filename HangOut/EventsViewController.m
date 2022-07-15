@@ -37,7 +37,6 @@
 
     [self.tableView addSubview:self.refreshControl];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
-//    self.tableView.estimatedRowHeight = [UITableView.automaticDimension];
 }
 -(void) fetchEvents{
     NSURL *url= [NSURL URLWithString:@"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894"
@@ -123,6 +122,7 @@
 //    userPhoto[@"imageFile"] = imageFile;
 //    [userPhoto saveInBackground];
     return cell;
+//    return UITableViewAutomaticDimension;
 }
 
 -(void) displayAlertMessages{

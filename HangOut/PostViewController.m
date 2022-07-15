@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) UIImage *postImage;
 @property (weak, nonatomic) IBOutlet UIImageView *postPictureImageView;
-@property (weak, nonatomic) IBOutlet UITextField *captionTextFeild;
+@property (weak, nonatomic) IBOutlet UITextView *captionTextView;
 
 @end
 
@@ -54,7 +54,8 @@
 
     // Do something with the images (based on your use case)
     UIImage *resizedImage = [self resizeImage:originalImage withSize:CGSizeMake(200, 200)];
-    self.postPictureImageView.image = resizedImage;
+    self.postImage = resizedImage;
+    self.postPictureImageView.image = self.postImage;
     
     //self.pictureImageView.image = resizedImage;
     // Dismiss UIImagePickerController to go back to your original view controller
@@ -74,7 +75,7 @@
     return newImage;
 }
 - (IBAction)didTapPost:(id)sender {
-    [Post postUserImage:self.postPictureImageView.image withCaption:self.captionTextFeild.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+    [Post postUserImage:self.postImage withCaption:self.captionTextView.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
             if(error != nil){
                 NSLog(@"User share failed: %@", error.localizedDescription);
                

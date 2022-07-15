@@ -15,6 +15,7 @@
 #import "HangOUTCell.h"
 #import "PFImageView.h"
 #import "ProfilePic.h"
+#import "DateTools.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -68,10 +69,6 @@
     [postQuery orderByDescending:@"createdAt"];
     [postQuery includeKey:@"author"];
     postQuery.limit = 35;
-    
-//    PFQuery *picQuery = [ProfilePic query];
-//    [picQuery orderByDescending:@"updateAt"];
-//    picQuery.limit = 1;
 
     [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
         if (posts) {
@@ -82,18 +79,7 @@
             NSLog(@"%@", error.localizedDescription);
         }
     }];
-    
-    
-//    [picQuery findObjectsInBackgroundWithBlock:^(NSArray<ProfilePic *> * _Nullable pic, NSError * _Nullable error) {
-//        if (pic) {
-//            self.picArray = (NSMutableArray *)pic;
-//
-//            [self.tableView reloadData];
-//        }
-//        else {
-//            NSLog(@"%@", error.localizedDescription);
-//        }
-//    }];
+
     [self.refreshControl endRefreshing];
     
 }
@@ -102,20 +88,20 @@
     HangOUTCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HangOUTCell"];
     
     Post *post = self.postsArray[indexPath.row];
-    //NSLog(@"%i", _picArray.count);
-    cell.post = post;
-    
-//    ProfilePic *pic = self.picArray[indexPath.row];
-//    cell.pic = pic;
-    
-    cell.postPictureImageView.file = post[@"image"];
-    [cell.postPictureImageView loadInBackground];
-//    cell.profilePictureImageView.file = pic[@"image"];
-//    [cell.profilePictureImageView loadInBackground];
+
+    if(post.image == nil){
+        [cell.postPictureImageView setHidden:YES];
+    }
+    else {
+        [cell.postPictureImageView setHidden:NO];
+        cell.postPictureImageView.file = post[@"image"];
+        [cell.postPictureImageView loadInBackground];
+    }
     
     cell.captionLabel.text = post.caption;
     cell.userLabel.text = post.author.username;
     cell.usernameLabel.text =  post.author.username;
+    cell.dateLabel.text = [post.createdAt shortTimeAgoSinceNow];
     
     PFQuery *picQuery = [ProfilePic query];
     [picQuery includeKey:@"author"];
@@ -159,8 +145,39 @@
     }];
     
 }
-    
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Post *post = self.postsArray[indexPath.row];
+    if(post.image == nil){
+        return 206;
+    }
+    else {
+        return 446;
+    }
+}
+- (IBAction)didTapFavorite:(id)sender {
+//        if (self.post.favorited){
+//            self.post.favorited =NO;
+//            self.post.favoriteCount -=1;
+//            //todo : update fav text
+//            [self.likeButton setImage:[UIImage imageNamed:@"favor-icon"] forState:UIControlStateNormal];
+//
+//            NSString *favoriteCount = [NSString stringWithFormat:@"%d", self.post.likeCount];
+//                    [self.likeCount setTitle:favoriteCount forState:UIControlStateNormal];
+//
+//        }
+//
+//        else{
+//            self.post.favorited =YES;
+//            self.post.likeCount +=1;
+//            //todo : update fav text
+//            [self.likeButton setImage:[UIImage imageNamed:@"favor-icon-red"] forState:UIControlStateNormal];
+//
+//            NSString *likeCount = [NSString stringWithFormat:@"%d", self.post.likeCount];
+//                    [self.likeButton setTitle:likeCount forState:UIControlStateNormal];
+//        }
+//
+}
 
 
 @end

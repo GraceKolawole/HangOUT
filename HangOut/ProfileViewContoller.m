@@ -12,6 +12,13 @@
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
 #import "PFImageView.h"
+#import "SignupViewController.h"
+#import "LoginViewController.h"
+#import "EventCell.h"
+#import "HangOUTCell.h"
+#import "HomeViewController.h"
+#import "Post.h"
+
 //UITableViewDataSource, UITableViewDelegate,
 @interface ProfileViewContoller () < UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -21,6 +28,7 @@
 @property (nonatomic, strong) NSMutableArray *picArray;
 @property (strong, nonatomic) ProfilePic *pic;
 @property (weak, nonatomic) PFImageView *profilePictureImageView;
+@property (nonatomic, strong) NSMutableArray<Post *> *postsArray;
 
 @end
 
@@ -29,16 +37,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
     self.refreshControl = [[UIRefreshControl alloc] init];
+    
+    self.userLabel.text = self.post.author.username;
+    self.usernameLabel.text = self.post.author.username;
+    self.emailLabel.text = self.post.email;
 
-//    self.tableView.dataSource = self;
-//    self.tableView.delegate = self;
 
     [self.refreshControl addTarget:self action: @selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
-//    [self.tableView insertSubview:self.refreshControl atIndex:0];
-
-    // Server fetch
+    
     PFQuery *picQuery = [ProfilePic query];
     [picQuery includeKey:@"author"];
     [picQuery whereKey:@"author" equalTo:[PFUser currentUser]];
@@ -56,12 +63,9 @@
               NSLog(@"%@", error.localizedDescription);
           }
           }];
+    
 }
      - (void)beginRefresh: (UIRefreshControl *)UIRefreshControl {
-         
-         // get the current user
-         // set the user image
-         // set the property
          
          PFQuery *picQuery = [ProfilePic query];
          [picQuery orderByDescending:@"updateAt"];
@@ -94,19 +98,13 @@
 
     // Get the image captured by the UIImagePickerController
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
-//    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
-    
-    // Do something with the images (based on your use case)
+
     UIImage *resizedImage = [self resizeImage:originalImage withSize:CGSizeMake(200, 200)];
     self.profilePictureImageView.image = resizedImage;
     
-//    id profilePicObject = resizedImage;
-//    [NSNotificationCenter.defaultCenter postNotificationName:@"handleProfilePicChange" object:profilePicObject];
     
     [ProfilePic profilepicUserImage:resizedImage withCompletion:^(BOOL succeeded, NSError * _Nullable error) {}];
     
-    
-    //self.pictureImageView.image = resizedImage;
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -123,9 +121,5 @@
     
     return newImage;
 }
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return [self.picArray count];
-//}
-
 
 @end

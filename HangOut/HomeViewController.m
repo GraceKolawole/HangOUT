@@ -98,6 +98,14 @@
     }
 
     cell.captionLabel.text = post.caption;
+        CGFloat fixedWidth = cell.captionLabel.frame.size.width;
+    CGSize newSize = [cell.captionLabel sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+        CGRect newFrame = cell.captionLabel.frame;
+        newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newSize.height);
+    cell.captionLabel.frame = newFrame;
+    [cell.captionLabel setNeedsUpdateConstraints];
+    [cell.captionLabel layoutIfNeeded];
+    
     cell.userLabel.text = post.author.username;
     cell.usernameLabel.text =  post.author.username;
     cell.dateLabel.text = [post.createdAt shortTimeAgoSinceNow];
@@ -127,8 +135,15 @@
     return [self.postsArray count];
 }
 
-
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  // Disable selecting row until implemented
+  return nil;
+}
 - (IBAction)didTapLogout:(id)sender {
    // [self dismissViewControllerAnimated:true completion:nil];
 
@@ -144,6 +159,7 @@
     }];
 
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Post *post = self.postsArray[indexPath.row];
@@ -155,27 +171,7 @@
     }
 }
 - (IBAction)didTapFavorite:(id)sender {
-//        if (self.post.favorited){
-//            self.post.favorited =NO;
-//            self.post.favoriteCount -=1;
-//            //todo : update fav text
-//            [self.likeButton setImage:[UIImage imageNamed:@"favor-icon"] forState:UIControlStateNormal];
-//
-//            NSString *favoriteCount = [NSString stringWithFormat:@"%d", self.post.likeCount];
-//                    [self.likeCount setTitle:favoriteCount forState:UIControlStateNormal];
-//
-//        }
-//
-//        else{
-//            self.post.favorited =YES;
-//            self.post.likeCount +=1;
-//            //todo : update fav text
-//            [self.likeButton setImage:[UIImage imageNamed:@"favor-icon-red"] forState:UIControlStateNormal];
-//
-//            NSString *likeCount = [NSString stringWithFormat:@"%d", self.post.likeCount];
-//                    [self.likeButton setTitle:likeCount forState:UIControlStateNormal];
-//        }
-//
+
 }
 
 

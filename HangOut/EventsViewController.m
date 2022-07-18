@@ -37,6 +37,7 @@
 
     [self.tableView addSubview:self.refreshControl];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
+    [self.refreshControl endRefreshing];
 }
 -(void) fetchEvents{
     NSURL *url= [NSURL URLWithString:@"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894"
@@ -57,6 +58,7 @@
                
            }
         [self.refreshControl endRefreshing];
+        [self.indicator stopAnimating];
         
     }];
     [task resume];
@@ -87,45 +89,37 @@
     if (performers && performers.count > 0) {
         NSString *performerName = performers.firstObject[@"name"];
         cell.titleLabel.text = performerName;
-        NSString *posterURLString = performers.firstObject[@"image"];
+        NSString *ticLink = performers.firstObject[@"url"];
+        cell.linkTextView.text = ticLink;
+        CGFloat fixedWidth = cell.linkTextView.frame.size.width;
+        CGSize newSize = [cell.linkTextView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+        CGRect newFrame = cell.linkTextView.frame;
+        newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newSize.height);
+        cell.linkTextView.frame = newFrame;
+        [cell.linkTextView setNeedsUpdateConstraints];
+        [cell.linkTextView layoutIfNeeded];
 
+        NSString *posterURLString = performers.firstObject[@"image"];
+        
+        if (![posterURLString isKindOfClass:[NSNull class]]) {
         NSURL *posterURL = [NSURL URLWithString:posterURLString];
     [NSData dataWithContentsOfURL:posterURL];
     NSData *posterImageData = [NSData dataWithContentsOfURL:posterURL];
     cell.posterView.image = [UIImage imageWithData:posterImageData];
+        }
+        
     }
 
-//        cell.posterView.image = nil;
-//        [posterURL saveInBackground];
-//        [cell.posterView setImageWithURL:posterURL];
-//
-//        NSURL *linkURL  = performers[0][@"url"];
-//        NSURL *myURL = performers[0][[NSURL alloc]initWithString:@"https://seatgeek.com/performers/tickets"];
-    //    cell.linkLabel.text = myURL;
-    //    NSString *  = performers[0][@"url"];
-    //    NSData *myData = [[NSData alloc]initWithContentsOfURL:myURL];
-    //    id myJSON = [NSJSONSerialization JSONObjectWithData:myData options:NSJSONReadingMutableContainers error:nil];
-    //    NSArray *jsonArray = (NSArray *)myJSON;
-    //    for (id element in jsonArray) {
-    //        NSLog(@"Element: %@", [element description]);
-    
-//    /
-//
-////    NSString *baseURLString = @"https://seatgeek.com/images";
-//    NSString *imageURLString = event[@"image"];
-//    NSString *fullimageURLString = [baseURLString stringByAppendingString:imageURLString];
-///Users/gracekolawole/Desktop/See/HangOUT/HangOut.xcworkspace
-//    NSURL *imageURL = [NSURL URLWithString:fullimageURLString];
-//    cell.posterView.image = nil;
-//
-//    PFFileObject *imageFile = [PFFileObject fileObjectWithName:@"image.jpg" data:imageData];
-//
-//    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-//    userPhoto[@"imageName"] = @"image";
-//    userPhoto[@"imageFile"] = imageFile;
-//    [userPhoto saveInBackground];
     return cell;
-//    return UITableViewAutomaticDimension;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  // Disable selecting row until implemented
+  return nil;
 }
 
 -(void) displayAlertMessages{
@@ -141,4 +135,3 @@
 }
 
     @end
-

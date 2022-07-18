@@ -20,4 +20,9 @@
     // Configure the view for the selected state
 }
 
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    //TODO: clean up your cell
+}
+
 @end

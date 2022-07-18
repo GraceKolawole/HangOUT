@@ -28,7 +28,7 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    //self.
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     [self.indicator startAnimating];
     [self fetchEvents];
@@ -76,8 +76,7 @@
     NSDictionary *event = self.events[indexPath.row];
     NSDictionary *venue = event[@"venue"];
     NSArray *performers = event[@"performers"];
-    NSString *performerName = performers[0][@"name"];
-    cell.titleLabel.text = performerName;
+
     
     
     cell.addressLabel.text = venue[@"address"];
@@ -85,13 +84,17 @@
     cell.eventType.text = event[@"type"];
     cell.locationLabel.text = venue[@"display_location"];
     cell.dateTimeLabel.text = event[@"datetime_utc"];
+    if (performers && performers.count > 0) {
+        NSString *performerName = performers.firstObject[@"name"];
+        cell.titleLabel.text = performerName;
+        NSString *posterURLString = performers.firstObject[@"image"];
 
-        NSString *posterURLString = performers[0][@"image"];
-        
         NSURL *posterURL = [NSURL URLWithString:posterURLString];
     [NSData dataWithContentsOfURL:posterURL];
     NSData *posterImageData = [NSData dataWithContentsOfURL:posterURL];
     cell.posterView.image = [UIImage imageWithData:posterImageData];
+    }
+
 //        cell.posterView.image = nil;
 //        [posterURL saveInBackground];
 //        [cell.posterView setImageWithURL:posterURL];

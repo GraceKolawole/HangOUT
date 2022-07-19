@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B611C3964537B4B4653F24305990802F"
+               BlueprintIdentifier = "A4A46EB9B6D37DDBB1B00682F629D3C9"
                BlueprintName = "Pods-HangOut"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-HangOut.a">

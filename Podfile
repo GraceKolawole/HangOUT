@@ -9,7 +9,6 @@ target 'HangOut' do
     pod 'Parse'
     pod 'Parse/UI'
     pod 'DateTools'
-    pod 'AFNetworking'
 
   target 'HangOutTests' do
     inherit! :search_paths

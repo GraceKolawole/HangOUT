@@ -64,15 +64,9 @@
                         <color key="backgroundColor" systemColor="placeholderTextColor"/>
                     </view>
                     <connections>
-<<<<<<< HEAD
-                        <outlet property="passwordTextFeild" destination="mws-IP-VH4" id="eDJ-gZ-vPQ"/>
-                        <outlet property="usernameTextFeild" destination="XCb-pR-D0g" id="FVz-if-8zn"/>
-                        <segue destination="91b-IW-51q" kind="presentation" identifier="LoginSegue" id="sdW-o1-FYm"/>
-=======
                         <outlet property="passwordTextFeild" destination="mws-IP-VH4" id="tj6-ut-2Ve"/>
                         <outlet property="usernameTextFeild" destination="XCb-pR-D0g" id="n6W-OY-E9K"/>
                         <segue destination="91b-IW-51q" kind="presentation" identifier="LoginSegue" id="S5B-wu-U7e"/>
->>>>>>> Cleanup
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNL-d4-HOd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

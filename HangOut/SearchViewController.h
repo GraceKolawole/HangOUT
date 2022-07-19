@@ -9,10 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SearchViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating>
+@interface SearchViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate>
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
-@end
 
 NS_ASSUME_NONNULL_END

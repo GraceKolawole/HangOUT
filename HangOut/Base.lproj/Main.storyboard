@@ -221,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JL8-ch-upl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450.7246376811595" y="16.741071428571427"/>
+            <point key="canvasLocation" x="2330" y="17"/>
         </scene>
         <!--Group-->
         <scene sceneID="9EL-DV-Veo">
@@ -300,7 +300,7 @@
         <!--Outings-->
         <scene sceneID="Ydk-VJ-3mT">
             <objects>
-                <viewController id="HVE-UB-pTr" customClass="EventsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsViewController" id="HVE-UB-pTr" customClass="EventsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mVo-4W-Wbh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,14 +425,20 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="9pR-eA-oGs"/>
-                    <navigationItem key="navigationItem" title="Outings" id="hIk-EJ-Pna"/>
+                    <navigationItem key="navigationItem" title="Outings" id="hIk-EJ-Pna">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="jxt-Lr-evi">
+                            <connections>
+                                <action selector="didSearch:" destination="HVE-UB-pTr" id="0ai-vJ-eBa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EMQ-xu-8Ad" id="hJ7-oE-Cnf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0L-B8-e2w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4263.768115942029" y="16.741071428571427"/>
+            <point key="canvasLocation" x="4210" y="17"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="40I-mB-L1e">
@@ -894,12 +900,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2265" y="1649"/>
+            <point key="canvasLocation" x="1581" y="1454"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="LcH-XA-Ml4">
             <objects>
-                <viewController id="Zlc-Mr-Ltq" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="Zlc-Mr-Ltq" customClass="SearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H6n-Lt-0EI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -914,11 +920,11 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="53" id="wV0-gU-foQ">
-                                        <rect key="frame" x="0.0" y="88.5" width="414" height="53"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="93" id="wV0-gU-foQ" customClass="SearchCell">
+                                        <rect key="frame" x="0.0" y="88.5" width="414" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wV0-gU-foQ" id="MY5-4r-QLr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -928,14 +934,15 @@
                         <viewLayoutGuide key="safeArea" id="ZR5-fP-5Dz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8YS-cB-Mpa"/>
                     <connections>
-                        <outlet property="searchBar" destination="aUA-tJ-KOZ" id="aW1-Tf-JaF"/>
-                        <outlet property="tableView" destination="FwF-p5-mA8" id="qP3-NF-14d"/>
+                        <outlet property="searchBar" destination="aUA-tJ-KOZ" id="aOu-d2-eM2"/>
+                        <outlet property="tableView" destination="FwF-p5-mA8" id="OXs-av-5ys"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fk-bT-QF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3795.652173913044" y="963.61607142857133"/>
+            <point key="canvasLocation" x="4209" y="663"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

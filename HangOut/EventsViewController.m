@@ -6,6 +6,7 @@
 ////
 //
 #import "EventsViewController.h"
+#import "SearchViewController.h"
 #import "EventCell.h"
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
@@ -132,6 +133,19 @@
 
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
+}
+- (IBAction)didSearch:(id)sender {
+    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SearchViewController *SearchViewController = [storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
+
+    sceneDelegate.window.rootViewController = SearchViewController;
+
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        // PFUser.current() will
+    }];
+    
 }
 
     @end

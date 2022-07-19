@@ -38,7 +38,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
                                 <connections>
-                                    <action selector="didTapSignup:" destination="hEU-MU-BIQ" eventType="touchUpInside" id="m5I-gh-eS1"/>
+                                    <action selector="didTapSignup:" destination="hEU-MU-BIQ" eventType="touchUpInside" id="uP1-UX-fks"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fb-nl-pEb">
@@ -56,7 +56,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
-                                    <action selector="loginUser:" destination="hEU-MU-BIQ" eventType="touchUpInside" id="FmB-BK-NgI"/>
+                                    <action selector="loginUser:" destination="hEU-MU-BIQ" eventType="touchUpInside" id="0dq-53-uHE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,9 +64,15 @@
                         <color key="backgroundColor" systemColor="placeholderTextColor"/>
                     </view>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="passwordTextFeild" destination="mws-IP-VH4" id="eDJ-gZ-vPQ"/>
                         <outlet property="usernameTextFeild" destination="XCb-pR-D0g" id="FVz-if-8zn"/>
                         <segue destination="91b-IW-51q" kind="presentation" identifier="LoginSegue" id="sdW-o1-FYm"/>
+=======
+                        <outlet property="passwordTextFeild" destination="mws-IP-VH4" id="tj6-ut-2Ve"/>
+                        <outlet property="usernameTextFeild" destination="XCb-pR-D0g" id="n6W-OY-E9K"/>
+                        <segue destination="91b-IW-51q" kind="presentation" identifier="LoginSegue" id="S5B-wu-U7e"/>
+>>>>>>> Cleanup
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNL-d4-HOd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -898,8 +904,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sdW-o1-FYm"/>
-        <segue reference="r3V-LK-50N"/>
+        <segue reference="S5B-wu-U7e"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.circle" catalog="system" width="128" height="121"/>

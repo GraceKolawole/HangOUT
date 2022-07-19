@@ -5,52 +5,53 @@
 ////  Created by Oluwanifemi Kolawole on 7/5/22.
 ////
 //
-//#import "SearchViewController.h"
+#import "SearchViewController.h"
+#import "Parse/Parse.h"
+#import "EventCell.h"
 //
-//@interface SearchViewController ()
-//@property (strong, nonatomic) IBOutlet UITableView *tableView;
-//@property (strong, nonatomic) UISearchController *searchController;
-//@property (strong, nonatomic) NSArray *data;
-//@property (strong, nonatomic) NSArray *filteredData;
-//
-//@end
-//
-//@implementation SearchViewController
-//
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
+@interface SearchViewController ()
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) NSMutableArray *filteredData;
+@property BOOL isFiltered;
+
+@end
+
+@implementation SearchViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    _isFiltered = false;
+    self.searchBar.delegate = self;
+    
 //    self.tableView.delegate = self;
-//       self.tableView.dataSource = self;
+//    self.tableView.dataSource = self;
+
 //
-//       self.data = @[];
-//       self.filteredData = self.data;
+//    self.data =@[ ];
+//    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+//    self.searchController.searchResultsUpdater = self;
+//    self.searchController.searchBar.autocapitalizationType = nil;
 //
-//       // Initializing with searchResultsController set to nil means that
-//       // searchController will use this view controller to display the search results
-//       self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-//       self.searchController.searchResultsUpdater = self;
-//
-//       // If we are using this same view controller to present the results
-//       // dimming it out wouldn't make sense. Should probably only set
-//       // this to yes if using another controller to display the search results.
 //       self.searchController.dimsBackgroundDuringPresentation = NO;
 //
 //       [self.searchController.searchBar sizeToFit];
 //       self.tableView.tableHeaderView = self.searchController.searchBar;
 //
-//       // Sets this view controller as presenting view controller for the search interface
 //       self.definesPresentationContext = YES;
-//}
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.filteredData.count;
-//}
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.filteredData.count;
+}
 //
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TableCell"
-//                                                                 forIndexPath:indexPath];
-//    cell.textLabel.text = self.filteredData[indexPath.row];
-//    return cell;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TableCell"
+                                                                 forIndexPath:indexPath];
+    cell.textLabel.text = self.filteredData[indexPath.row];
+    return cell;
+}
 //
 //- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
 //
@@ -82,4 +83,4 @@
 //}
 //*/
 //
-//@end
+@end

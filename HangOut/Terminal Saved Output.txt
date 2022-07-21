@@ -1,0 +1,723 @@
+Last login: Mon Jul 18 16:15:03 on ttys003
+gracekolawole@gracekolawole-mbp ~ % cd /Users/gracekolawole/Documents/IOS/See/HangOUT
+gracekolawole@gracekolawole-mbp HangOUT % git branch
+  Cleanup
+  Group-Screen
+  Home-Screen
+  Login-Screen
+  Message
+  Outings-Event
+  Outings-screen
+* SearchBar
+  main
+  new-feature
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch SearchBar
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+	modified:   HangOut/Base.lproj/Main.storyboard
+	modified:   HangOut/SearchViewController.h
+	modified:   HangOut/SearchViewController.m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch SearchBar
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+	modified:   HangOut/Base.lproj/Main.storyboard
+	modified:   HangOut/SearchViewController.h
+	modified:   HangOut/SearchViewController.m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gracekolawole@gracekolawole-mbp HangOUT % git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+gracekolawole@gracekolawole-mbp HangOUT % git add -A
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch SearchBar
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+	modified:   HangOut/Base.lproj/Main.storyboard
+	modified:   HangOut/SearchViewController.h
+	modified:   HangOut/SearchViewController.m
+
+gracekolawole@gracekolawole-mbp HangOUT % git commit -m "Add and connected features to the SearchViewContoller.m"
+[SearchBar ddfc40a] Add and connected features to the SearchViewContoller.m
+ 4 files changed, 82 insertions(+), 40 deletions(-)
+ rewrite HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate (89%)
+gracekolawole@gracekolawole-mbp HangOUT % git push
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 44.58 KiB | 7.43 MiB/s, done.
+Total 11 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+remote: 
+remote: Create a pull request for 'SearchBar' on GitHub by visiting:
+remote:      https://github.com/GraceKolawole/HangOUT/pull/new/SearchBar
+remote: 
+To github.com:GraceKolawole/HangOUT.git
+ * [new branch]      SearchBar -> SearchBar
+gracekolawole@gracekolawole-mbp HangOUT % git checkout Cleanup
+error: Your local changes to the following files would be overwritten by checkout:
+	HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+Please commit your changes or stash them before you switch branches.
+Aborting
+gracekolawole@gracekolawole-mbp HangOUT % git stash
+Saved working directory and index state WIP on SearchBar: ddfc40a Add and connected features to the SearchViewContoller.m
+gracekolawole@gracekolawole-mbp HangOUT % git checkout Cleanup
+Switched to branch 'Cleanup'
+gracekolawole@gracekolawole-mbp HangOUT % git merge main
+error: Your local changes to the following files would be overwritten by merge:
+  HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+gracekolawole@gracekolawole-mbp HangOUT % merge main
+zsh: command not found: merge
+gracekolawole@gracekolawole-mbp HangOUT % git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+	HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+Please commit your changes or stash them before you switch branches.
+Aborting
+gracekolawole@gracekolawole-mbp HangOUT % git stash
+Saved working directory and index state WIP on Cleanup: e7fc858 Add breakpoints to gitignore
+gracekolawole@gracekolawole-mbp HangOUT % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+gracekolawole@gracekolawole-mbp HangOUT % git merge Cleanup
+error: Your local changes to the following files would be overwritten by merge:
+	HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+Please commit your changes or stash them before you merge.
+Aborting
+gracekolawole@gracekolawole-mbp HangOUT % git stash
+Saved working directory and index state WIP on main: fe212b9 Add a dynamic size to the captionLabel in HomeViewContoller.m and EventViewController.m
+gracekolawole@gracekolawole-mbp HangOUT % git merge Cleanup
+warning: Cannot merge binary files: HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate (HEAD vs. Cleanup)
+Removing Pods/Target Support Files/AFNetworking/AFNetworking.xcconfig
+Removing Pods/Target Support Files/AFNetworking/AFNetworking-prefix.pch
+Removing Pods/Target Support Files/AFNetworking/AFNetworking-dummy.m
+Removing Pods/Pods.xcodeproj/xcuserdata/gracekolawole.xcuserdatad/xcschemes/AFNetworking.xcscheme
+Removing Pods/Headers/Public/AFNetworking/WKWebView+AFNetworking.h
+Removing Pods/Headers/Public/AFNetworking/UIRefreshControl+AFNetworking.h
+Removing Pods/Headers/Public/AFNetworking/UIProgressView+AFNetworking.h
+Removing Pods/Headers/Public/AFNetworking/UIKit+AFNetworking.h
+Removing Pods/Headers/Public/AFNetworking/UIImageView+AFNetworking.h
+Removing Pods/Headers/Public/AFNetworking/UIButton+AFNetworking.h
+Removing Pods/Headers/Public/AFNetworking/UIActivityIndicatorView+AFNetworking.h
+Removing Pods/Headers/Public/AFNetworking/AFURLSessionManager.h
+Removing Pods/Headers/Public/AFNetworking/AFURLResponseSerialization.h
+Removing Pods/Headers/Public/AFNetworking/AFURLRequestSerialization.h
+Removing Pods/Headers/Public/AFNetworking/AFSecurityPolicy.h
+Removing Pods/Headers/Public/AFNetworking/AFNetworking.h
+Removing Pods/Headers/Public/AFNetworking/AFNetworkReachabilityManager.h
+Removing Pods/Headers/Public/AFNetworking/AFNetworkActivityIndicatorManager.h
+Removing Pods/Headers/Public/AFNetworking/AFImageDownloader.h
+Removing Pods/Headers/Public/AFNetworking/AFHTTPSessionManager.h
+Removing Pods/Headers/Public/AFNetworking/AFCompatibilityMacros.h
+Removing Pods/Headers/Public/AFNetworking/AFAutoPurgingImageCache.h
+Removing Pods/Headers/Private/AFNetworking/WKWebView+AFNetworking.h
+Removing Pods/Headers/Private/AFNetworking/UIRefreshControl+AFNetworking.h
+Removing Pods/Headers/Private/AFNetworking/UIProgressView+AFNetworking.h
+Removing Pods/Headers/Private/AFNetworking/UIKit+AFNetworking.h
+Removing Pods/Headers/Private/AFNetworking/UIImageView+AFNetworking.h
+Removing Pods/Headers/Private/AFNetworking/UIButton+AFNetworking.h
+Removing Pods/Headers/Private/AFNetworking/UIActivityIndicatorView+AFNetworking.h
+Removing Pods/Headers/Private/AFNetworking/AFURLSessionManager.h
+Removing Pods/Headers/Private/AFNetworking/AFURLResponseSerialization.h
+Removing Pods/Headers/Private/AFNetworking/AFURLRequestSerialization.h
+Removing Pods/Headers/Private/AFNetworking/AFSecurityPolicy.h
+Removing Pods/Headers/Private/AFNetworking/AFNetworking.h
+Removing Pods/Headers/Private/AFNetworking/AFNetworkReachabilityManager.h
+Removing Pods/Headers/Private/AFNetworking/AFNetworkActivityIndicatorManager.h
+Removing Pods/Headers/Private/AFNetworking/AFImageDownloader.h
+Removing Pods/Headers/Private/AFNetworking/AFHTTPSessionManager.h
+Removing Pods/Headers/Private/AFNetworking/AFCompatibilityMacros.h
+Removing Pods/Headers/Private/AFNetworking/AFAutoPurgingImageCache.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/WKWebView+AFNetworking.m
+Removing Pods/AFNetworking/UIKit+AFNetworking/WKWebView+AFNetworking.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
+Removing Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
+Removing Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.m
+Removing Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h
+Removing Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.m
+Removing Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h
+Removing Pods/AFNetworking/README.md
+Removing Pods/AFNetworking/LICENSE
+Removing Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
+Removing Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+Removing Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
+Removing Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+Removing Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
+Removing Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+Removing Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
+Removing Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+Removing Pods/AFNetworking/AFNetworking/AFNetworking.h
+Removing Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
+Removing Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+Removing Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
+Removing Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h
+Removing Pods/AFNetworking/AFNetworking/AFCompatibilityMacros.h
+Auto-merging HangOut/Base.lproj/Main.storyboard
+CONFLICT (content): Merge conflict in HangOut/Base.lproj/Main.storyboard
+Auto-merging HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+Auto-merging HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+CONFLICT (content): Merge conflict in HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+Automatic merge failed; fix conflicts and then commit the result.
+gracekolawole@gracekolawole-mbp HangOUT % git checkout Cleanup
+HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate: needs merge
+HangOut/Base.lproj/Main.storyboard: needs merge
+error: you need to resolve your current index first
+gracekolawole@gracekolawole-mbp HangOUT % git stash
+HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate: needs merge
+HangOut/Base.lproj/Main.storyboard: needs merge
+gracekolawole@gracekolawole-mbp HangOUT % git checkout Cleanup
+HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate: needs merge
+HangOut/Base.lproj/Main.storyboard: needs merge
+error: you need to resolve your current index first
+gracekolawole@gracekolawole-mbp HangOUT % git merge Cleanup   
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+gracekolawole@gracekolawole-mbp HangOUT % cd
+gracekolawole@gracekolawole-mbp ~ % cd /Users/gracekolawole/Documents/IOS/See/HangOUT
+gracekolawole@gracekolawole-mbp HangOUT % cd checkout main
+cd: string not in pwd: checkout
+gracekolawole@gracekolawole-mbp HangOUT % git checkout main
+HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate: needs merge
+HangOut/Base.lproj/Main.storyboard: needs merge
+error: you need to resolve your current index first
+gracekolawole@gracekolawole-mbp HangOUT % git unmerge Cleanup
+git: 'unmerge' is not a git command. See 'git --help'.
+gracekolawole@gracekolawole-mbp HangOUT % git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+gracekolawole@gracekolawole-mbp HangOUT % git branch
+  Cleanup
+  Group-Screen
+  Home-Screen
+  Login-Screen
+  Message
+  Outings-Event
+  Outings-screen
+  SearchBar
+* main
+  new-feature
+gracekolawole@gracekolawole-mbp HangOUT % git merge Cleanup
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+gracekolawole@gracekolawole-mbp HangOUT % git checkout Cleanup
+HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate: needs merge
+error: you need to resolve your current index first
+gracekolawole@gracekolawole-mbp HangOUT % git Checkout Cleanup
+fatal: cannot handle Checkout as a builtin
+gracekolawole@gracekolawole-mbp HangOUT % git Checkout Cleanup
+fatal: cannot handle Checkout as a builtin
+gracekolawole@gracekolawole-mbp HangOUT % git merge Cleanup
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+gracekolawole@gracekolawole-mbp HangOUT % git commit
+[main d73dfd0] Merge branch 'Cleanup'
+gracekolawole@gracekolawole-mbp HangOUT % git push
+To github.com:GraceKolawole/HangOUT.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:GraceKolawole/HangOUT.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+gracekolawole@gracekolawole-mbp HangOUT % git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 662 bytes | 662.00 KiB/s, done.
+From github.com:GraceKolawole/HangOUT
+   fe212b9..090a79d  main       -> origin/main
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+warning: Cannot merge binary files: HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate (HEAD vs. 090a79d362b0932328824d94f09e4db4fb954101)
+Auto-merging HangOut/Base.lproj/Main.storyboard
+Auto-merging HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+CONFLICT (content): Merge conflict in HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+Automatic merge failed; fix conflicts and then commit the result.
+gracekolawole@gracekolawole-mbp HangOUT % git commit
+U	HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+gracekolawole@gracekolawole-mbp HangOUT % git commit
+[main 478b8a5] Merge branch 'main' of github.com:GraceKolawole/HangOUT
+gracekolawole@gracekolawole-mbp HangOUT % git checkout Cleanup
+Switched to branch 'Cleanup'
+gracekolawole@gracekolawole-mbp HangOUT % git merge main
+Updating e7fc858..478b8a5
+Fast-forward
+ .../UserInterfaceState.xcuserstate                 | Bin 34145 -> 76019 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           | 150 +++++++-
+ HangOut/.DS_Store                                  | Bin 0 -> 8196 bytes
+ HangOut/Base.lproj/Main.storyboard                 | 384 +++++----------------
+ HangOut/EventsViewController.m                     |  66 ++--
+ HangOut/HangOUTCell.m                              |   5 +
+ HangOut/HomeViewController.m                       |  42 +--
+ HangOut/SearchViewController.h                     |   4 +-
+ HangOut/SearchViewController.m                     |  77 +++--
+ 9 files changed, 316 insertions(+), 412 deletions(-)
+ create mode 100644 HangOut/.DS_Store
+gracekolawole@gracekolawole-mbp HangOUT % git commit
+On branch Cleanup
+nothing to commit, working tree clean
+gracekolawole@gracekolawole-mbp HangOUT % git push
+Enumerating objects: 46, done.
+Counting objects: 100% (44/44), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 37.76 KiB | 9.44 MiB/s, done.
+Total 16 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 7 local objects.
+To github.com:GraceKolawole/HangOUT.git
+   e7fc858..478b8a5  Cleanup -> Cleanup
+gracekolawole@gracekolawole-mbp HangOUT % git checkout main
+M	.DS_Store
+M	HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+gracekolawole@gracekolawole-mbp HangOUT % git commit
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gracekolawole@gracekolawole-mbp HangOUT % git add -A
+gracekolawole@gracekolawole-mbp HangOUT % status
+zsh: command not found: status
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .DS_Store
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+
+gracekolawole@gracekolawole-mbp HangOUT % git push
+To github.com:GraceKolawole/HangOUT.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:GraceKolawole/HangOUT.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+gracekolawole@gracekolawole-mbp HangOUT % git fetch
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 630 bytes | 315.00 KiB/s, done.
+From github.com:GraceKolawole/HangOUT
+   090a79d..ebe9232  main       -> origin/main
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .DS_Store
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+
+gracekolawole@gracekolawole-mbp HangOUT % git commit -m "Add .DS_Store to podfile"
+[main 0a6e4c9] Add .DS_Store to podfile
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ rewrite HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate (91%)
+gracekolawole@gracekolawole-mbp HangOUT % git push
+To github.com:GraceKolawole/HangOUT.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:GraceKolawole/HangOUT.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+gracekolawole@gracekolawole-mbp HangOUT % git pull
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+Already up to date!
+Merge made by the 'recursive' strategy.
+gracekolawole@gracekolawole-mbp HangOUT % git commit
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+gracekolawole@gracekolawole-mbp HangOUT % git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 36.80 KiB | 12.27 MiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:GraceKolawole/HangOUT.git
+   ebe9232..b5ebb9a  main -> main
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+gracekolawole@gracekolawole-mbp HangOUT % git merge main
+Already up to date.
+gracekolawole@gracekolawole-mbp HangOUT % git open main
+git: 'open' is not a git command. See 'git --help'.
+
+The most similar commands are
+	clean
+	clone
+	notes
+	prune
+gracekolawole@gracekolawole-mbp HangOUT % open main
+The file /Users/gracekolawole/Documents/IOS/See/HangOUT/main does not exist.
+gracekolawole@gracekolawole-mbp HangOUT % git checkout git branch
+error: pathspec 'git' did not match any file(s) known to git
+error: pathspec 'branch' did not match any file(s) known to git
+gracekolawole@gracekolawole-mbp HangOUT % git branch
+  Cleanup
+  Group-Screen
+  Home-Screen
+  Login-Screen
+  Message
+  Outings-Event
+  Outings-screen
+  SearchBar
+* main
+  new-feature
+gracekolawole@gracekolawole-mbp HangOUT % git add -A
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+	modified:   HangOut/Base.lproj/Main.storyboard
+	modified:   HangOut/SearchViewController.m
+
+gracekolawole@gracekolawole-mbp HangOUT % git commit -m "Changed the name of file in to match the current name in Main.storyboard"
+[main 1dc24a0] Changed the name of file in to match the current name in Main.storyboard
+ 3 files changed, 48 insertions(+), 6 deletions(-)
+ rewrite HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate (89%)
+gracekolawole@gracekolawole-mbp HangOUT % git push
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 43.76 KiB | 8.75 MiB/s, done.
+Total 10 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To github.com:GraceKolawole/HangOUT.git
+   b5ebb9a..1dc24a0  main -> main
+gracekolawole@gracekolawole-mbp HangOUT % git branch   
+  Cleanup
+  Group-Screen
+  Home-Screen
+  Login-Screen
+  Message
+  Outings-Event
+  Outings-screen
+  SearchBar
+* main
+  new-feature
+gracekolawole@gracekolawole-mbp HangOUT % git checkout Searchbar
+error: Your local changes to the following files would be overwritten by checkout:
+	HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+	HangOut/Base.lproj/Main.storyboard
+	HangOut/SearchViewController.m
+Please commit your changes or stash them before you switch branches.
+Aborting
+gracekolawole@gracekolawole-mbp HangOUT % t stash
+zsh: command not found: t
+gracekolawole@gracekolawole-mbp HangOUT % git stash
+Saved working directory and index state WIP on main: 1dc24a0 Changed the name of file in to match the current name in Main.storyboard
+gracekolawole@gracekolawole-mbp HangOUT % git checkout SearchBar
+error: Your local changes to the following files would be overwritten by checkout:
+	HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+Please commit your changes or stash them before you switch branches.
+Aborting
+gracekolawole@gracekolawole-mbp HangOUT % git add -A
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+
+gracekolawole@gracekolawole-mbp HangOUT % git commit -m "Delete extra functions and methods in SearchViewController.m"
+[main d838ced] Delete extra functions and methods in SearchViewController.m
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rewrite HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate (91%)
+gracekolawole@gracekolawole-mbp HangOUT % git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 42.04 KiB | 7.01 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:GraceKolawole/HangOUT.git
+   1dc24a0..d838ced  main -> main
+gracekolawole@gracekolawole-mbp HangOUT % git checkout SearchBar
+Switched to branch 'SearchBar'
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch SearchBar
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   HangOut/SearchCell.h
+	new file:   HangOut/SearchCell.m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+	modified:   HangOut.xcodeproj/project.pbxproj
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+	modified:   HangOut/.DS_Store
+	modified:   HangOut/Base.lproj/Main.storyboard
+	modified:   HangOut/EventsViewController.m
+	modified:   HangOut/SearchCell.h
+	modified:   HangOut/SearchViewController.h
+	modified:   HangOut/SearchViewController.m
+
+gracekolawole@gracekolawole-mbp HangOUT % git add -A
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch SearchBar
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .DS_Store
+	modified:   HangOut.xcodeproj/project.pbxproj
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+	modified:   HangOut/.DS_Store
+	modified:   HangOut/Base.lproj/Main.storyboard
+	modified:   HangOut/EventsViewController.m
+	new file:   HangOut/SearchCell.h
+	new file:   HangOut/SearchCell.m
+	modified:   HangOut/SearchViewController.h
+	modified:   HangOut/SearchViewController.m
+
+gracekolawole@gracekolawole-mbp HangOUT % git commit -m "Add list of states to the cell in SearchViewCOntoller.m" 
+[SearchBar 5531d5e] Add list of states to the cell in SearchViewCOntoller.m
+ 11 files changed, 304 insertions(+), 126 deletions(-)
+ rewrite HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate (90%)
+ create mode 100644 HangOut/SearchCell.h
+ create mode 100644 HangOut/SearchCell.m
+ rewrite HangOut/SearchViewController.m (78%)
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch SearchBar
+nothing to commit, working tree clean
+gracekolawole@gracekolawole-mbp HangOUT % git push
+Enumerating objects: 36, done.
+Counting objects: 100% (36/36), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (20/20), 67.84 KiB | 8.48 MiB/s, done.
+Total 20 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), completed with 11 local objects.
+To github.com:GraceKolawole/HangOUT.git
+   ddfc40a..5531d5e  SearchBar -> SearchBar
+gracekolawole@gracekolawole-mbp HangOUT % open podfile
+gracekolawole@gracekolawole-mbp HangOUT % git add-a
+git: 'add-a' is not a git command. See 'git --help'.
+gracekolawole@gracekolawole-mbp HangOUT % git add-A
+git: 'add-A' is not a git command. See 'git --help'.
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch SearchBar
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+	modified:   HangOut/Base.lproj/Main.storyboard
+	modified:   HangOut/EventsViewController.m
+	modified:   HangOut/SearchViewController.m
+	modified:   HangOut/main.m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gracekolawole@gracekolawole-mbp HangOUT % git add -A
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch SearchBar
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate
+	modified:   HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+	modified:   HangOut/Base.lproj/Main.storyboard
+	modified:   HangOut/EventsViewController.m
+	modified:   HangOut/SearchViewController.m
+	modified:   HangOut/main.m
+
+gracekolawole@gracekolawole-mbp HangOUT % git commit -m "Implementing the searchbar and the fetchMoreEvent to fetch events while scrolling in EventViewContoller.m"
+[SearchBar 7b48f92] Implementing the searchbar and the fetchMoreEvent to fetch events while scrolling in EventViewContoller.m
+ 6 files changed, 349 insertions(+), 110 deletions(-)
+ rewrite HangOut.xcworkspace/xcuserdata/gracekolawole.xcuserdatad/UserInterfaceState.xcuserstate (87%)
+ rewrite HangOut/SearchViewController.m (99%)
+gracekolawole@gracekolawole-mbp HangOUT % git status
+On branch SearchBar
+nothing to commit, working tree clean
+gracekolawole@gracekolawole-mbp HangOUT % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+gracekolawole@gracekolawole-mbp HangOUT % git rebase -i HEAD~5
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+gracekolawole@gracekolawole-mbp HangOUT % git Add -A
+fatal: cannot handle Add as a builtin
+gracekolawole@gracekolawole-mbp HangOUT % git stash
+Saved working directory and index state WIP on main: d838ced Delete extra functions and methods in SearchViewController.m
+gracekolawole@gracekolawole-mbp HangOUT % git rebase -i HEAD~5
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+gracekolawole@gracekolawole-mbp HangOUT % pick 0a6e4c9 Add .DS_Store to podfile
+zsh: command not found: pick
+gracekolawole@gracekolawole-mbp HangOUT % git rebase -i HEAD~5                 
+hint: Waiting for your editor to close the file... 
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified). Use -c <commit> to reword the commit message.
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+~                                                                               
+~                                                                               
+~                                                                               
+-- INSERT --

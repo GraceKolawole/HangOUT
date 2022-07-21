@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)signupUser {
@@ -42,15 +41,7 @@
         }
     }];
 
-}/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
 - (IBAction)signupUser:(id)sender {
     if([self.usernameTextFeild.text isEqual:@""] || [self.passwordTextFeild.text isEqual:@""] || [self.emailTextFeild.text isEqual:@""]){

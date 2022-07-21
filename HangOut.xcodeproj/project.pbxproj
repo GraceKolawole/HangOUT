@@ -26,7 +26,6 @@
 		954873212874F368002CD6BC /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954873202874F368002CD6BC /* Keys.plist */; };
 		95487324287501DF002CD6BC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95487323287501DF002CD6BC /* HomeViewController.m */; };
 		9548732D28750592002CD6BC /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548732C28750592002CD6BC /* Post.m */; };
-		9548733328752786002CD6BC /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548733228752786002CD6BC /* SearchViewController.m */; };
 		9548733628752A08002CD6BC /* HangOUTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548733528752A08002CD6BC /* HangOUTCell.m */; };
 		9553A4B528764319005C988B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553A4B428764319005C988B /* SignupViewController.m */; };
 		9553A4B8287655AD005C988B /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553A4B7287655AD005C988B /* PostViewController.m */; };
@@ -94,8 +93,6 @@
 		95487323287501DF002CD6BC /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		9548732B28750592002CD6BC /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		9548732C28750592002CD6BC /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
-		9548733128752786002CD6BC /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		9548733228752786002CD6BC /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		9548733428752A08002CD6BC /* HangOUTCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HangOUTCell.h; sourceTree = "<group>"; };
 		9548733528752A08002CD6BC /* HangOUTCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangOUTCell.m; sourceTree = "<group>"; };
 		9553A4B328764319005C988B /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
@@ -206,8 +203,6 @@
 				9553A4B7287655AD005C988B /* PostViewController.m */,
 				9553A4B328764319005C988B /* SignupViewController.h */,
 				9553A4B428764319005C988B /* SignupViewController.m */,
-				9548733128752786002CD6BC /* SearchViewController.h */,
-				9548733228752786002CD6BC /* SearchViewController.m */,
 				95487322287501DF002CD6BC /* HomeViewController.h */,
 				95487323287501DF002CD6BC /* HomeViewController.m */,
 				953F07102874ABD7009BD594 /* Assets.xcassets */,
@@ -477,7 +472,6 @@
 				953F073B2874D229009BD594 /* LoginViewController.m in Sources */,
 				953F07032874ABD6009BD594 /* AppDelegate.m in Sources */,
 				9553A4B528764319005C988B /* SignupViewController.m in Sources */,
-				9548733328752786002CD6BC /* SearchViewController.m in Sources */,
 				95DE8804287E8BB700015C15 /* IntrovertedCell.m in Sources */,
 				950B82862878B35300C8DC57 /* EventCell.m in Sources */,
 				953F070F2874ABD6009BD594 /* HangOut.xcdatamodeld in Sources */,

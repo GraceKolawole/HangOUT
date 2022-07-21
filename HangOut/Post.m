@@ -50,15 +50,6 @@
         return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
     
 }
-    
 
-//[post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//    if (succeeded) {
-//        // The object has been saved.
-//    }
-//    else {
-//        NSLog(@"%@", error.localizedDescription);
-//    }
-//}];
 
 @end

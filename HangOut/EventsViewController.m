@@ -6,7 +6,6 @@
 ////
 //
 #import "EventsViewController.h"
-#import "SearchViewController.h"
 #import "EventCell.h"
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
@@ -116,7 +115,7 @@
 
 - (void)fetchMoreEvents{
     pageId += 1;
-    NSString *urlString = [NSString stringWithFormat:@"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894&per_page=25&page=%i", pageId];
+    NSString *urlString = [NSString stringWithFormat:@"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894&per_page=15&page=%i", pageId];
     NSURL *url= [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -137,8 +136,8 @@
     [task resume];
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    NSString *urlString = [NSString stringWithFormat:@"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894&per_page=25&page=%i&q=%@", pageId, searchText];
+- (void)searchBar:(NSString *)searchText {
+    NSString *urlString = [NSString stringWithFormat:@"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894&per_page=15&page=%i&q=%@", pageId, searchText];
     NSURL *url= [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -161,7 +160,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.row == self.events.count - 6) {
+  if (indexPath.row == self.events.count - 4) {
     pageId += 1;
     [self fetchEvents];
   }
@@ -198,11 +197,11 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
--(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
     self.searchBar.showsCancelButton = YES;
 }
 
--(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     self.searchBar.showsCancelButton = NO;
     self.searchBar.text = @"";
     [self.searchBar resignFirstResponder];
@@ -223,18 +222,5 @@
 //    }
 //    [self.tableView reloadData];
 //}
-
-- (IBAction)didSearch:(id)sender {
-    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
-
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    SearchViewController *SearchViewController = [storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
-
-    sceneDelegate.window.rootViewController = SearchViewController;
-
-    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        // PFUser.current() will
-    }];
-}
 
 @end

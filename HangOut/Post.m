@@ -48,7 +48,6 @@
         return nil;
     }
         return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
-
 }
 
 @end

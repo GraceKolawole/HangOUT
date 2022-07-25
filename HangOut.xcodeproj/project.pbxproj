@@ -234,6 +234,20 @@
 				9548732C28750592002CD6BC /* Post.m */,
 				953B4B9C287796FE0090186A /* ProfilePic.h */,
 				953B4B9D287796FE0090186A /* ProfilePic.m */,
+				9548733428752A08002CD6BC /* HangOUTCell.h */,
+				9548733528752A08002CD6BC /* HangOUTCell.m */,
+				9553A4BB28777E9C005C988B /* ProfilePictureViewController.h */,
+				9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */,
+				950B82812878B07A00C8DC57 /* EventsViewController.h */,
+				950B82822878B07A00C8DC57 /* EventsViewController.m */,
+				950B82842878B35300C8DC57 /* EventCell.h */,
+				950B82852878B35300C8DC57 /* EventCell.m */,
+				9566B984287C8B830005D40A /* GroupViewController.h */,
+				9566B985287C8B830005D40A /* GroupViewController.m */,
+				95DE87F0287E7EC300015C15 /* GroupPassViewController.h */,
+				95DE87F1287E7EC300015C15 /* GroupPassViewController.m */,
+				95DE8802287E8BB700015C15 /* IntrovertedCell.h */,
+				95DE8803287E8BB700015C15 /* IntrovertedCell.m */,
 			);
 			path = HangOut;
 			sourceTree = "<group>";

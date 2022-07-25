@@ -1,0 +1,8 @@
+# Git Ignore
+
+# OS X Junk Files
+.DS_Store
+
+# Exclude user specific files
+xcuserdata/
+**/xcuserdata/

@@ -194,24 +194,41 @@
 				953F07022874ABD6009BD594 /* AppDelegate.m */,
 				953F07042874ABD6009BD594 /* SceneDelegate.h */,
 				953F07052874ABD6009BD594 /* SceneDelegate.m */,
+				955FECE42887362500D34B54 /* Delegates */,
+				953F070A2874ABD6009BD594 /* Main.storyboard */,
+				955FECE32887361500D34B54 /* Cells */,
+				9548733428752A08002CD6BC /* HangOUTCell.h */,
+				9548733528752A08002CD6BC /* HangOUTCell.m */,
+				950B82842878B35300C8DC57 /* EventCell.h */,
+				950B82852878B35300C8DC57 /* EventCell.m */,
+				95DE8802287E8BB700015C15 /* IntrovertedCell.h */,
+				95DE8803287E8BB700015C15 /* IntrovertedCell.m */,
+				955FECE02887359600D34B54 /* View Controllers */,
 				953F07072874ABD6009BD594 /* ViewController.h */,
 				953F07082874ABD6009BD594 /* ViewController.m */,
-				953F070A2874ABD6009BD594 /* Main.storyboard */,
-				9566B981287908CD0005D40A /* ProfileViewContoller.h */,
-				9566B982287908CD0005D40A /* ProfileViewContoller.m */,
-				9553A4B6287655AD005C988B /* PostViewController.h */,
-				9553A4B7287655AD005C988B /* PostViewController.m */,
+				953F07392874D229009BD594 /* LoginViewController.h */,
+				953F073A2874D229009BD594 /* LoginViewController.m */,
 				9553A4B328764319005C988B /* SignupViewController.h */,
 				9553A4B428764319005C988B /* SignupViewController.m */,
 				95487322287501DF002CD6BC /* HomeViewController.h */,
 				95487323287501DF002CD6BC /* HomeViewController.m */,
+				9553A4B6287655AD005C988B /* PostViewController.h */,
+				9553A4B7287655AD005C988B /* PostViewController.m */,
+				9566B981287908CD0005D40A /* ProfileViewContoller.h */,
+				9566B982287908CD0005D40A /* ProfileViewContoller.m */,
+				9553A4BB28777E9C005C988B /* ProfilePictureViewController.h */,
+				9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */,
+				950B82812878B07A00C8DC57 /* EventsViewController.h */,
+				950B82822878B07A00C8DC57 /* EventsViewController.m */,
+				9566B984287C8B830005D40A /* GroupViewController.h */,
+				9566B985287C8B830005D40A /* GroupViewController.m */,
+				95DE87F0287E7EC300015C15 /* GroupPassViewController.h */,
+				95DE87F1287E7EC300015C15 /* GroupPassViewController.m */,
 				953F07102874ABD7009BD594 /* Assets.xcassets */,
 				953F07122874ABD7009BD594 /* LaunchScreen.storyboard */,
 				953F07152874ABD7009BD594 /* Info.plist */,
 				954873202874F368002CD6BC /* Keys.plist */,
 				953F07162874ABD7009BD594 /* main.m */,
-				953F07392874D229009BD594 /* LoginViewController.h */,
-				953F073A2874D229009BD594 /* LoginViewController.m */,
 				953F070D2874ABD6009BD594 /* HangOut.xcdatamodeld */,
 				9548732B28750592002CD6BC /* Post.h */,
 				9548732C28750592002CD6BC /* Post.m */,
@@ -250,6 +267,27 @@
 				953F072C2874ABD7009BD594 /* HangOutUITestsLaunchTests.m */,
 			);
 			path = HangOutUITests;
+			sourceTree = "<group>";
+		};
+		955FECE02887359600D34B54 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		955FECE32887361500D34B54 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		955FECE42887362500D34B54 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

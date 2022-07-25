@@ -10,6 +10,8 @@
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
 
+#define BASE_EVENT_URL @"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894&per_page=15"
+
 @interface EventsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 {
     int pageId;
@@ -19,11 +21,11 @@
 @property (nonatomic, strong) NSArray *events;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (strong, nonatomic) NSArray *filteredEvent;
-//
+@property (weak, nonatomic) IBOutlet UISearchBar *searchEventForText;
+@property (nonatomic, strong) NSArray *filteredEvents;
+
 @end
-//
+
 @implementation EventsViewController
 
 - (void)viewDidLoad {
@@ -31,12 +33,11 @@
     searchText = nil;
     [super viewDidLoad];
 
-    [self.searchBar becomeFirstResponder];
-    self.searchBar.delegate = self;
+    [self.searchEventForText becomeFirstResponder];
+    self.searchEventForText.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-
     [self.indicator startAnimating];
     [self fetchEvents];
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -47,9 +48,8 @@
     [self.refreshControl endRefreshing];
 }
 
--(void) fetchEvents{
-    self.filteredEvent = self.events;
-    NSURL *url= [NSURL URLWithString:@"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894"];
+- (void) fetchEvents{
+    NSURL *url = [NSURL URLWithString:BASE_EVENT_URL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -59,10 +59,9 @@
            }
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-               NSLog(@"%@",  dataDictionary);
                
                self.events = dataDictionary[@"events"];
-               self.filteredEvent = dataDictionary[@"events"];
+               self.filteredEvents = dataDictionary[@"events"];
 
                [self.tableView reloadData];
            }
@@ -78,8 +77,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    EventCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell" forIndexPath:indexPath];
-    NSDictionary *event = self.filteredEvent[indexPath.row];
+    EventCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell"];
+    NSDictionary *event = self.filteredEvents[indexPath.row];
     NSDictionary *venue = event[@"venue"];
     NSArray *performers = event[@"performers"];
 
@@ -115,7 +114,7 @@
 
 - (void)fetchMoreEvents{
     pageId += 1;
-    NSString *urlString = [NSString stringWithFormat:@"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894&per_page=15&page=%i", pageId];
+    NSString *urlString = [NSString stringWithFormat:@"%@&page=%i", BASE_EVENT_URL, pageId];
     NSURL *url= [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -129,6 +128,7 @@
                NSMutableArray *newEvents = [self.events mutableCopy];
                [newEvents addObjectsFromArray:dataDictionary[@"events"]];
                self.events = newEvents;
+               self.filteredEvents = newEvents;
                
                [self.tableView reloadData];
            }
@@ -136,8 +136,16 @@
     [task resume];
 }
 
-- (void)searchBar:(NSString *)searchText {
-    NSString *urlString = [NSString stringWithFormat:@"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894&per_page=15&page=%i&q=%@", pageId, searchText];
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  if (indexPath.row == self.events.count - 4) {
+    [self fetchMoreEvents];
+  }
+}
+
+- (void) searchBar:(UISearchBar *)searchEventForText textDidChange:(NSString *)searchText {
+    searchText=[searchText stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSString *urlString = [NSString stringWithFormat:@"%@&page=%i&q=%@", BASE_EVENT_URL, pageId, searchText];
     NSURL *url= [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -148,30 +156,21 @@
            }
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-               self.filteredEvent = dataDictionary[@"events"];
+              self.filteredEvents = dataDictionary[@"events"];
                
                [self.tableView reloadData];
-           }
+
+               }
         [self.refreshControl endRefreshing];
         [self.indicator stopAnimating];
     }];
     [task resume];
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  if (indexPath.row == self.events.count - 4) {
-    pageId += 1;
-    [self fetchEvents];
-  }
-}
+    }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:
 (NSInteger)section{
-    if (self.filteredEvent.count > 0){
-    return self.filteredEvent.count;
-    }
-    return self.events.count;
+    
+    return self.filteredEvents.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -181,7 +180,6 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  // Disable selecting row until implemented
   return nil;
 }
 
@@ -198,29 +196,43 @@
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
-    self.searchBar.showsCancelButton = YES;
+    self.searchEventForText.showsCancelButton = YES;
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    self.searchBar.showsCancelButton = NO;
-    self.searchBar.text = @"";
-    [self.searchBar resignFirstResponder];
-    self.filteredEvent = self.events;
+    self.searchEventForText.showsCancelButton = NO;
+    self.searchEventForText.text = @"";
+    [self.searchEventForText resignFirstResponder];
+    self.filteredEvents = self.events;
     [self.tableView reloadData];
 }
 
-//- (void)NSString *)searchText {
-//    if (searchText.length != 0) {
-//        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
-//            return [event containsString:searchText] || [type containsString:searchText];
-//        }];
-//        self.filteredEvent = [self.events filteredArrayUsingPredicate:predicate];
-//        NSLog(@"%@", self.filteredEvent);
-//    }
-//    else {
-//        self.filteredEvent = self.events;
-//    }
-//    [self.tableView reloadData];
-//}
+- (void)updateSearchResultsForSearchController:(nonnull UISearchController *)searchController {
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)coder {
+}
+
+- (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
+}
+
+- (void)preferredContentSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
+}
+- (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
+}
+
+- (void)willTransitionToTraitCollection:(nonnull UITraitCollection *)newCollection withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
+}
+
+- (void)didUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context withAnimationCoordinator:(nonnull UIFocusAnimationCoordinator *)coordinator {
+}
+
+- (void)setNeedsFocusUpdate {
+}
+- (void)updateFocusIfNeeded {
+}
 
 @end

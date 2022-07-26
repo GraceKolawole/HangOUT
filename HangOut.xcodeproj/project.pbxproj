@@ -190,6 +190,8 @@
 		953F07002874ABD6009BD594 /* HangOut */ = {
 			isa = PBXGroup;
 			children = (
+				95DCDF0C28907360002076F5 /* Map  */,
+				953F070A2874ABD6009BD594 /* Main.storyboard */,
 				95DCDF0228905018002076F5 /* Home Controller */,
 				95DCDF0128904FC6002076F5 /* OutingsControllers */,
 				95DCDEF1288F4D14002076F5 /* ProfileController */,
@@ -197,7 +199,6 @@
 				95DCDEE9288F4C27002076F5 /* Homelogins */,
 				95DCDECD288F4761002076F5 /* GroupsViewContoller */,
 				955FECE42887362500D34B54 /* Delegates */,
-				953F070A2874ABD6009BD594 /* Main.storyboard */,
 				955FECE32887361500D34B54 /* Cells */,
 				955FECE02887359600D34B54 /* View Controllers */,
 				953F07102874ABD7009BD594 /* Assets.xcassets */,
@@ -322,6 +323,13 @@
 				95DCDF062890505D002076F5 /* HomeViewController.m */,
 			);
 			path = "Home Controller";
+			sourceTree = "<group>";
+		};
+		95DCDF0C28907360002076F5 /* Map  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Map ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

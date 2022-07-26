@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3340C9EB5B81CACFD02BD2FB /* libPods-HangOutUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDC14E044A4D7CAA1170057 /* libPods-HangOutUITests.a */; };
-		950B82832878B07A00C8DC57 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950B82822878B07A00C8DC57 /* EventsViewController.m */; };
-		950B82862878B35300C8DC57 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950B82852878B35300C8DC57 /* EventCell.m */; };
-		953B4B9E287796FE0090186A /* ProfilePic.m in Sources */ = {isa = PBXBuildFile; fileRef = 953B4B9D287796FE0090186A /* ProfilePic.m */; };
-		953F07032874ABD6009BD594 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07022874ABD6009BD594 /* AppDelegate.m */; };
-		953F07062874ABD6009BD594 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07052874ABD6009BD594 /* SceneDelegate.m */; };
-		953F07092874ABD6009BD594 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07082874ABD6009BD594 /* ViewController.m */; };
 		953F070C2874ABD6009BD594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953F070A2874ABD6009BD594 /* Main.storyboard */; };
 		953F070F2874ABD6009BD594 /* HangOut.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 953F070D2874ABD6009BD594 /* HangOut.xcdatamodeld */; };
 		953F07112874ABD7009BD594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953F07102874ABD7009BD594 /* Assets.xcassets */; };
@@ -22,18 +16,24 @@
 		953F07212874ABD7009BD594 /* HangOutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F07202874ABD7009BD594 /* HangOutTests.m */; };
 		953F072B2874ABD7009BD594 /* HangOutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F072A2874ABD7009BD594 /* HangOutUITests.m */; };
 		953F072D2874ABD7009BD594 /* HangOutUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F072C2874ABD7009BD594 /* HangOutUITestsLaunchTests.m */; };
-		953F073B2874D229009BD594 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F073A2874D229009BD594 /* LoginViewController.m */; };
 		954873212874F368002CD6BC /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954873202874F368002CD6BC /* Keys.plist */; };
-		95487324287501DF002CD6BC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95487323287501DF002CD6BC /* HomeViewController.m */; };
-		9548732D28750592002CD6BC /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548732C28750592002CD6BC /* Post.m */; };
-		9548733628752A08002CD6BC /* HangOUTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548733528752A08002CD6BC /* HangOUTCell.m */; };
-		9553A4B528764319005C988B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553A4B428764319005C988B /* SignupViewController.m */; };
-		9553A4B8287655AD005C988B /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553A4B7287655AD005C988B /* PostViewController.m */; };
-		9553A4BD28777E9C005C988B /* ProfilePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */; };
-		9566B983287908CD0005D40A /* ProfileViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566B982287908CD0005D40A /* ProfileViewContoller.m */; };
-		9566B986287C8B830005D40A /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566B985287C8B830005D40A /* GroupViewController.m */; };
-		95DE87F2287E7EC300015C15 /* GroupPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE87F1287E7EC300015C15 /* GroupPassViewController.m */; };
-		95DE8804287E8BB700015C15 /* IntrovertedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE8803287E8BB700015C15 /* IntrovertedCell.m */; };
+		95DCDEBC288F45D0002076F5 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEB8288F45D0002076F5 /* EventCell.m */; };
+		95DCDEBD288F45D0002076F5 /* IntrovertedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEB9288F45D0002076F5 /* IntrovertedCell.m */; };
+		95DCDEC2288F462E002076F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEBE288F462E002076F5 /* AppDelegate.m */; };
+		95DCDEC3288F462E002076F5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEC1288F462E002076F5 /* SceneDelegate.m */; };
+		95DCDEC6288F466E002076F5 /* HangOUTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEC5288F466E002076F5 /* HangOUTCell.m */; };
+		95DCDEE7288F4A12002076F5 /* GroupMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEE5288F4A12002076F5 /* GroupMessageView.m */; };
+		95DCDEE8288F4A12002076F5 /* GroupPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEE6288F4A12002076F5 /* GroupPassViewController.m */; };
+		95DCDEEE288F4CC9002076F5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEEB288F4CC9002076F5 /* LoginViewController.m */; };
+		95DCDEEF288F4CC9002076F5 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEEC288F4CC9002076F5 /* SignupViewController.m */; };
+		95DCDEF6288F4D70002076F5 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEF3288F4D70002076F5 /* PostViewController.m */; };
+		95DCDEF7288F4D70002076F5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEF4288F4D70002076F5 /* Post.m */; };
+		95DCDEFE288F4D7B002076F5 /* ProfilePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEF8288F4D7B002076F5 /* ProfilePictureViewController.m */; };
+		95DCDEFF288F4D7B002076F5 /* ProfilePic.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEFB288F4D7B002076F5 /* ProfilePic.m */; };
+		95DCDF00288F4D7B002076F5 /* ProfileViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEFD288F4D7B002076F5 /* ProfileViewContoller.m */; };
+		95DCDF0528905053002076F5 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0328905053002076F5 /* EventsViewController.m */; };
+		95DCDF082890505D002076F5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF062890505D002076F5 /* HomeViewController.m */; };
+		95DCDF0B2890508D002076F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0A2890508D002076F5 /* ViewController.m */; };
 		966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06785D0378A68E04F16E844B /* libPods-HangOut.a */; };
 		96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */; };
 /* End PBXBuildFile section */
@@ -62,19 +62,7 @@
 		3BDC14E044A4D7CAA1170057 /* libPods-HangOutUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HangOutUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC8769BAB806F79FED45840 /* Pods-HangOutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutTests/Pods-HangOutTests.release.xcconfig"; sourceTree = "<group>"; };
 		91ABB8770DDA35F4E3C7BDC7 /* Pods-HangOutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutTests/Pods-HangOutTests.debug.xcconfig"; sourceTree = "<group>"; };
-		950B82812878B07A00C8DC57 /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		950B82822878B07A00C8DC57 /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
-		950B82842878B35300C8DC57 /* EventCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
-		950B82852878B35300C8DC57 /* EventCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
-		953B4B9C287796FE0090186A /* ProfilePic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfilePic.h; sourceTree = "<group>"; };
-		953B4B9D287796FE0090186A /* ProfilePic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfilePic.m; sourceTree = "<group>"; };
 		953F06FE2874ABD6009BD594 /* HangOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HangOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		953F07012874ABD6009BD594 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		953F07022874ABD6009BD594 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		953F07042874ABD6009BD594 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		953F07052874ABD6009BD594 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		953F07072874ABD6009BD594 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		953F07082874ABD6009BD594 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		953F070B2874ABD6009BD594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		953F070E2874ABD6009BD594 /* HangOut.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HangOut.xcdatamodel; sourceTree = "<group>"; };
 		953F07102874ABD7009BD594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,30 +74,42 @@
 		953F07262874ABD7009BD594 /* HangOutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangOutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		953F072A2874ABD7009BD594 /* HangOutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangOutUITests.m; sourceTree = "<group>"; };
 		953F072C2874ABD7009BD594 /* HangOutUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangOutUITestsLaunchTests.m; sourceTree = "<group>"; };
-		953F07392874D229009BD594 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		953F073A2874D229009BD594 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		954873202874F368002CD6BC /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		95487322287501DF002CD6BC /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		95487323287501DF002CD6BC /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		9548732B28750592002CD6BC /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
-		9548732C28750592002CD6BC /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
-		9548733428752A08002CD6BC /* HangOUTCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HangOUTCell.h; sourceTree = "<group>"; };
-		9548733528752A08002CD6BC /* HangOUTCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangOUTCell.m; sourceTree = "<group>"; };
-		9553A4B328764319005C988B /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
-		9553A4B428764319005C988B /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
-		9553A4B6287655AD005C988B /* PostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
-		9553A4B7287655AD005C988B /* PostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
-		9553A4BB28777E9C005C988B /* ProfilePictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfilePictureViewController.h; sourceTree = "<group>"; };
-		9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfilePictureViewController.m; sourceTree = "<group>"; };
-		9566B981287908CD0005D40A /* ProfileViewContoller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewContoller.h; sourceTree = "<group>"; };
-		9566B982287908CD0005D40A /* ProfileViewContoller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewContoller.m; sourceTree = "<group>"; };
-		9566B984287C8B830005D40A /* GroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
-		9566B985287C8B830005D40A /* GroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
 		9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HangOutTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		95DE87F0287E7EC300015C15 /* GroupPassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupPassViewController.h; sourceTree = "<group>"; };
-		95DE87F1287E7EC300015C15 /* GroupPassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupPassViewController.m; sourceTree = "<group>"; };
-		95DE8802287E8BB700015C15 /* IntrovertedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntrovertedCell.h; sourceTree = "<group>"; };
-		95DE8803287E8BB700015C15 /* IntrovertedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntrovertedCell.m; sourceTree = "<group>"; };
+		95DCDEB8288F45D0002076F5 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
+		95DCDEB9288F45D0002076F5 /* IntrovertedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntrovertedCell.m; sourceTree = "<group>"; };
+		95DCDEBA288F45D0002076F5 /* IntrovertedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntrovertedCell.h; sourceTree = "<group>"; };
+		95DCDEBB288F45D0002076F5 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
+		95DCDEBE288F462E002076F5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		95DCDEBF288F462E002076F5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		95DCDEC0288F462E002076F5 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		95DCDEC1288F462E002076F5 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		95DCDEC4288F466E002076F5 /* HangOUTCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HangOUTCell.h; sourceTree = "<group>"; };
+		95DCDEC5288F466E002076F5 /* HangOUTCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HangOUTCell.m; sourceTree = "<group>"; };
+		95DCDEE3288F4A12002076F5 /* GroupPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupPassViewController.h; sourceTree = "<group>"; };
+		95DCDEE4288F4A12002076F5 /* GroupMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupMessageView.h; sourceTree = "<group>"; };
+		95DCDEE5288F4A12002076F5 /* GroupMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupMessageView.m; sourceTree = "<group>"; };
+		95DCDEE6288F4A12002076F5 /* GroupPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupPassViewController.m; sourceTree = "<group>"; };
+		95DCDEEA288F4CC9002076F5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		95DCDEEB288F4CC9002076F5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		95DCDEEC288F4CC9002076F5 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		95DCDEED288F4CC9002076F5 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		95DCDEF2288F4D70002076F5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		95DCDEF3288F4D70002076F5 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
+		95DCDEF4288F4D70002076F5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		95DCDEF5288F4D70002076F5 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		95DCDEF8288F4D7B002076F5 /* ProfilePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePictureViewController.m; sourceTree = "<group>"; };
+		95DCDEF9288F4D7B002076F5 /* ProfilePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePictureViewController.h; sourceTree = "<group>"; };
+		95DCDEFA288F4D7B002076F5 /* ProfilePic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePic.h; sourceTree = "<group>"; };
+		95DCDEFB288F4D7B002076F5 /* ProfilePic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePic.m; sourceTree = "<group>"; };
+		95DCDEFC288F4D7B002076F5 /* ProfileViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewContoller.h; sourceTree = "<group>"; };
+		95DCDEFD288F4D7B002076F5 /* ProfileViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewContoller.m; sourceTree = "<group>"; };
+		95DCDF0328905053002076F5 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		95DCDF0428905053002076F5 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		95DCDF062890505D002076F5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		95DCDF072890505D002076F5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		95DCDF092890508D002076F5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		95DCDF0A2890508D002076F5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,64 +190,22 @@
 		953F07002874ABD6009BD594 /* HangOut */ = {
 			isa = PBXGroup;
 			children = (
-				953F07012874ABD6009BD594 /* AppDelegate.h */,
-				953F07022874ABD6009BD594 /* AppDelegate.m */,
-				953F07042874ABD6009BD594 /* SceneDelegate.h */,
-				953F07052874ABD6009BD594 /* SceneDelegate.m */,
+				95DCDF0228905018002076F5 /* Home Controller */,
+				95DCDF0128904FC6002076F5 /* OutingsControllers */,
+				95DCDEF1288F4D14002076F5 /* ProfileController */,
+				95DCDEF0288F4CF2002076F5 /* Posts */,
+				95DCDEE9288F4C27002076F5 /* Homelogins */,
+				95DCDECD288F4761002076F5 /* GroupsViewContoller */,
 				955FECE42887362500D34B54 /* Delegates */,
 				953F070A2874ABD6009BD594 /* Main.storyboard */,
 				955FECE32887361500D34B54 /* Cells */,
-				9548733428752A08002CD6BC /* HangOUTCell.h */,
-				9548733528752A08002CD6BC /* HangOUTCell.m */,
-				950B82842878B35300C8DC57 /* EventCell.h */,
-				950B82852878B35300C8DC57 /* EventCell.m */,
-				95DE8802287E8BB700015C15 /* IntrovertedCell.h */,
-				95DE8803287E8BB700015C15 /* IntrovertedCell.m */,
 				955FECE02887359600D34B54 /* View Controllers */,
-				953F07072874ABD6009BD594 /* ViewController.h */,
-				953F07082874ABD6009BD594 /* ViewController.m */,
-				953F07392874D229009BD594 /* LoginViewController.h */,
-				953F073A2874D229009BD594 /* LoginViewController.m */,
-				9553A4B328764319005C988B /* SignupViewController.h */,
-				9553A4B428764319005C988B /* SignupViewController.m */,
-				95487322287501DF002CD6BC /* HomeViewController.h */,
-				95487323287501DF002CD6BC /* HomeViewController.m */,
-				9553A4B6287655AD005C988B /* PostViewController.h */,
-				9553A4B7287655AD005C988B /* PostViewController.m */,
-				9566B981287908CD0005D40A /* ProfileViewContoller.h */,
-				9566B982287908CD0005D40A /* ProfileViewContoller.m */,
-				9553A4BB28777E9C005C988B /* ProfilePictureViewController.h */,
-				9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */,
-				950B82812878B07A00C8DC57 /* EventsViewController.h */,
-				950B82822878B07A00C8DC57 /* EventsViewController.m */,
-				9566B984287C8B830005D40A /* GroupViewController.h */,
-				9566B985287C8B830005D40A /* GroupViewController.m */,
-				95DE87F0287E7EC300015C15 /* GroupPassViewController.h */,
-				95DE87F1287E7EC300015C15 /* GroupPassViewController.m */,
 				953F07102874ABD7009BD594 /* Assets.xcassets */,
 				953F07122874ABD7009BD594 /* LaunchScreen.storyboard */,
 				953F07152874ABD7009BD594 /* Info.plist */,
 				954873202874F368002CD6BC /* Keys.plist */,
 				953F07162874ABD7009BD594 /* main.m */,
 				953F070D2874ABD6009BD594 /* HangOut.xcdatamodeld */,
-				9548732B28750592002CD6BC /* Post.h */,
-				9548732C28750592002CD6BC /* Post.m */,
-				953B4B9C287796FE0090186A /* ProfilePic.h */,
-				953B4B9D287796FE0090186A /* ProfilePic.m */,
-				9548733428752A08002CD6BC /* HangOUTCell.h */,
-				9548733528752A08002CD6BC /* HangOUTCell.m */,
-				9553A4BB28777E9C005C988B /* ProfilePictureViewController.h */,
-				9553A4BC28777E9C005C988B /* ProfilePictureViewController.m */,
-				950B82812878B07A00C8DC57 /* EventsViewController.h */,
-				950B82822878B07A00C8DC57 /* EventsViewController.m */,
-				950B82842878B35300C8DC57 /* EventCell.h */,
-				950B82852878B35300C8DC57 /* EventCell.m */,
-				9566B984287C8B830005D40A /* GroupViewController.h */,
-				9566B985287C8B830005D40A /* GroupViewController.m */,
-				95DE87F0287E7EC300015C15 /* GroupPassViewController.h */,
-				95DE87F1287E7EC300015C15 /* GroupPassViewController.m */,
-				95DE8802287E8BB700015C15 /* IntrovertedCell.h */,
-				95DE8803287E8BB700015C15 /* IntrovertedCell.m */,
 			);
 			path = HangOut;
 			sourceTree = "<group>";
@@ -272,6 +230,8 @@
 		955FECE02887359600D34B54 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				95DCDF092890508D002076F5 /* ViewController.h */,
+				95DCDF0A2890508D002076F5 /* ViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -279,6 +239,12 @@
 		955FECE32887361500D34B54 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				95DCDEC4288F466E002076F5 /* HangOUTCell.h */,
+				95DCDEC5288F466E002076F5 /* HangOUTCell.m */,
+				95DCDEBB288F45D0002076F5 /* EventCell.h */,
+				95DCDEB8288F45D0002076F5 /* EventCell.m */,
+				95DCDEBA288F45D0002076F5 /* IntrovertedCell.h */,
+				95DCDEB9288F45D0002076F5 /* IntrovertedCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -286,8 +252,76 @@
 		955FECE42887362500D34B54 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				95DCDEBF288F462E002076F5 /* AppDelegate.h */,
+				95DCDEBE288F462E002076F5 /* AppDelegate.m */,
+				95DCDEC0288F462E002076F5 /* SceneDelegate.h */,
+				95DCDEC1288F462E002076F5 /* SceneDelegate.m */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		95DCDECD288F4761002076F5 /* GroupsViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDEE4288F4A12002076F5 /* GroupMessageView.h */,
+				95DCDEE5288F4A12002076F5 /* GroupMessageView.m */,
+				95DCDEE3288F4A12002076F5 /* GroupPassViewController.h */,
+				95DCDEE6288F4A12002076F5 /* GroupPassViewController.m */,
+			);
+			path = GroupsViewContoller;
+			sourceTree = "<group>";
+		};
+		95DCDEE9288F4C27002076F5 /* Homelogins */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDEEA288F4CC9002076F5 /* LoginViewController.h */,
+				95DCDEEB288F4CC9002076F5 /* LoginViewController.m */,
+				95DCDEED288F4CC9002076F5 /* SignupViewController.h */,
+				95DCDEEC288F4CC9002076F5 /* SignupViewController.m */,
+			);
+			path = Homelogins;
+			sourceTree = "<group>";
+		};
+		95DCDEF0288F4CF2002076F5 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDEF2288F4D70002076F5 /* Post.h */,
+				95DCDEF4288F4D70002076F5 /* Post.m */,
+				95DCDEF5288F4D70002076F5 /* PostViewController.h */,
+				95DCDEF3288F4D70002076F5 /* PostViewController.m */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		95DCDEF1288F4D14002076F5 /* ProfileController */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDEFA288F4D7B002076F5 /* ProfilePic.h */,
+				95DCDEFB288F4D7B002076F5 /* ProfilePic.m */,
+				95DCDEF9288F4D7B002076F5 /* ProfilePictureViewController.h */,
+				95DCDEF8288F4D7B002076F5 /* ProfilePictureViewController.m */,
+				95DCDEFC288F4D7B002076F5 /* ProfileViewContoller.h */,
+				95DCDEFD288F4D7B002076F5 /* ProfileViewContoller.m */,
+			);
+			path = ProfileController;
+			sourceTree = "<group>";
+		};
+		95DCDF0128904FC6002076F5 /* OutingsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDF0428905053002076F5 /* EventsViewController.h */,
+				95DCDF0328905053002076F5 /* EventsViewController.m */,
+			);
+			path = OutingsControllers;
+			sourceTree = "<group>";
+		};
+		95DCDF0228905018002076F5 /* Home Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDF072890505D002076F5 /* HomeViewController.h */,
+				95DCDF062890505D002076F5 /* HomeViewController.m */,
+			);
+			path = "Home Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,25 +537,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953B4B9E287796FE0090186A /* ProfilePic.m in Sources */,
-				950B82832878B07A00C8DC57 /* EventsViewController.m in Sources */,
 				953F07172874ABD7009BD594 /* main.m in Sources */,
-				953F07092874ABD6009BD594 /* ViewController.m in Sources */,
-				953F073B2874D229009BD594 /* LoginViewController.m in Sources */,
-				953F07032874ABD6009BD594 /* AppDelegate.m in Sources */,
-				9553A4B528764319005C988B /* SignupViewController.m in Sources */,
-				95DE8804287E8BB700015C15 /* IntrovertedCell.m in Sources */,
-				950B82862878B35300C8DC57 /* EventCell.m in Sources */,
+				95DCDEC2288F462E002076F5 /* AppDelegate.m in Sources */,
+				95DCDEBD288F45D0002076F5 /* IntrovertedCell.m in Sources */,
 				953F070F2874ABD6009BD594 /* HangOut.xcdatamodeld in Sources */,
-				9548733628752A08002CD6BC /* HangOUTCell.m in Sources */,
-				9553A4B8287655AD005C988B /* PostViewController.m in Sources */,
-				9566B986287C8B830005D40A /* GroupViewController.m in Sources */,
-				95487324287501DF002CD6BC /* HomeViewController.m in Sources */,
-				953F07062874ABD6009BD594 /* SceneDelegate.m in Sources */,
-				9566B983287908CD0005D40A /* ProfileViewContoller.m in Sources */,
-				9548732D28750592002CD6BC /* Post.m in Sources */,
-				9553A4BD28777E9C005C988B /* ProfilePictureViewController.m in Sources */,
-				95DE87F2287E7EC300015C15 /* GroupPassViewController.m in Sources */,
+				95DCDEC6288F466E002076F5 /* HangOUTCell.m in Sources */,
+				95DCDEF7288F4D70002076F5 /* Post.m in Sources */,
+				95DCDF0528905053002076F5 /* EventsViewController.m in Sources */,
+				95DCDEFE288F4D7B002076F5 /* ProfilePictureViewController.m in Sources */,
+				95DCDF0B2890508D002076F5 /* ViewController.m in Sources */,
+				95DCDF00288F4D7B002076F5 /* ProfileViewContoller.m in Sources */,
+				95DCDEE7288F4A12002076F5 /* GroupMessageView.m in Sources */,
+				95DCDEEF288F4CC9002076F5 /* SignupViewController.m in Sources */,
+				95DCDEEE288F4CC9002076F5 /* LoginViewController.m in Sources */,
+				95DCDEBC288F45D0002076F5 /* EventCell.m in Sources */,
+				95DCDEC3288F462E002076F5 /* SceneDelegate.m in Sources */,
+				95DCDEE8288F4A12002076F5 /* GroupPassViewController.m in Sources */,
+				95DCDEFF288F4D7B002076F5 /* ProfilePic.m in Sources */,
+				95DCDF082890505D002076F5 /* HomeViewController.m in Sources */,
+				95DCDEF6288F4D70002076F5 /* PostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

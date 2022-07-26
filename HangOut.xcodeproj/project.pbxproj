@@ -35,6 +35,7 @@
 		95DCDF082890505D002076F5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF062890505D002076F5 /* HomeViewController.m */; };
 		95DCDF0B2890508D002076F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0A2890508D002076F5 /* ViewController.m */; };
 		95DCDF0F28907477002076F5 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0E28907477002076F5 /* LocationsViewController.m */; };
+		95DCDF13289075E4002076F5 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF12289075E4002076F5 /* LocationCell.m */; };
 		966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06785D0378A68E04F16E844B /* libPods-HangOut.a */; };
 		96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */; };
 /* End PBXBuildFile section */
@@ -113,6 +114,8 @@
 		95DCDF0A2890508D002076F5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		95DCDF0D28907477002076F5 /* LocationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
 		95DCDF0E28907477002076F5 /* LocationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		95DCDF11289075E4002076F5 /* LocationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
+		95DCDF12289075E4002076F5 /* LocationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
 		F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,7 +196,8 @@
 		953F07002874ABD6009BD594 /* HangOut */ = {
 			isa = PBXGroup;
 			children = (
-				95DCDF0C28907360002076F5 /* Map  */,
+				95DCDF102890757E002076F5 /* Map Cell */,
+				95DCDF0C28907360002076F5 /* Map ViewController */,
 				953F070A2874ABD6009BD594 /* Main.storyboard */,
 				95DCDF0228905018002076F5 /* Home Controller */,
 				95DCDF0128904FC6002076F5 /* OutingsControllers */,
@@ -328,13 +332,22 @@
 			path = "Home Controller";
 			sourceTree = "<group>";
 		};
-		95DCDF0C28907360002076F5 /* Map  */ = {
+		95DCDF0C28907360002076F5 /* Map ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				95DCDF0D28907477002076F5 /* LocationsViewController.h */,
 				95DCDF0E28907477002076F5 /* LocationsViewController.m */,
 			);
-			path = "Map ";
+			path = "Map ViewController";
+			sourceTree = "<group>";
+		};
+		95DCDF102890757E002076F5 /* Map Cell */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDF11289075E4002076F5 /* LocationCell.h */,
+				95DCDF12289075E4002076F5 /* LocationCell.m */,
+			);
+			path = "Map Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,6 +572,7 @@
 				95DCDF0528905053002076F5 /* EventsViewController.m in Sources */,
 				95DCDF0F28907477002076F5 /* LocationsViewController.m in Sources */,
 				95DCDEFE288F4D7B002076F5 /* ProfilePictureViewController.m in Sources */,
+				95DCDF13289075E4002076F5 /* LocationCell.m in Sources */,
 				95DCDF0B2890508D002076F5 /* ViewController.m in Sources */,
 				95DCDF00288F4D7B002076F5 /* ProfileViewContoller.m in Sources */,
 				95DCDEE7288F4A12002076F5 /* GroupMessageView.m in Sources */,

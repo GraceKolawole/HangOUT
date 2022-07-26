@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_SECRET</key>
+	<string>W2AOE1TYC4MHK5SZYOUGX0J3LVRALMPB4CXT3ZH21ZCPUMCU</string>
+	<key>CLIENT_ID</key>
+	<string>QA1L0Z0ZNA2QVEEDHFPQWK0I5F1DE3GPLSNW4BZEBGJXUCFL</string>
 	<key>applicationId</key>
 	<string>eh5ykK8uS1H0daAGojGNjs1zXqtL2owhKC97V6RE</string>
 	<key>clientKey</key>

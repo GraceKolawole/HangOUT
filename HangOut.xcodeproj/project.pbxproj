@@ -36,6 +36,8 @@
 		95DCDF0B2890508D002076F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0A2890508D002076F5 /* ViewController.m */; };
 		95DCDF0F28907477002076F5 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0E28907477002076F5 /* LocationsViewController.m */; };
 		95DCDF13289075E4002076F5 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF12289075E4002076F5 /* LocationCell.m */; };
+		95DCDF16289077BF002076F5 /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF15289077BF002076F5 /* PhotoMapViewController.m */; };
+		95DCDF1828907B50002076F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95DCDF1728907B50002076F5 /* MapKit.framework */; };
 		966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06785D0378A68E04F16E844B /* libPods-HangOut.a */; };
 		96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */; };
 /* End PBXBuildFile section */
@@ -116,6 +118,9 @@
 		95DCDF0E28907477002076F5 /* LocationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
 		95DCDF11289075E4002076F5 /* LocationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
 		95DCDF12289075E4002076F5 /* LocationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
+		95DCDF14289077BF002076F5 /* PhotoMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoMapViewController.h; sourceTree = "<group>"; };
+		95DCDF15289077BF002076F5 /* PhotoMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoMapViewController.m; sourceTree = "<group>"; };
+		95DCDF1728907B50002076F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95DCDF1828907B50002076F5 /* MapKit.framework in Frameworks */,
 				966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +170,7 @@
 		676698D3AF294F26F002A8CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95DCDF1728907B50002076F5 /* MapKit.framework */,
 				06785D0378A68E04F16E844B /* libPods-HangOut.a */,
 				9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */,
 				3BDC14E044A4D7CAA1170057 /* libPods-HangOutUITests.a */,
@@ -337,6 +344,8 @@
 			children = (
 				95DCDF0D28907477002076F5 /* LocationsViewController.h */,
 				95DCDF0E28907477002076F5 /* LocationsViewController.m */,
+				95DCDF14289077BF002076F5 /* PhotoMapViewController.h */,
+				95DCDF15289077BF002076F5 /* PhotoMapViewController.m */,
 			);
 			path = "Map ViewController";
 			sourceTree = "<group>";
@@ -571,6 +580,7 @@
 				95DCDEF7288F4D70002076F5 /* Post.m in Sources */,
 				95DCDF0528905053002076F5 /* EventsViewController.m in Sources */,
 				95DCDF0F28907477002076F5 /* LocationsViewController.m in Sources */,
+				95DCDF16289077BF002076F5 /* PhotoMapViewController.m in Sources */,
 				95DCDEFE288F4D7B002076F5 /* ProfilePictureViewController.m in Sources */,
 				95DCDF13289075E4002076F5 /* LocationCell.m in Sources */,
 				95DCDF0B2890508D002076F5 /* ViewController.m in Sources */,

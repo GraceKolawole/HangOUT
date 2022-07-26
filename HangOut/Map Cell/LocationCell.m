@@ -42,8 +42,8 @@
         NSString *urlSuffix = [category valueForKeyPath:@"icon.suffix"];
         NSString *urlString = [NSString stringWithFormat:@"%@bg_32%@", urlPrefix, urlSuffix];
         
-        NSURL *url = [NSURL URLWithString:urlString];
-        [self.categoryImageView setImageWithURL:url];
+//        NSURL *url = [NSURL URLWithString:urlString];
+//        [self.categoryImageView setImageWithURL:url];
     }
 }
 

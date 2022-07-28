@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) Post *post;
 @property (strong, nonatomic) ProfilePic *pic;
-@property (weak, nonatomic) IBOutlet UIButton *detaliButton;
+@property (weak, nonatomic) IBOutlet UIButton *detailButton;
 
 @end
 

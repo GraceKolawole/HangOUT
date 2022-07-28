@@ -170,9 +170,6 @@
         return 446;
     }
 }
-- (IBAction)didTapFavorite:(id)sender {
-
-}
 
 
 @end

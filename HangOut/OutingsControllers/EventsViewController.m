@@ -6,13 +6,14 @@
 ////
 //
 #import "EventsViewController.h"
+#import "PhotoMapViewController.h"
 #import "EventCell.h"
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
 
 #define BASE_EVENT_URL @"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894&per_page=15"
 
-@interface EventsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchResultsUpdating, UISearchBarDelegate>
+@interface EventsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchResultsUpdating, UISearchBarDelegate, UINavigationControllerDelegate>
 {
     int pageId;
     NSString *searchText;
@@ -59,7 +60,7 @@
            }
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-               
+
                self.events = dataDictionary[@"events"];
                self.filteredEvents = dataDictionary[@"events"];
 
@@ -124,6 +125,7 @@
                [self displayAlertMessages];
            }
            else {
+               
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                NSMutableArray *newEvents = [self.events mutableCopy];
                [newEvents addObjectsFromArray:dataDictionary[@"events"]];
@@ -144,9 +146,9 @@
 }
 
 - (void) searchBar:(UISearchBar *)searchEventForText textDidChange:(NSString *)searchText {
-    searchText=[searchText stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    searchText = [searchText stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     NSString *urlString = [NSString stringWithFormat:@"%@&page=%i&q=%@", BASE_EVENT_URL, pageId, searchText];
-    NSURL *url= [NSURL URLWithString:urlString];
+    NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -175,6 +177,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *venue = self.filteredEvents[indexPath.row];
+    NSNumber *lat = [venue valueForKeyPath:@"location.lat"];
+    NSNumber *lng = [venue valueForKeyPath:@"location.lng"];
+    NSLog(@"%@, %@", lat, lng);
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

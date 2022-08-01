@@ -8,8 +8,17 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@protocol StateFilterDelegate <NSObject>
+- (NSUInteger) numberOfStatesAvailable;
+- (NSString *) stateNameForRow: (NSUInteger) row;
+
+- (void) stateFilterEnabledForRow: (NSUInteger) row;
+- (void) stateFilterDisabledForRow: (NSUInteger) row;
+
+@end
 
 @interface StateViewController : UIViewController
+@property (nonatomic, weak) id <StateFilterDelegate> delegate;
 
 @end
 

@@ -6,8 +6,14 @@
 //
 
 #import "FilteredViewController.h"
+#import "FilteredCell.h"
+#import "Parse/Parse.h"
+#import "EventsViewController.h"
+#import "EventCell.h"
 
 @interface FilteredViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+//@property id <FilterDelegate delegate;
 
 @end
 
@@ -17,15 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) fetchFilteredEvents{
+    
 }
-*/
+
 
 @end

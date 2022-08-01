@@ -9,10 +9,13 @@
 #import "EventCell.h"
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
+#import "FilterViewController.h"
 
 #define BASE_EVENT_URL @"https://api.seatgeek.com/2/events?client_id=Mjc3NjgxNTV8MTY1NzU1NDk5MC4zNjM1OTU3&client_secret=84710cd42677f14b657b6203e088a97a1bdc67637e7b9468ee2f53eb2a5ea894&per_page=15"
+@protocol EventTypeFilterDelegate <NSObject>
+@end
 
-@interface EventsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchResultsUpdating, UISearchBarDelegate>
+@interface EventsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchResultsUpdating, UISearchBarDelegate, FilterDelegate>
 {
     int pageId;
     NSString *searchText;
@@ -23,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchEventForText;
 @property (nonatomic, strong) NSArray *filteredEvents;
+@property (nonatomic, strong) NSArray *eventsStates;
 
 @end
 
@@ -62,6 +66,8 @@
                
                self.events = dataDictionary[@"events"];
                self.filteredEvents = dataDictionary[@"events"];
+               
+               [self populateAvailableStates];
 
                [self.tableView reloadData];
            }
@@ -207,6 +213,23 @@
     [self.tableView reloadData];
 }
 
+- (void) populateAvailableStates {
+    NSMutableSet *availableStates = [NSMutableSet new];
+    for (int i = 0; i < self.filteredEvents.count; i++) {
+        [availableStates addObject:self.filteredEvents[i][@"venue"][@"display_location"]];
+    }
+    self.eventsStates = [availableStates allObjects];
+}
+
+- (NSUInteger)numberOfStatesAvailable{
+    return self.eventsStates.count;
+}
+- (NSString *)stateNameForRow:(NSUInteger)row{
+    return self.eventsStates[row];
+}
+- (void)stateFilterEnabledForRow:(NSUInteger)row{}
+- (void)stateFilterDisabledForRow:(NSUInteger)row{}
+
 - (void)updateSearchResultsForSearchController:(nonnull UISearchController *)searchController {
 }
 
@@ -234,5 +257,10 @@
 }
 - (void)updateFocusIfNeeded {
 }
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender: (id)string {
+    if ([segue.identifier isEqualToString:@"PresentViewController"]) {
+        FilterViewController *vc = [segue destinationViewController];
+        vc.stateFilterdelegate = self;
+    }
+}
 @end

@@ -1,13 +1,14 @@
 //
-//  IntrovertedCell.m
+//  StateCell.m
 //  HangOut
 //
-//  Created by Oluwanifemi Kolawole on 7/12/22.
+//  Created by Oluwanifemi Kolawole on 7/28/22.
 //
 
-#import "IntrovertedCell.h"
+#import "StateCell.h"
 
-@implementation IntrovertedCell
+@implementation StateCell
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];

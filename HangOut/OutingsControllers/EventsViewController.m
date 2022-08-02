@@ -287,7 +287,6 @@
 }
 
 - (IBAction)didTapFilter:(id)sender {
-    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UINavigationController *vc = [storyboard instantiateViewControllerWithIdentifier: @"FilterViewController"];
     FilterViewController *filterView = (FilterViewController *)[vc topViewController];

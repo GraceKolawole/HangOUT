@@ -507,7 +507,7 @@
         <scene sceneID="r1O-hw-aor">
             <objects>
                 <viewController id="6ib-wT-Jeg" customClass="HomeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qsv-tn-BMQ">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Qsv-tn-BMQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -984,7 +984,13 @@
                             <constraint firstItem="exq-G2-L1B" firstAttribute="centerX" secondItem="ozs-9S-lAl" secondAttribute="centerX" id="mVU-1L-o3m"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zgo-fa-MuU"/>
+                    <navigationItem key="navigationItem" id="zgo-fa-MuU">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="0b6-CA-fxK">
+                            <connections>
+                                <action selector="didTapDone:" destination="y0A-Qf-o6L" id="dOb-3t-L8i"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="exq-G2-L1B" id="qkg-hU-fUY"/>
                     </connections>

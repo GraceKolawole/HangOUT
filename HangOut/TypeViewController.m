@@ -59,4 +59,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     }
     [tableView reloadData];
 }
+- (IBAction)didTapDone:(id)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
 @end

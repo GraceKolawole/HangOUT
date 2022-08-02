@@ -12,12 +12,9 @@
 @protocol EventTypeFilterDelegate <NSObject>
 @end
 @interface TypeViewController () < UITableViewDataSource, UITableViewDelegate>
-{
-    NSMutableArray *cellSelected;
-}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property(nonatomic) UITableViewCellAccessoryType accessoryType;
+@property(nonatomic) BOOL allowsMultipleSelection;
 @end
 
 @implementation TypeViewController
@@ -26,7 +23,6 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    cellSelected = [NSMutableArray array];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
@@ -42,7 +38,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TypeCell" forIndexPath:indexPath];
     cell.textLabel.text = [self.delegate typeNameForRow:indexPath.row];
     
-    if ([cellSelected containsObject:indexPath]){
+    if ([self.delegate cellTypeSelected:indexPath.row]){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else{
@@ -55,11 +51,11 @@
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if ([cellSelected containsObject:indexPath]){
-        [cellSelected removeObject:indexPath];
+    if ([self.delegate cellTypeSelected:indexPath.row]){
+        [self.delegate typeFilterDisabledForRow:indexPath.row];
     }
     else{
-        [cellSelected addObject:indexPath];
+        [self.delegate typeFilterEnabledForRow:indexPath.row];
     }
     [tableView reloadData];
 }

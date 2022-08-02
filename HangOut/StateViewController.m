@@ -13,12 +13,6 @@
 @protocol EventTypeFilterDelegate <NSObject>
 @end
 @interface StateViewController () < UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
-//{
-//    NSMutableArray *filteredStates;
-//    NSMutableArray *cellSelected;
-//    BOOL isFiltered;
-//    NSString *state;
-//}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -71,6 +65,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView reloadData];
 }
 - (IBAction)didTapDone:(id)sender {
-    
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 @end

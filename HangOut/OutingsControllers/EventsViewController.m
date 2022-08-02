@@ -29,6 +29,7 @@
 @property (nonatomic, strong) NSArray *eventsStates;
 @property (nonatomic, strong) NSArray *eventsTypes;
 @property (nonatomic, strong) NSMutableSet *selectedStateEvents;
+@property (nonatomic, strong) NSMutableSet *selectedTypeEvents;
 
 @end
 
@@ -44,6 +45,7 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.selectedStateEvents = [NSMutableSet new];
+    self.selectedTypeEvents = [NSMutableSet new];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.indicator startAnimating];
     [self fetchEvents];
@@ -246,6 +248,18 @@
     self.filteredEvents = filteredEvent;
     [self.tableView reloadData];
 }
+- (void) filterSelectedTypeEvents{
+    NSMutableArray *filteredEvent = [NSMutableArray new];
+    for (int t = 0; t< self.events.count; t++){
+        NSString * type = self.events[t][@"type"];
+        
+        if (self.selectedTypeEvents.count == 0||[self.selectedTypeEvents containsObject:type]){
+            [filteredEvent addObject:self.events[t]];
+        }
+    }
+    self.filteredEvents = filteredEvent;
+    [self.tableView reloadData];
+}
 - (NSUInteger)numberOfStatesAvailable{
     return self.eventsStates.count;
 }
@@ -266,6 +280,12 @@
     NSString *nameForRow = [self stateNameForRow:row];
     return [self.selectedStateEvents containsObject:nameForRow];
 }
+
+- (BOOL)cellTypeSelected:(NSUInteger)row{
+    NSString *nameForTypeRow = [self typeNameForRow:row];
+    return [self.selectedTypeEvents containsObject:nameForTypeRow];
+}
+
 - (IBAction)didTapFilter:(id)sender {
     SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -295,7 +315,16 @@
     [self.selectedStateEvents removeObject:nameForRow];
     [self filterSelectedStateEvents];
 }
-
+- (void)typeFilterEnabledForRow:(NSUInteger)row{
+    NSString *nameForTypeRow = [self typeNameForRow:row];
+    [self.selectedTypeEvents addObject:nameForTypeRow];
+    [self filterSelectedTypeEvents];
+}
+- (void)typeFilterDisabledForRow:(NSUInteger)row{
+    NSString *nameForTypeRow = [self typeNameForRow:row];
+    [self.selectedTypeEvents removeObject:nameForTypeRow];
+    [self filterSelectedTypeEvents];
+}
 - (void)updateSearchResultsForSearchController:(nonnull UISearchController *)searchController {
 }
 

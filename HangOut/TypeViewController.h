@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol TypeFilterDelegate <NSObject>
 - (NSUInteger) numberOfTypesAvailable;
 - (NSString *) typeNameForRow: (NSUInteger) row;
-
+- (BOOL) cellTypeSelected: (NSUInteger) row;
 - (void) typeFilterEnabledForRow: (NSUInteger) row;
 - (void) typeFilterDisabledForRow: (NSUInteger) row;
 

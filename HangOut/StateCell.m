@@ -1,16 +1,18 @@
 //
-//  EventCell.m
+//  StateCell.m
 //  HangOut
 //
-//  Created by Oluwanifemi Kolawole on 7/8/22.
+//  Created by Oluwanifemi Kolawole on 7/28/22.
 //
 
-#import "EventCell.h"
+#import "StateCell.h"
 
-@implementation EventCell
+@implementation StateCell
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

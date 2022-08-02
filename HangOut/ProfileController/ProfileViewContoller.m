@@ -19,7 +19,6 @@
 #import "HomeViewController.h"
 #import "Post.h"
 
-//UITableViewDataSource, UITableViewDelegate,
 @interface ProfileViewContoller () < UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

@@ -21,9 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) Post *profilepicture;
 @property (nonatomic, strong) NSMutableArray<Post *> *postsArray;
-//
 @property (strong, nonatomic) Post *post;
-//@property (strong, nonatomic) ProfilePic *pic;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
@@ -41,7 +39,6 @@
         [self.refreshControl addTarget:self action: @selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
         [self.tableView insertSubview:self.refreshControl atIndex:0];
 
-        // Server fetch
         PFQuery *postQuery = [Post query];
         [postQuery orderByDescending:@"createdAt"];
         [postQuery includeKey:@"author"];
@@ -60,11 +57,6 @@
 }
 
 - (void)beginRefresh: (UIRefreshControl *)UIRefreshControl {
-
-    // get the current user
-    // set the user image
-    // set the property
-
     PFQuery *postQuery = [Post query];
     [postQuery orderByDescending:@"createdAt"];
     [postQuery includeKey:@"author"];
@@ -141,11 +133,9 @@
 }
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  // Disable selecting row until implemented
   return nil;
 }
 - (IBAction)didTapLogout:(id)sender {
-   // [self dismissViewControllerAnimated:true completion:nil];
 
     SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
 
@@ -155,7 +145,6 @@
     sceneDelegate.window.rootViewController = loginViewController;
 
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        // PFUser.current() will now be nil
     }];
 
 }

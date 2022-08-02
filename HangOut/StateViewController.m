@@ -13,16 +13,15 @@
 @protocol EventTypeFilterDelegate <NSObject>
 @end
 @interface StateViewController () < UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
-{
-    NSMutableArray *filteredStates;
-    NSMutableArray *cellSelected;
-    BOOL isFiltered;
-    NSString *state;
-}
+//{
+//    NSMutableArray *filteredStates;
+//    NSMutableArray *cellSelected;
+//    BOOL isFiltered;
+//    NSString *state;
+//}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *states;
-@property(nonatomic) UITableViewCellAccessoryType accessoryType;
+
 @property(nonatomic) BOOL allowsMultipleSelection;
 @property(nonatomic, readonly, nullable) NSArray<NSIndexPath *> *indexPathsForSelectedRows;
 
@@ -32,10 +31,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    state = nil;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    cellSelected = [NSMutableArray array];
+
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
@@ -51,7 +49,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StateCell" forIndexPath:indexPath];
     cell.textLabel.text = [self.delegate stateNameForRow:indexPath.row];
     
-    if ([cellSelected containsObject:indexPath]){
+    if ([self.delegate cellSelected:indexPath.row]){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else{
@@ -64,11 +62,11 @@
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if ([cellSelected containsObject:indexPath]){
-        [cellSelected removeObject:indexPath];
+    if ([self.delegate cellSelected:indexPath.row]){
+        [self.delegate stateFilterDisabledForRow:indexPath.row];
     }
     else{
-        [cellSelected addObject:indexPath];
+        [self.delegate stateFilterEnabledForRow:indexPath.row];
     }
     [tableView reloadData];
 }

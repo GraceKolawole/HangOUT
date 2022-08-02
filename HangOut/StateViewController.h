@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol StateFilterDelegate <NSObject>
 - (NSUInteger) numberOfStatesAvailable;
 - (NSString *) stateNameForRow: (NSUInteger) row;
-- (NSMutableArray *) cellSelected: row;
+- (BOOL) cellSelected: (NSUInteger) row;
 
 - (void) stateFilterEnabledForRow: (NSUInteger) row;
 - (void) stateFilterDisabledForRow: (NSUInteger) row;

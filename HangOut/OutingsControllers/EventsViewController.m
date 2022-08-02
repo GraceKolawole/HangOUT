@@ -15,7 +15,7 @@
 @protocol EventTypeFilterDelegate <NSObject>
 @end
 
-@interface EventsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchResultsUpdating, UISearchBarDelegate, FilterStateDelegate, FilterTypeDelegate>
+@interface EventsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchResultsUpdating, UISearchBarDelegate, FilterStateDelegate, FilterTypeDelegate, UINavigationControllerDelegate>
 {
     int pageId;
     NSString *searchText;
@@ -28,6 +28,7 @@
 @property (nonatomic, strong) NSArray *filteredEvents;
 @property (nonatomic, strong) NSArray *eventsStates;
 @property (nonatomic, strong) NSArray *eventsTypes;
+@property (nonatomic, strong) NSMutableSet *selectedStateEvents;
 
 @end
 
@@ -42,9 +43,11 @@
     self.searchEventForText.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.selectedStateEvents = [NSMutableSet new];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.indicator startAnimating];
     [self fetchEvents];
+
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchEvents) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshControl];
@@ -69,6 +72,7 @@
                self.filteredEvents = dataDictionary[@"events"];
                
                [self populateAvailableStates];
+               [self populateAvailableTypes];
 
                [self.tableView reloadData];
            }
@@ -226,11 +230,22 @@
 - (void) populateAvailableTypes {
     NSMutableSet *availableTypes = [NSMutableSet new];
     for (int a = 0; a < self.filteredEvents.count; a++) {
-        [availableTypes addObject:self.filteredEvents[a][@"venue"][@"type"]];
+        [availableTypes addObject:self.filteredEvents[a][@"type"]];
     }
     self.eventsTypes = [availableTypes allObjects];
 }
-
+- (void) filterSelectedStateEvents{
+    NSMutableArray *filteredEvent = [NSMutableArray new];
+    for (int e = 0; e< self.events.count; e++){
+        NSString * state = self.events[e][@"venue"][@"display_location"];
+        
+        if (self.selectedStateEvents.count == 0||[self.selectedStateEvents containsObject:state]){
+            [filteredEvent addObject:self.events[e]];
+        }
+    }
+    self.filteredEvents = filteredEvent;
+    [self.tableView reloadData];
+}
 - (NSUInteger)numberOfStatesAvailable{
     return self.eventsStates.count;
 }
@@ -247,10 +262,38 @@
     return self.eventsTypes[row];
 }
 
+- (BOOL)cellSelected:(NSUInteger)row{
+    NSString *nameForRow = [self stateNameForRow:row];
+    return [self.selectedStateEvents containsObject:nameForRow];
+}
+- (IBAction)didTapFilter:(id)sender {
+    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *vc = [storyboard instantiateViewControllerWithIdentifier: @"FilterViewController"];
+    FilterViewController *filterView = (FilterViewController *)[vc topViewController];
+    filterView.stateFilterdelegate = self;
+    filterView.typeFilterdelegate = self;
+    vc.modalPresentationStyle = UIModalPresentationPageSheet;
+    UISheetPresentationController *sheet = [vc sheetPresentationController];
+    sheet.detents = @[[UISheetPresentationControllerDetent mediumDetent], [UISheetPresentationControllerDetent largeDetent]];
+    sheet.largestUndimmedDetentIdentifier = UISheetPresentationControllerDetentIdentifierMedium;
+    sheet.prefersScrollingExpandsWhenScrolledToEdge = NO;
+    sheet.prefersEdgeAttachedInCompactHeight = YES;
+    sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = YES;
+    [self presentViewController:vc animated:NO completion:nil];
+    
+}
+
 - (void)stateFilterEnabledForRow:(NSUInteger)row{
+    NSString *nameForRow = [self stateNameForRow:row];
+    [self.selectedStateEvents addObject:nameForRow];
+    [self filterSelectedStateEvents];
 }
 
 - (void)stateFilterDisabledForRow:(NSUInteger)row{
+    NSString *nameForRow = [self stateNameForRow:row];
+    [self.selectedStateEvents removeObject:nameForRow];
+    [self filterSelectedStateEvents];
 }
 
 - (void)updateSearchResultsForSearchController:(nonnull UISearchController *)searchController {

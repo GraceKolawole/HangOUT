@@ -33,7 +33,6 @@
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
-            // Todo - segue
         } else {
             NSLog(@"User registered successfully");
             [self performSegueWithIdentifier:@"FirstSegue" sender:nil];

@@ -6,7 +6,6 @@
 //
 
 #import "GroupMessageView.h"
-//#import "GroupPassViewController.h"
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
 
@@ -21,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 

@@ -8,7 +8,6 @@
 #import "FilterViewController.h"
 #import "SceneDelegate.h"
 #import "StateViewController.h"
-#import "StateCell.h"
 #import "Parse/Parse.h"
 #import "EventsViewController.h"
 #import "TypeViewController.h"

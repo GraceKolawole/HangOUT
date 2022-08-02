@@ -327,33 +327,6 @@
 - (void)updateSearchResultsForSearchController:(nonnull UISearchController *)searchController {
 }
 
-- (void)encodeWithCoder:(nonnull NSCoder *)coder {
-}
-
-- (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
-}
-
-- (void)preferredContentSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
-}
-
-- (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
-}
-
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
-}
-
-- (void)willTransitionToTraitCollection:(nonnull UITraitCollection *)newCollection withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
-}
-
-- (void)didUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context withAnimationCoordinator:(nonnull UIFocusAnimationCoordinator *)coordinator {
-}
-
-- (void)setNeedsFocusUpdate {
-}
-
-- (void)updateFocusIfNeeded {
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender: (id)string {
     if ([segue.identifier isEqualToString:@"PresentViewController"]) {
         FilterViewController *vc = [segue destinationViewController];

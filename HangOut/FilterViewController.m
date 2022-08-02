@@ -11,6 +11,7 @@
 #import "StateCell.h"
 #import "Parse/Parse.h"
 #import "EventsViewController.h"
+#import "TypeViewController.h"
 
 @interface FilterViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -47,6 +48,10 @@
     if ([segue.identifier isEqualToString:@"PresentStateViewController"]) {
         StateViewController *vc = [segue destinationViewController];
         vc.delegate = self.stateFilterdelegate;
+    }
+    if ([segue.identifier isEqualToString:@"PresentTypeViewController"]) {
+        TypeViewController *tyvc = [segue destinationViewController];
+        tyvc.delegate = self.typeFilterdelegate;
     }
 }
 

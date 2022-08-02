@@ -38,6 +38,8 @@
 		95DCDF2128932A29002076F5 /* StateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF2028932A29002076F5 /* StateCell.m */; };
 		95DCDF24289354B1002076F5 /* FilteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF23289354B1002076F5 /* FilteredViewController.m */; };
 		95DCDF27289358CC002076F5 /* FilteredCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF26289358CC002076F5 /* FilteredCell.m */; };
+		95DCDF2A2898D46D002076F5 /* TypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF292898D46D002076F5 /* TypeViewController.m */; };
+		95DCDF2D2898DBD5002076F5 /* TypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF2C2898DBD5002076F5 /* TypeCell.m */; };
 		966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06785D0378A68E04F16E844B /* libPods-HangOut.a */; };
 		96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */; };
 /* End PBXBuildFile section */
@@ -122,6 +124,10 @@
 		95DCDF23289354B1002076F5 /* FilteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilteredViewController.m; sourceTree = "<group>"; };
 		95DCDF25289358CC002076F5 /* FilteredCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilteredCell.h; sourceTree = "<group>"; };
 		95DCDF26289358CC002076F5 /* FilteredCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilteredCell.m; sourceTree = "<group>"; };
+		95DCDF282898D46D002076F5 /* TypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeViewController.h; sourceTree = "<group>"; };
+		95DCDF292898D46D002076F5 /* TypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeViewController.m; sourceTree = "<group>"; };
+		95DCDF2B2898DBD5002076F5 /* TypeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeCell.h; sourceTree = "<group>"; };
+		95DCDF2C2898DBD5002076F5 /* TypeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeCell.m; sourceTree = "<group>"; };
 		F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +214,7 @@
 				95DCDF23289354B1002076F5 /* FilteredViewController.m */,
 				95DCDF0228905018002076F5 /* Home Controller */,
 				95DCDF0128904FC6002076F5 /* OutingsControllers */,
+				95DCDEFA288F4D7B002076F5 /* ProfilePic.h */,
 				95DCDEF1288F4D14002076F5 /* ProfileController */,
 				95DCDEF0288F4CF2002076F5 /* Posts */,
 				95DCDEE9288F4C27002076F5 /* Homelogins */,
@@ -229,6 +236,10 @@
 				95DCDF2028932A29002076F5 /* StateCell.m */,
 				95DCDF25289358CC002076F5 /* FilteredCell.h */,
 				95DCDF26289358CC002076F5 /* FilteredCell.m */,
+				95DCDF282898D46D002076F5 /* TypeViewController.h */,
+				95DCDF292898D46D002076F5 /* TypeViewController.m */,
+				95DCDF2B2898DBD5002076F5 /* TypeCell.h */,
+				95DCDF2C2898DBD5002076F5 /* TypeCell.m */,
 			);
 			path = HangOut;
 			sourceTree = "<group>";
@@ -317,7 +328,6 @@
 		95DCDEF1288F4D14002076F5 /* ProfileController */ = {
 			isa = PBXGroup;
 			children = (
-				95DCDEFA288F4D7B002076F5 /* ProfilePic.h */,
 				95DCDEFB288F4D7B002076F5 /* ProfilePic.m */,
 				95DCDEF9288F4D7B002076F5 /* ProfilePictureViewController.h */,
 				95DCDEF8288F4D7B002076F5 /* ProfilePictureViewController.m */,
@@ -580,7 +590,9 @@
 				95DCDEEF288F4CC9002076F5 /* SignupViewController.m in Sources */,
 				95DCDEEE288F4CC9002076F5 /* LoginViewController.m in Sources */,
 				95DCDEBC288F45D0002076F5 /* EventCell.m in Sources */,
+				95DCDF2D2898DBD5002076F5 /* TypeCell.m in Sources */,
 				95DCDF27289358CC002076F5 /* FilteredCell.m in Sources */,
+				95DCDF2A2898D46D002076F5 /* TypeViewController.m in Sources */,
 				95DCDF24289354B1002076F5 /* FilteredViewController.m in Sources */,
 				95DCDEC3288F462E002076F5 /* SceneDelegate.m in Sources */,
 				95DCDEE8288F4A12002076F5 /* GroupPassViewController.m in Sources */,

@@ -1,38 +1,29 @@
 //
-//  StateViewController.m
+//  TypeViewController.m
 //  HangOut
 //
-//  Created by Oluwanifemi Kolawole on 7/28/22.
+//  Created by Oluwanifemi Kolawole on 8/1/22.
 //
-
 #import "SceneDelegate.h"
-#import "StateViewController.h"
-#import "StateCell.h"
+#import "TypeViewController.h"
+#import "TypeCell.h"
 #import "Parse/Parse.h"
 
 @protocol EventTypeFilterDelegate <NSObject>
 @end
-@interface StateViewController () < UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+@interface TypeViewController () < UITableViewDataSource, UITableViewDelegate>
 {
-    NSMutableArray *filteredStates;
     NSMutableArray *cellSelected;
-    BOOL isFiltered;
-    NSString *state;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *states;
 @property(nonatomic) UITableViewCellAccessoryType accessoryType;
-@property(nonatomic) BOOL allowsMultipleSelection;
-@property(nonatomic, readonly, nullable) NSArray<NSIndexPath *> *indexPathsForSelectedRows;
-
 @end
 
-@implementation StateViewController
+@implementation TypeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    state = nil;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     cellSelected = [NSMutableArray array];
@@ -42,14 +33,14 @@
 -(NSInteger)numberofsectionsInTableView:(UITableView *)tableview{
     return 1;
 }
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[self delegate] numberOfStatesAvailable];
+ 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [[self delegate] numberOfTypesAvailable];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StateCell" forIndexPath:indexPath];
-    cell.textLabel.text = [self.delegate stateNameForRow:indexPath.row];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TypeCell" forIndexPath:indexPath];
+    cell.textLabel.text = [self.delegate typeNameForRow:indexPath.row];
     
     if ([cellSelected containsObject:indexPath]){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -71,8 +62,5 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         [cellSelected addObject:indexPath];
     }
     [tableView reloadData];
-}
-- (IBAction)didTapDone:(id)sender {
-    
 }
 @end

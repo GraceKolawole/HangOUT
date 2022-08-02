@@ -7,15 +7,22 @@
 #import "StateCell.h"
 #import <UIKit/UIKit.h>
 #import "StateViewController.h"
+#import "TypeViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol FilterDelegate <StateFilterDelegate>
--(void) filterDismissed;
+@protocol FilterStateDelegate <StateFilterDelegate>
+- (void) filterDismissed;
+
+@end
+
+@protocol FilterTypeDelegate <TypeFilterDelegate>
+- (void) filterDismissed;
 
 @end
 
 @interface FilterViewController : UIViewController 
-@property (nonatomic, weak) id <FilterDelegate> stateFilterdelegate;
+@property (nonatomic, weak) id <FilterStateDelegate> stateFilterdelegate;
+@property (nonatomic, weak) id <FilterTypeDelegate> typeFilterdelegate;
 
 @end
 

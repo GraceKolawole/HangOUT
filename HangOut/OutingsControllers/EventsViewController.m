@@ -15,7 +15,7 @@
 @protocol EventTypeFilterDelegate <NSObject>
 @end
 
-@interface EventsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchResultsUpdating, UISearchBarDelegate, FilterDelegate>
+@interface EventsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchResultsUpdating, UISearchBarDelegate, FilterStateDelegate, FilterTypeDelegate>
 {
     int pageId;
     NSString *searchText;
@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchEventForText;
 @property (nonatomic, strong) NSArray *filteredEvents;
 @property (nonatomic, strong) NSArray *eventsStates;
+@property (nonatomic, strong) NSArray *eventsTypes;
 
 @end
 
@@ -46,10 +47,10 @@
     [self fetchEvents];
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchEvents) forControlEvents:UIControlEventValueChanged];
-
     [self.tableView addSubview:self.refreshControl];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     [self.refreshControl endRefreshing];
+    
 }
 
 - (void) fetchEvents{
@@ -116,9 +117,11 @@
         }
     }
     return cell;
+    
 }
 
 - (void)fetchMoreEvents{
+    
     pageId += 1;
     NSString *urlString = [NSString stringWithFormat:@"%@&page=%i", BASE_EVENT_URL, pageId];
     NSURL *url= [NSURL URLWithString:urlString];
@@ -140,6 +143,7 @@
            }
     }];
     [task resume];
+    
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -163,7 +167,7 @@
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
               self.filteredEvents = dataDictionary[@"events"];
-               
+
                [self.tableView reloadData];
 
                }
@@ -175,7 +179,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:
 (NSInteger)section{
-    
     return self.filteredEvents.count;
 }
 
@@ -220,15 +223,35 @@
     }
     self.eventsStates = [availableStates allObjects];
 }
+- (void) populateAvailableTypes {
+    NSMutableSet *availableTypes = [NSMutableSet new];
+    for (int a = 0; a < self.filteredEvents.count; a++) {
+        [availableTypes addObject:self.filteredEvents[a][@"venue"][@"type"]];
+    }
+    self.eventsTypes = [availableTypes allObjects];
+}
 
 - (NSUInteger)numberOfStatesAvailable{
     return self.eventsStates.count;
 }
+
+- (NSUInteger)numberOfTypesAvailable{
+    return self.eventsTypes.count;
+}
+
 - (NSString *)stateNameForRow:(NSUInteger)row{
     return self.eventsStates[row];
 }
-- (void)stateFilterEnabledForRow:(NSUInteger)row{}
-- (void)stateFilterDisabledForRow:(NSUInteger)row{}
+
+- (NSString *)typeNameForRow:(NSUInteger)row{
+    return self.eventsTypes[row];
+}
+
+- (void)stateFilterEnabledForRow:(NSUInteger)row{
+}
+
+- (void)stateFilterDisabledForRow:(NSUInteger)row{
+}
 
 - (void)updateSearchResultsForSearchController:(nonnull UISearchController *)searchController {
 }
@@ -241,6 +264,7 @@
 
 - (void)preferredContentSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
 }
+
 - (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
 }
 
@@ -255,8 +279,10 @@
 
 - (void)setNeedsFocusUpdate {
 }
+
 - (void)updateFocusIfNeeded {
 }
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender: (id)string {
     if ([segue.identifier isEqualToString:@"PresentViewController"]) {
         FilterViewController *vc = [segue destinationViewController];

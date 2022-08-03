@@ -33,11 +33,11 @@
 		95DCDF0528905053002076F5 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0328905053002076F5 /* EventsViewController.m */; };
 		95DCDF082890505D002076F5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF062890505D002076F5 /* HomeViewController.m */; };
 		95DCDF0B2890508D002076F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0A2890508D002076F5 /* ViewController.m */; };
-		95DCDF1B28931865002076F5 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF1A28931865002076F5 /* FilterViewController.m */; };
-		95DCDF1E2893189D002076F5 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF1D2893189D002076F5 /* StateViewController.m */; };
-		95DCDF2128932A29002076F5 /* StateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF2028932A29002076F5 /* StateCell.m */; };
-		95DCDF2A2898D46D002076F5 /* TypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF292898D46D002076F5 /* TypeViewController.m */; };
-		95DCDF2D2898DBD5002076F5 /* TypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF2C2898DBD5002076F5 /* TypeCell.m */; };
+		95DCDF36289ADDF5002076F5 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF32289ADDF5002076F5 /* StateViewController.m */; };
+		95DCDF37289ADDF5002076F5 /* StateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF33289ADDF5002076F5 /* StateCell.m */; };
+		95DCDF3C289ADE9C002076F5 /* TypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF3A289ADE9C002076F5 /* TypeViewController.m */; };
+		95DCDF3D289ADE9C002076F5 /* TypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF3B289ADE9C002076F5 /* TypeCell.m */; };
+		95DCDF40289ADEAD002076F5 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF3E289ADEAD002076F5 /* FilterViewController.m */; };
 		966ED540B9A2A5D3E62CD8E0 /* libPods-HangOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06785D0378A68E04F16E844B /* libPods-HangOut.a */; };
 		96A4682D6264D890E4EC9CA9 /* libPods-HangOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9589EE52621F457E99E85B26 /* libPods-HangOutTests.a */; };
 /* End PBXBuildFile section */
@@ -102,7 +102,6 @@
 		95DCDEF5288F4D70002076F5 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
 		95DCDEF8288F4D7B002076F5 /* ProfilePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePictureViewController.m; sourceTree = "<group>"; };
 		95DCDEF9288F4D7B002076F5 /* ProfilePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePictureViewController.h; sourceTree = "<group>"; };
-		95DCDEFA288F4D7B002076F5 /* ProfilePic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePic.h; sourceTree = "<group>"; };
 		95DCDEFB288F4D7B002076F5 /* ProfilePic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePic.m; sourceTree = "<group>"; };
 		95DCDEFC288F4D7B002076F5 /* ProfileViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewContoller.h; sourceTree = "<group>"; };
 		95DCDEFD288F4D7B002076F5 /* ProfileViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewContoller.m; sourceTree = "<group>"; };
@@ -112,16 +111,17 @@
 		95DCDF072890505D002076F5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		95DCDF092890508D002076F5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		95DCDF0A2890508D002076F5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		95DCDF1928931865002076F5 /* FilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
-		95DCDF1A28931865002076F5 /* FilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
-		95DCDF1C2893189D002076F5 /* StateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
-		95DCDF1D2893189D002076F5 /* StateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
-		95DCDF1F28932A29002076F5 /* StateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateCell.h; sourceTree = "<group>"; };
-		95DCDF2028932A29002076F5 /* StateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateCell.m; sourceTree = "<group>"; };
-		95DCDF282898D46D002076F5 /* TypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeViewController.h; sourceTree = "<group>"; };
-		95DCDF292898D46D002076F5 /* TypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeViewController.m; sourceTree = "<group>"; };
-		95DCDF2B2898DBD5002076F5 /* TypeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeCell.h; sourceTree = "<group>"; };
-		95DCDF2C2898DBD5002076F5 /* TypeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeCell.m; sourceTree = "<group>"; };
+		95DCDF32289ADDF5002076F5 /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
+		95DCDF33289ADDF5002076F5 /* StateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateCell.m; sourceTree = "<group>"; };
+		95DCDF34289ADDF5002076F5 /* StateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
+		95DCDF35289ADDF5002076F5 /* StateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateCell.h; sourceTree = "<group>"; };
+		95DCDF38289ADE9C002076F5 /* TypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeViewController.h; sourceTree = "<group>"; };
+		95DCDF39289ADE9C002076F5 /* TypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeCell.h; sourceTree = "<group>"; };
+		95DCDF3A289ADE9C002076F5 /* TypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeViewController.m; sourceTree = "<group>"; };
+		95DCDF3B289ADE9C002076F5 /* TypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeCell.m; sourceTree = "<group>"; };
+		95DCDF3E289ADEAD002076F5 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		95DCDF3F289ADEAD002076F5 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
+		95DCDF41289ADF07002076F5 /* ProfilePic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePic.h; sourceTree = "<group>"; };
 		F0FAFC4E646808D0230A344F /* Pods-HangOutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangOutUITests/Pods-HangOutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB25F62C4F8DFE5EDC6E7D3C /* Pods-HangOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangOut/Pods-HangOut.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,11 +202,13 @@
 		953F07002874ABD6009BD594 /* HangOut */ = {
 			isa = PBXGroup;
 			children = (
+				95DCDF31289ADD89002076F5 /* State Contoller &Cell */,
+				95DCDF30289ADD48002076F5 /* Type Contoller &Cell */,
+				95DCDF2E289ADD1C002076F5 /* Filter Controller &Cell */,
 				95DCDF0C28907360002076F5 /* Map  */,
 				953F070A2874ABD6009BD594 /* Main.storyboard */,
 				95DCDF0228905018002076F5 /* Home Controller */,
 				95DCDF0128904FC6002076F5 /* OutingsControllers */,
-				95DCDEFA288F4D7B002076F5 /* ProfilePic.h */,
 				95DCDEF1288F4D14002076F5 /* ProfileController */,
 				95DCDEF0288F4CF2002076F5 /* Posts */,
 				95DCDEE9288F4C27002076F5 /* Homelogins */,
@@ -220,16 +222,6 @@
 				954873202874F368002CD6BC /* Keys.plist */,
 				953F07162874ABD7009BD594 /* main.m */,
 				953F070D2874ABD6009BD594 /* HangOut.xcdatamodeld */,
-				95DCDF1928931865002076F5 /* FilterViewController.h */,
-				95DCDF1A28931865002076F5 /* FilterViewController.m */,
-				95DCDF1C2893189D002076F5 /* StateViewController.h */,
-				95DCDF1D2893189D002076F5 /* StateViewController.m */,
-				95DCDF1F28932A29002076F5 /* StateCell.h */,
-				95DCDF2028932A29002076F5 /* StateCell.m */,
-				95DCDF282898D46D002076F5 /* TypeViewController.h */,
-				95DCDF292898D46D002076F5 /* TypeViewController.m */,
-				95DCDF2B2898DBD5002076F5 /* TypeCell.h */,
-				95DCDF2C2898DBD5002076F5 /* TypeCell.m */,
 			);
 			path = HangOut;
 			sourceTree = "<group>";
@@ -318,6 +310,7 @@
 		95DCDEF1288F4D14002076F5 /* ProfileController */ = {
 			isa = PBXGroup;
 			children = (
+				95DCDF41289ADF07002076F5 /* ProfilePic.h */,
 				95DCDEFB288F4D7B002076F5 /* ProfilePic.m */,
 				95DCDEF9288F4D7B002076F5 /* ProfilePictureViewController.h */,
 				95DCDEF8288F4D7B002076F5 /* ProfilePictureViewController.m */,
@@ -350,6 +343,37 @@
 			children = (
 			);
 			path = "Map ";
+			sourceTree = "<group>";
+		};
+		95DCDF2E289ADD1C002076F5 /* Filter Controller &Cell */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDF3F289ADEAD002076F5 /* FilterViewController.h */,
+				95DCDF3E289ADEAD002076F5 /* FilterViewController.m */,
+			);
+			path = "Filter Controller &Cell";
+			sourceTree = "<group>";
+		};
+		95DCDF30289ADD48002076F5 /* Type Contoller &Cell */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDF39289ADE9C002076F5 /* TypeCell.h */,
+				95DCDF3B289ADE9C002076F5 /* TypeCell.m */,
+				95DCDF38289ADE9C002076F5 /* TypeViewController.h */,
+				95DCDF3A289ADE9C002076F5 /* TypeViewController.m */,
+			);
+			path = "Type Contoller &Cell";
+			sourceTree = "<group>";
+		};
+		95DCDF31289ADD89002076F5 /* State Contoller &Cell */ = {
+			isa = PBXGroup;
+			children = (
+				95DCDF35289ADDF5002076F5 /* StateCell.h */,
+				95DCDF33289ADDF5002076F5 /* StateCell.m */,
+				95DCDF34289ADDF5002076F5 /* StateViewController.h */,
+				95DCDF32289ADDF5002076F5 /* StateViewController.m */,
+			);
+			path = "State Contoller &Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -567,27 +591,27 @@
 			files = (
 				953F07172874ABD7009BD594 /* main.m in Sources */,
 				95DCDEC2288F462E002076F5 /* AppDelegate.m in Sources */,
-				95DCDF1B28931865002076F5 /* FilterViewController.m in Sources */,
+				95DCDF36289ADDF5002076F5 /* StateViewController.m in Sources */,
 				953F070F2874ABD6009BD594 /* HangOut.xcdatamodeld in Sources */,
+				95DCDF3C289ADE9C002076F5 /* TypeViewController.m in Sources */,
 				95DCDEC6288F466E002076F5 /* HangOUTCell.m in Sources */,
 				95DCDEF7288F4D70002076F5 /* Post.m in Sources */,
-				95DCDF2128932A29002076F5 /* StateCell.m in Sources */,
 				95DCDF0528905053002076F5 /* EventsViewController.m in Sources */,
 				95DCDEFE288F4D7B002076F5 /* ProfilePictureViewController.m in Sources */,
 				95DCDF0B2890508D002076F5 /* ViewController.m in Sources */,
 				95DCDF00288F4D7B002076F5 /* ProfileViewContoller.m in Sources */,
 				95DCDEE7288F4A12002076F5 /* GroupMessageView.m in Sources */,
+				95DCDF37289ADDF5002076F5 /* StateCell.m in Sources */,
 				95DCDEEF288F4CC9002076F5 /* SignupViewController.m in Sources */,
 				95DCDEEE288F4CC9002076F5 /* LoginViewController.m in Sources */,
+				95DCDF3D289ADE9C002076F5 /* TypeCell.m in Sources */,
 				95DCDEBC288F45D0002076F5 /* EventCell.m in Sources */,
-				95DCDF2D2898DBD5002076F5 /* TypeCell.m in Sources */,
-				95DCDF2A2898D46D002076F5 /* TypeViewController.m in Sources */,
 				95DCDEC3288F462E002076F5 /* SceneDelegate.m in Sources */,
 				95DCDEE8288F4A12002076F5 /* GroupPassViewController.m in Sources */,
 				95DCDEFF288F4D7B002076F5 /* ProfilePic.m in Sources */,
 				95DCDF082890505D002076F5 /* HomeViewController.m in Sources */,
+				95DCDF40289ADEAD002076F5 /* FilterViewController.m in Sources */,
 				95DCDEF6288F4D70002076F5 /* PostViewController.m in Sources */,
-				95DCDF1E2893189D002076F5 /* StateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

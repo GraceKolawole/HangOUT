@@ -29,19 +29,6 @@
         }];
 
         [Parse initializeWithConfiguration:config];
-    
-//    PFObject *profilePic = [PFObject objectWithClassName:@"ProfilePic"];
-//    profilePic[@"image"] = @1337;
-//    [gameScore saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (succeeded) {
-//            NSLog(@"Object saved!");
-//        } else {
-//            NSLog(@"Error: %@", error.description);
-//        }
-//    }];
-    
-
-    
     return YES;
 }
 

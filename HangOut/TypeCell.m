@@ -1,13 +1,13 @@
 //
-//  EventCell.m
+//  TypeCell.m
 //  HangOut
 //
-//  Created by Oluwanifemi Kolawole on 7/8/22.
+//  Created by Oluwanifemi Kolawole on 8/1/22.
 //
 
-#import "EventCell.h"
+#import "TypeCell.h"
 
-@implementation EventCell
+@implementation TypeCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

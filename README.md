@@ -92,7 +92,6 @@ Original App Design Project - README Template
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-https://www.figma.com/file/CZxnEG289QBY09kEIUwqm7/Untitled?node-id=0%3A1
 
 ### [BONUS] Interactive Prototype
 https://www.figma.com/file/CZxnEG289QBY09kEIUwqm7/Untitled?node-id=0%3A1

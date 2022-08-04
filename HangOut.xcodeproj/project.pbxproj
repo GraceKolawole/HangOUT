@@ -202,11 +202,10 @@
 		953F07002874ABD6009BD594 /* HangOut */ = {
 			isa = PBXGroup;
 			children = (
+				953F070A2874ABD6009BD594 /* Main.storyboard */,
 				95DCDF31289ADD89002076F5 /* State Contoller &Cell */,
 				95DCDF30289ADD48002076F5 /* Type Contoller &Cell */,
 				95DCDF2E289ADD1C002076F5 /* Filter Controller &Cell */,
-				95DCDF0C28907360002076F5 /* Map  */,
-				953F070A2874ABD6009BD594 /* Main.storyboard */,
 				95DCDF0228905018002076F5 /* Home Controller */,
 				95DCDF0128904FC6002076F5 /* OutingsControllers */,
 				95DCDEF1288F4D14002076F5 /* ProfileController */,
@@ -266,6 +265,7 @@
 		955FECE42887362500D34B54 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				95DCDF0C28907360002076F5 /* Map  */,
 				95DCDEBF288F462E002076F5 /* AppDelegate.h */,
 				95DCDEBE288F462E002076F5 /* AppDelegate.m */,
 				95DCDEC0288F462E002076F5 /* SceneDelegate.h */,
@@ -342,7 +342,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Map ";
+			name = "Map ";
+			path = "../Map ";
 			sourceTree = "<group>";
 		};
 		95DCDF2E289ADD1C002076F5 /* Filter Controller &Cell */ = {

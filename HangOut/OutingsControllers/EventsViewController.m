@@ -240,26 +240,30 @@
     NSMutableArray *filteredEvent = [NSMutableArray new];
     for (int e = 0; e< self.events.count; e++){
         NSString * state = self.events[e][@"venue"][@"display_location"];
-        
-        if (self.selectedStateEvents.count == 0||[self.selectedStateEvents containsObject:state]){
+        NSString * type = self.events[e][@"type"];
+        if ((self.selectedStateEvents.count == 0 && self.selectedStateEvents.count == self.selectedTypeEvents.count)||[self.selectedStateEvents containsObject:state]){
+            [filteredEvent addObject:self.events[e]];
+        }
+        if ((self.selectedTypeEvents.count == 0 && self.selectedTypeEvents.count == self.selectedStateEvents.count)||[self.selectedTypeEvents containsObject:type]){
             [filteredEvent addObject:self.events[e]];
         }
     }
     self.filteredEvents = filteredEvent;
     [self.tableView reloadData];
+
 }
-- (void) filterSelectedTypeEvents{
-    NSMutableArray *filteredEvent = [NSMutableArray new];
-    for (int t = 0; t< self.events.count; t++){
-        NSString * type = self.events[t][@"type"];
-        
-        if (self.selectedTypeEvents.count == 0||[self.selectedTypeEvents containsObject:type]){
-            [filteredEvent addObject:self.events[t]];
-        }
-    }
-    self.filteredEvents = filteredEvent;
-    [self.tableView reloadData];
-}
+//- (void) filterSelectedTypeEvents{
+//    NSMutableArray *filteredEvent = [NSMutableArray new];
+//    for (int t = 0; t< self.events.count; t++){
+//        NSString * type = self.events[t][@"type"];
+//
+//        if (self.selectedTypeEvents.count == 0||[self.selectedTypeEvents containsObject:type]){
+//            [filteredEvent addObject:self.events[t]];
+//        }
+//    }
+//    self.filteredEvents = filteredEvent;
+//    [self.tableView reloadData];
+//}
 - (NSUInteger)numberOfStatesAvailable{
     return self.eventsStates.count;
 }
@@ -317,12 +321,14 @@
 - (void)typeFilterEnabledForRow:(NSUInteger)row{
     NSString *nameForTypeRow = [self typeNameForRow:row];
     [self.selectedTypeEvents addObject:nameForTypeRow];
-    [self filterSelectedTypeEvents];
+//    [self filterSelectedTypeEvents];
+    [self filterSelectedStateEvents];
 }
 - (void)typeFilterDisabledForRow:(NSUInteger)row{
     NSString *nameForTypeRow = [self typeNameForRow:row];
     [self.selectedTypeEvents removeObject:nameForTypeRow];
-    [self filterSelectedTypeEvents];
+//    [self filterSelectedTypeEvents];
+    [self filterSelectedStateEvents];
 }
 - (void)updateSearchResultsForSearchController:(nonnull UISearchController *)searchController {
 }

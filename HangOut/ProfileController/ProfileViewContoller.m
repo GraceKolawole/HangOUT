@@ -6,7 +6,6 @@
 //
 
 #import "ProfileViewContoller.h"
-#import "ProfilePictureViewController.h"
 #import "ProfilePic.h"
 #import "Parse/Parse.h"
 #import "AppDelegate.h"

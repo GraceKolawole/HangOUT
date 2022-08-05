@@ -8,6 +8,7 @@
 #import "TypeViewController.h"
 #import "TypeCell.h"
 #import "Parse/Parse.h"
+#import "EventsViewController.h"
 
 @protocol EventTypeFilterDelegate <NSObject>
 @end

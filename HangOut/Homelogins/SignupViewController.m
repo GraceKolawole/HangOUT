@@ -9,10 +9,10 @@
 #import "Parse/Parse.h"
 
 @interface SignupViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *usernameTextFeild;
-@property (weak, nonatomic) IBOutlet UITextField *emailTextFeild;
-@property (weak, nonatomic) IBOutlet UITextField *addressTextFeild;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextFeild;
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITextField *email;
+@property (weak, nonatomic) IBOutlet UITextField *address;
+@property (weak, nonatomic) IBOutlet UITextField *password;
 - (IBAction)signupUser:(id)sender;
 
 @end
@@ -26,9 +26,9 @@
 - (void)signupUser {
     PFUser *newUser = [PFUser user];
 
-    newUser.username = self.usernameTextFeild.text;
-    newUser.password = self.passwordTextFeild.text;
-    newUser.email = self.emailTextFeild.text;
+    newUser.username = self.username.text;
+    newUser.password = self.password.text;
+    newUser.email = self.email.text;
 
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
@@ -43,7 +43,7 @@
 }
 
 - (IBAction)signupUser:(id)sender {
-    if([self.usernameTextFeild.text isEqual:@""] || [self.passwordTextFeild.text isEqual:@""] || [self.emailTextFeild.text isEqual:@""]){
+    if([self.username.text isEqual:@""] || [self.password.text isEqual:@""] || [self.email.text isEqual:@""]){
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Title"
                                                                                message:@"Message"
                                                                         preferredStyle:(UIAlertControllerStyleAlert)];

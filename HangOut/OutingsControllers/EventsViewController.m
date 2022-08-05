@@ -236,44 +236,21 @@
     }
     self.eventsTypes = [availableTypes allObjects];
 }
-- (void) selectedEventFilters{
+- (void) filterSelectedStateEvents{
     NSMutableArray *filteredEvent = [NSMutableArray new];
     for (int e = 0; e< self.events.count; e++){
         NSString * state = self.events[e][@"venue"][@"display_location"];
         NSString * type = self.events[e][@"type"];
-        // 4 cases
-        // 1. User did not select any type and any state
-        // 2. User selected a type but did not select a state
-        // 3. User did not select a type but selected a state
-        // 4. User selected a type and a state
-        //self.selectedStateEvents.count == self.selectedTypeEvents.count)||
-        //self.selectedTypeEvents.count == self.selectedStateEvents.count)||
-        
-        // 1st case
-        if (self.selectedStateEvents.count > 0 && self.selectedTypeEvents.count > 0) {
-            if ([self.selectedStateEvents containsObject:state] && [self.selectedTypeEvents containsObject:type]) {
-                [filteredEvent addObject:self.events[e]];
-            }
-        // 3 case
+        if ((self.selectedStateEvents.count == 0 && self.selectedStateEvents.count == self.selectedTypeEvents.count)||[self.selectedStateEvents containsObject:state]){
+            [filteredEvent addObject:self.events[e]];
         }
-        else if (self.selectedStateEvents.count > 0) {
-            if ((self.selectedStateEvents.count == self.selectedTypeEvents.count)||[self.selectedStateEvents containsObject:state]){
-                [filteredEvent addObject:self.events[e]];
-            }
-        }
-        // 2 case If the user has selected a type
-        else if (self.selectedTypeEvents.count > 0) {
-            if ((self.selectedTypeEvents.count != self.selectedStateEvents.count)||[self.selectedTypeEvents containsObject:type]) {
-                [filteredEvent addObject:self.events[e]];
-            }
-        // 4 case
-        }
-        else {
-            break;
+        if ((self.selectedTypeEvents.count == 0 && self.selectedTypeEvents.count == self.selectedStateEvents.count)||[self.selectedTypeEvents containsObject:type]){
+            [filteredEvent addObject:self.events[e]];
         }
     }
     self.filteredEvents = filteredEvent;
     [self.tableView reloadData];
+
 }
 //- (void) filterSelectedTypeEvents{
 //    NSMutableArray *filteredEvent = [NSMutableArray new];
@@ -333,25 +310,25 @@
 - (void)stateFilterEnabledForRow:(NSUInteger)row{
     NSString *nameForRow = [self stateNameForRow:row];
     [self.selectedStateEvents addObject:nameForRow];
-    [self selectedEventFilters];
+    [self filterSelectedStateEvents];
 }
 
 - (void)stateFilterDisabledForRow:(NSUInteger)row{
     NSString *nameForRow = [self stateNameForRow:row];
     [self.selectedStateEvents removeObject:nameForRow];
-    [self selectedEventFilters];
+    [self filterSelectedStateEvents];
 }
 - (void)typeFilterEnabledForRow:(NSUInteger)row{
     NSString *nameForTypeRow = [self typeNameForRow:row];
     [self.selectedTypeEvents addObject:nameForTypeRow];
 //    [self filterSelectedTypeEvents];
-    [self selectedEventFilters];
+    [self filterSelectedStateEvents];
 }
 - (void)typeFilterDisabledForRow:(NSUInteger)row{
     NSString *nameForTypeRow = [self typeNameForRow:row];
     [self.selectedTypeEvents removeObject:nameForTypeRow];
 //    [self filterSelectedTypeEvents];
-    [self selectedEventFilters];
+    [self filterSelectedStateEvents];
 }
 - (void)updateSearchResultsForSearchController:(nonnull UISearchController *)searchController {
 }

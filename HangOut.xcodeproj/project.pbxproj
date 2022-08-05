@@ -27,12 +27,10 @@
 		95DCDEEF288F4CC9002076F5 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEEC288F4CC9002076F5 /* SignupViewController.m */; };
 		95DCDEF6288F4D70002076F5 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEF3288F4D70002076F5 /* PostViewController.m */; };
 		95DCDEF7288F4D70002076F5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEF4288F4D70002076F5 /* Post.m */; };
-		95DCDEFE288F4D7B002076F5 /* ProfilePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEF8288F4D7B002076F5 /* ProfilePictureViewController.m */; };
 		95DCDEFF288F4D7B002076F5 /* ProfilePic.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEFB288F4D7B002076F5 /* ProfilePic.m */; };
 		95DCDF00288F4D7B002076F5 /* ProfileViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDEFD288F4D7B002076F5 /* ProfileViewContoller.m */; };
 		95DCDF0528905053002076F5 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0328905053002076F5 /* EventsViewController.m */; };
 		95DCDF082890505D002076F5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF062890505D002076F5 /* HomeViewController.m */; };
-		95DCDF0B2890508D002076F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF0A2890508D002076F5 /* ViewController.m */; };
 		95DCDF36289ADDF5002076F5 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF32289ADDF5002076F5 /* StateViewController.m */; };
 		95DCDF37289ADDF5002076F5 /* StateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF33289ADDF5002076F5 /* StateCell.m */; };
 		95DCDF3C289ADE9C002076F5 /* TypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DCDF3A289ADE9C002076F5 /* TypeViewController.m */; };
@@ -100,8 +98,6 @@
 		95DCDEF3288F4D70002076F5 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 		95DCDEF4288F4D70002076F5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		95DCDEF5288F4D70002076F5 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
-		95DCDEF8288F4D7B002076F5 /* ProfilePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePictureViewController.m; sourceTree = "<group>"; };
-		95DCDEF9288F4D7B002076F5 /* ProfilePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePictureViewController.h; sourceTree = "<group>"; };
 		95DCDEFB288F4D7B002076F5 /* ProfilePic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePic.m; sourceTree = "<group>"; };
 		95DCDEFC288F4D7B002076F5 /* ProfileViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewContoller.h; sourceTree = "<group>"; };
 		95DCDEFD288F4D7B002076F5 /* ProfileViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewContoller.m; sourceTree = "<group>"; };
@@ -109,8 +105,6 @@
 		95DCDF0428905053002076F5 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		95DCDF062890505D002076F5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		95DCDF072890505D002076F5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		95DCDF092890508D002076F5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		95DCDF0A2890508D002076F5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		95DCDF32289ADDF5002076F5 /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
 		95DCDF33289ADDF5002076F5 /* StateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateCell.m; sourceTree = "<group>"; };
 		95DCDF34289ADDF5002076F5 /* StateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
@@ -214,7 +208,6 @@
 				95DCDECD288F4761002076F5 /* GroupsViewContoller */,
 				955FECE42887362500D34B54 /* Delegates */,
 				955FECE32887361500D34B54 /* Cells */,
-				955FECE02887359600D34B54 /* View Controllers */,
 				953F07102874ABD7009BD594 /* Assets.xcassets */,
 				953F07122874ABD7009BD594 /* LaunchScreen.storyboard */,
 				953F07152874ABD7009BD594 /* Info.plist */,
@@ -242,15 +235,6 @@
 			path = HangOutUITests;
 			sourceTree = "<group>";
 		};
-		955FECE02887359600D34B54 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				95DCDF092890508D002076F5 /* ViewController.h */,
-				95DCDF0A2890508D002076F5 /* ViewController.m */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
 		955FECE32887361500D34B54 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,7 +249,6 @@
 		955FECE42887362500D34B54 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				95DCDF0C28907360002076F5 /* Map  */,
 				95DCDEBF288F462E002076F5 /* AppDelegate.h */,
 				95DCDEBE288F462E002076F5 /* AppDelegate.m */,
 				95DCDEC0288F462E002076F5 /* SceneDelegate.h */,
@@ -312,8 +295,6 @@
 			children = (
 				95DCDF41289ADF07002076F5 /* ProfilePic.h */,
 				95DCDEFB288F4D7B002076F5 /* ProfilePic.m */,
-				95DCDEF9288F4D7B002076F5 /* ProfilePictureViewController.h */,
-				95DCDEF8288F4D7B002076F5 /* ProfilePictureViewController.m */,
 				95DCDEFC288F4D7B002076F5 /* ProfileViewContoller.h */,
 				95DCDEFD288F4D7B002076F5 /* ProfileViewContoller.m */,
 			);
@@ -336,14 +317,6 @@
 				95DCDF062890505D002076F5 /* HomeViewController.m */,
 			);
 			path = "Home Controller";
-			sourceTree = "<group>";
-		};
-		95DCDF0C28907360002076F5 /* Map  */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Map ";
-			path = "../Map ";
 			sourceTree = "<group>";
 		};
 		95DCDF2E289ADD1C002076F5 /* Filter Controller &Cell */ = {
@@ -598,8 +571,6 @@
 				95DCDEC6288F466E002076F5 /* HangOUTCell.m in Sources */,
 				95DCDEF7288F4D70002076F5 /* Post.m in Sources */,
 				95DCDF0528905053002076F5 /* EventsViewController.m in Sources */,
-				95DCDEFE288F4D7B002076F5 /* ProfilePictureViewController.m in Sources */,
-				95DCDF0B2890508D002076F5 /* ViewController.m in Sources */,
 				95DCDF00288F4D7B002076F5 /* ProfileViewContoller.m in Sources */,
 				95DCDEE7288F4A12002076F5 /* GroupMessageView.m in Sources */,
 				95DCDF37289ADDF5002076F5 /* StateCell.m in Sources */,

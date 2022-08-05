@@ -131,10 +131,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="dp0-tr-EIM"/>
                     <connections>
-                        <outlet property="addressTextFeild" destination="LCF-Lo-c6f" id="62w-Oe-xOq"/>
-                        <outlet property="emailTextFeild" destination="KlR-SX-AhC" id="jMN-k1-WfH"/>
-                        <outlet property="passwordTextFeild" destination="gGa-9p-HrM" id="eEb-WT-E8o"/>
-                        <outlet property="usernameTextFeild" destination="XHa-R0-ZMz" id="ZzB-8G-omB"/>
+                        <outlet property="address" destination="LCF-Lo-c6f" id="R2X-Nz-WzP"/>
+                        <outlet property="email" destination="KlR-SX-AhC" id="saE-0N-sgr"/>
+                        <outlet property="password" destination="gGa-9p-HrM" id="Vrc-h7-exT"/>
+                        <outlet property="username" destination="XHa-R0-ZMz" id="WJO-26-hz9"/>
                         <segue destination="91b-IW-51q" kind="presentation" identifier="FirstSegue" id="ajj-TY-olD"/>
                     </connections>
                 </viewController>
@@ -799,76 +799,6 @@
             </objects>
             <point key="canvasLocation" x="-140.57971014492756" y="15.401785714285714"/>
         </scene>
-        <!--Profile Picture View Controller-->
-        <scene sceneID="NBK-XQ-ZVK">
-            <objects>
-                <viewController storyboardIdentifier="ProfilePictureViewController" id="Vwn-O3-1jR" customClass="ProfilePictureViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BNA-9Q-83j">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ck5-1I-rtf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j21-XM-Y75">
-                                        <rect key="frame" x="0.0" y="8" width="414" height="825"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a profile Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMx-Dp-lim">
-                                                <rect key="frame" x="14" y="228" width="182" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGv-E8-fBW">
-                                                <rect key="frame" x="90" y="316" width="67" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                <connections>
-                                                    <action selector="tappedAlbum:" destination="Vwn-O3-1jR" eventType="touchUpInside" id="brp-3L-swL"/>
-                                                </connections>
-                                            </button>
-                                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-2S-6DO">
-                                                <rect key="frame" x="14" y="38.5" width="143" height="143"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <gestureRecognizers/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="cSV-tp-M8y"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="KHh-f0-Dax"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="cVH-Yd-VHZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Zjt-AJ-FlR">
-                        <barButtonItem key="rightBarButtonItem" title="Change" id="NLM-Ve-gqf">
-                            <connections>
-                                <action selector="didTapChange:" destination="Vwn-O3-1jR" id="Vzy-BC-Z4s"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="albumButton" destination="QGv-E8-fBW" id="ilO-uG-7Xd"/>
-                        <outlet property="profilePictureImageView" destination="1RD-2S-6DO" id="6jy-Xq-lPp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aLC-PB-rQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="UGn-eZ-OPN">
-                    <connections>
-                        <action selector="tapGesture:" destination="Vwn-O3-1jR" id="3XZ-Au-fts"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="690" y="1463"/>
-        </scene>
         <!--State View Controller-->
         <scene sceneID="def-YB-vKp">
             <objects>
@@ -1032,14 +962,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S5B-wu-U7e"/>
+        <segue reference="ajj-TY-olD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.circle" catalog="system" width="128" height="121"/>
         <image name="camera.on.rectangle" catalog="system" width="128" height="96"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="message" catalog="system" width="128" height="113"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

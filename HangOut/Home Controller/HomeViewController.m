@@ -7,7 +7,6 @@
 
 #import "HomeViewController.h"
 #import "PostViewController.h"
-#import "ProfilePictureViewController.h"
 #import "Parse/Parse.h"
 #import "Post.h"
 #import "SceneDelegate.h"
@@ -20,7 +19,7 @@
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) Post *profilepicture;
-@property (nonatomic, strong) NSMutableArray<Post *> *postsArray;
+@property (nonatomic, strong) NSMutableArray *postsArray;
 @property (strong, nonatomic) Post *post;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 

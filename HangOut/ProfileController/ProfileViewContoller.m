@@ -11,8 +11,6 @@
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
 #import "PFImageView.h"
-#import "SignupViewController.h"
-#import "LoginViewController.h"
 #import "EventCell.h"
 #import "HangOUTCell.h"
 #import "HomeViewController.h"
@@ -26,7 +24,7 @@
 @property (nonatomic, strong) NSMutableArray *picArray;
 @property (strong, nonatomic) ProfilePic *pic;
 @property (weak, nonatomic) PFImageView *profilePictureImageView;
-@property (nonatomic, strong) NSMutableArray<Post *> *postsArray;
+@property (nonatomic, strong) NSMutableArray *postsArray;
 
 @end
 
@@ -35,13 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+//    self.userLabel.text = self.post.author.username;
+//    self.usernameLabel.text = self.post.author.username;
+//    self.emailLabel.text = self.post.email;
+
     self.refreshControl = [[UIRefreshControl alloc] init];
-
-    self.userLabel.text = self.post.author.username;
-    self.usernameLabel.text = self.post.author.username;
-    self.emailLabel.text = self.post.email;
-
-
     [self.refreshControl addTarget:self action: @selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
 
     PFQuery *picQuery = [ProfilePic query];
